@@ -1,0 +1,36 @@
+table,field,type,required,description
+geo,geo_id,text,yes,Immutable geography identifier (L0–L6)
+geo,parent_geo_id,text,no,Parent geography id
+geo,level,enum,yes,L0 / L1 / L2 / L3 / L4 / L5 / L6
+geo,boundary_ref,text,no,Verified GIS boundary reference
+pricing,price_type,enum,yes,asking / registered / ready_reckoner / launch
+pricing,area_basis,enum,yes,carpet / built_up / saleable
+pricing,price_psf,number,yes,Price per sq ft on the declared area basis
+pricing,sample_size,integer,yes,Observations behind the aggregate; n=1 is a single instrument
+rental,monthly_rent,number,yes,Monthly asking or closed rent
+rental,configuration,text,yes,1BHK / 2BHK / 3BHK etc.
+rental,furnishing,enum,yes,bare / semi / full
+project,rera_id,text,yes,"MahaRERA project registration id, or NOT_REGISTERED"
+project,possession_date,date,no,Declared possession date from the RERA filing
+project,qpr_ref,text,no,Quarterly progress report reference
+infra,status,enum,yes,operational / commissioning / under_construction / approved / proposed / rumoured
+infra,slippage_months,number,no,Cumulative delay against the earliest published target
+infra,last_verified,date,yes,When the status was last checked against the source
+risk,risk_type,text,yes,flood / title / CRZ / environment / litigation / oversupply / infra
+risk,severity,enum,yes,low / medium / high
+fact,source_ref,text,yes,Source registry id — no fact exists without one
+fact,observed_date,date,yes,"Date the fact applies to, not the date it was copied"
+fact,confidence,enum,yes,high / medium / low
+fact,stale_after_days,integer,yes,"Domain refresh rule, drives the freshness display"
+fact,conflict_flag,boolean,yes,Marks an unresolved disagreement between sources
+lead,lead_id,text,yes,Lead identifier
+lead,source_channel,text,yes,Tagged at capture — never reconstructed later
+lead,qualified,boolean,yes,"True only if budget, timeline, authority and area fit all pass"
+lead,consent_ref,text,yes,DPDP notice and consent record reference
+deal,client_id,text,yes,Client identifier
+deal,stage,enum,yes,lead / qualified / visit / negotiation / closure / lost
+deal,closed_price,number,no,Actual registered consideration
+deal,commission_expected,number,no,Expected commission
+deal,commission_realised,number,no,"Realised commission, net of TDS"
+deal,payout_days,integer,no,Days from closure milestone to cash receipt
+deal,lost_reason,text,no,Mandatory on any deal marked lost

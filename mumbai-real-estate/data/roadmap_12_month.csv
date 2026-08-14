@@ -1,0 +1,17 @@
+workstream_label,workstream,start_month,end_month,closing_gate
+Compliance & certification,compliance,1,2,Certificate of Competency + MahaRERA ID issued
+"Entity, tax & data governance",compliance,1,2,GST/TDS position confirmed; DPDP notice+consent live
+"Schema, IDs & source registry",system,1,2,No fact without geo_id + source_ref + observed_date
+Corridor selection & market tree,research,1,2,"5 localities, 20–30 pockets locked; no expansion"
+Deep desk research — Phase 1,research,2,5,>=80% source completeness on Phase-1 field set
+Field intelligence programme,field,2,6,>=3 independent field inputs per locality
+Price truth & comparable engine,research,3,5,Registered / asking / RR separated with n and basis
+Scorecards & client-fit model,system,4,6,Every score traceable to inputs
+Lead engine pilot,demand,3,7,30 qualified leads; CAC measured by channel
+Deal execution & first closures,deal,4,9,First closures + written post-mortems
+"CRM, calculators & data health",system,5,8,"Used on every live lead, not a side project"
+Rental & corporate desk,deal,6,10,Second revenue line covering fixed costs
+Corridor 2 expansion,research,8,11,Only if pilot unit economics repeat
+Corridor 3 expansion,research,10,12,Only if corridor 2 replicates without founder
+Automation & change monitoring,system,10,12,"Automate checks, never judgement"
+Year-2 plan & first hire,compliance,11,12,Hire only against a measured bottleneck

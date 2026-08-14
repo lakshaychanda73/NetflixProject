@@ -1,0 +1,16 @@
+metric,value,unit,source_id,observed_date,confidence,note
+sales_h1_2026,47355,units,SRC-004,2026-06-30,high,+1% YoY
+launches_h1_2026,49161,units,SRC-004,2026-06-30,high,+8% YoY
+unsold_h1_2026,157410,units,SRC-004,2026-06-30,high,largest unsold pool in India
+qts_h1_2026,6.5,quarters,SRC-004,2026-06-30,high,quarters-to-sell at current velocity
+age_inventory_h1_2026,13.5,quarters,SRC-004,2026-06-30,high,improved from 14.3 in H1 2025
+avg_price_psf,36881,Rs/sqft,SRC-004,2026-06-30,high,most expensive market in India; basis per KF methodology
+registrations_h1_2026,80221,registrations,SRC-005,2026-06-30,high,"+6% YoY, best H1 since 2013"
+stampduty_h1_2026,6968,Rs crore,SRC-005,2026-06-30,high,BMC Mumbai jurisdiction
+registrations_jul_2026,13617,registrations,SRC-006,2026-07-31,high,+8.3% YoY; highest July in 14 years
+stampduty_jul_2026,1223,Rs crore,SRC-006,2026-07-31,high,+8.9% YoY
+share_above_1cr,54,% of sales,SRC-032,2026-06-30,high,up from 49% in H1 2025
+share_upto_1000sqft,81,% of registrations,SRC-033,2026-02-28,medium,"500–1,000 sqft band = 45%"
+repo_rate,5.25,%,SRC-022,2026-06-30,medium,unchanged since 5 Dec 2025
+home_loan_typical,7.65–8.50,%,SRC-022,2026-06-30,medium,best rates from ~7.10%
+registered_agents_mh,42865,agents,SRC-025,2026-03-31,medium,Maharashtra-wide
