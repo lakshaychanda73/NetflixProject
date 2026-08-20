@@ -139,7 +139,7 @@ def fig_wbs():
             ("1.5", "Recurring compliance calendar", "Half-yearly report, GST/TDS cycle, renewals, ad approvals"),
         ]),
         ("research", [
-            ("2.1", "Corridor and pocket definition", "5 localities, 20–30 pockets, verified boundaries, frozen"),
+            ("2.1", "Corridor and pocket definition", "6 localities, 20–30 pockets, verified boundaries, frozen"),
             ("2.2", "Statutory project register", "MahaRERA extract for every in-scope project"),
             ("2.3", "Price truth engine", "Registered / asking / RR separated, with basis and n"),
             ("2.4", "Rental layer", "Rents, deposits, maintenance, restrictions, vacancy proxies"),

@@ -52,6 +52,7 @@ h4{ margin:0 0 1.6mm 0; font-size:7.6pt; font-weight:800; letter-spacing:.12em;
 .body{ font-size:9.4pt; line-height:1.6; color:var(--ink2); }
 .dark .body{ color:var(--dink2); }
 .small{ font-size:8.2pt; line-height:1.55; color:var(--ink2); }
+.dark .small{ color:var(--dink2); }
 .tiny{ font-size:7pt; line-height:1.5; color:var(--muted); }
 .dark .tiny{ color:var(--dmuted); }
 strong{ font-weight:700; color:var(--ink); }
@@ -98,6 +99,7 @@ strong{ font-weight:700; color:var(--ink); }
        padding:5mm 5.5mm; }
 .dark .card{ background:var(--dark2); border-color:var(--dhair); }
 .card.tint{ background:var(--cardalt); }
+.dark .card.tint{ background:#141D2B; border-color:var(--dhair); }
 .card .rule{ height:1mm; margin:-5mm -5.5mm 4mm -5.5mm; border-radius:2.4mm 2.4mm 0 0; }
 .card h3{ font-size:10.5pt; }
 
@@ -127,10 +129,11 @@ ul.tight li{ margin-bottom:1.4mm; font-size:8.2pt; }
 .note.b{ border-left-color:var(--blue); } .note.g{ border-left-color:var(--green); }
 
 /* ---------- attribution bar (founder slide) ---------- */
-.attr{ display:flex; gap:2.4mm; align-items:center; font-size:6.8pt; color:var(--muted);
-       margin-top:2.6mm; }
+.attr{ display:flex; gap:2.4mm; align-items:baseline; flex-wrap:wrap; font-size:6.8pt;
+       color:var(--muted); margin-top:2.8mm; line-height:1.5; }
 .attr .tag{ font-weight:800; letter-spacing:.08em; text-transform:uppercase;
-            padding:.8mm 2mm; border-radius:1mm; background:var(--cardalt); color:var(--ink2); }
+            padding:.8mm 2mm; border-radius:1mm; background:var(--cardalt); color:var(--ink2);
+            white-space:nowrap; }
 .attr .tag.own{ background:#FDEDE2; color:var(--orange-d); }
 .attr .tag.fam{ background:#EDF1F8; color:var(--blue); }
 

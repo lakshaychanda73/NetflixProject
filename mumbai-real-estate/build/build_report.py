@@ -235,7 +235,7 @@ page(f"""
         <tbody>
         <tr><td style="width:26mm"><strong>Corridor</strong></td>
             <td>Eastern &amp; Central Suburbs — Powai, Kanjurmarg, Vikhroli, Bhandup, Mulund, Ghatkopar.
-            Five localities, 20–30 pockets, frozen for ninety days.</td></tr>
+            Six localities, 20–30 pockets, frozen for ninety days.</td></tr>
         <tr><td><strong>Sequence</strong></td>
             <td>Compliance, data and demand built in parallel from week 1. Marketing gated at week 6 on the
             Certificate of Competency. First closure targeted month 5.</td></tr>
@@ -874,7 +874,7 @@ page(f"""
       </table>
       <div class="callout crit" style="margin-top:3mm">
         <div class="h">Say this out loud in the first meeting</div>
-        <p style="margin:0" class="small">"I work five localities in depth rather than the whole city. If what
+        <p style="margin:0" class="small">"I work six localities in depth rather than the whole city. If what
         you need is outside them, I will tell you and introduce you to someone better placed." It costs you one
         client in ten and buys the credibility that closes the other nine.</p>
       </div>
@@ -1242,7 +1242,7 @@ page(f"""
       <div class="callout">
         <div class="h">Then, in the same week</div>
         <ol class="small" start="4" style="margin:0 0 0 4mm">
-          <li><strong>Freeze the corridor in writing.</strong> Five localities, 20–30 named pockets, dated and
+          <li><strong>Freeze the corridor in writing.</strong> Six localities, 20–30 named pockets, dated and
           signed by yourself. The written freeze is what stops the scope creep that kills this plan.</li>
           <li><strong>Create the schema.</strong> geo_id, price_type, area_basis, sample_size, observed_date,
           source_ref, confidence, stale_after_days, conflict_flag. All mandatory from record one.</li>

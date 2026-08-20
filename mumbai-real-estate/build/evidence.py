@@ -358,6 +358,21 @@ TICKET_MIX = [
     ("Rental — residential",           0.15,    900_000, 0.0800, 15),  # consideration = annualised rent
 ]
 
+
+def blended():
+    """Share-weighted average consideration and the blended commission rate.
+
+    Single source of truth: the report, the deck, the CSVs and the workbook all
+    read the rate from here so no artefact can quote a different number.
+    """
+    consid = sum(sh * c for _, sh, c, _, _ in TICKET_MIX)
+    comm = sum(sh * c * r for _, sh, c, r, _ in TICKET_MIX)
+    return consid, comm / consid
+
+
+BLENDED_CONSIDERATION, BLENDED_RATE = blended()
+BLENDED_RATE_LABEL = f"{BLENDED_RATE * 100:.2f}%"
+
 # Year-1 cost base, single founder, Eastern corridor pilot (Rs)
 COST_BASE = [
     # line, one-off, monthly, note
@@ -404,7 +419,7 @@ GANTT = [
     ("Compliance & certification",        "compliance", 1,  2,  "Certificate of Competency + MahaRERA ID issued"),
     ("Entity, tax & data governance",     "compliance", 1,  2,  "GST/TDS position confirmed; DPDP notice+consent live"),
     ("Schema, IDs & source registry",     "system",     1,  2,  "No fact without geo_id + source_ref + observed_date"),
-    ("Corridor selection & market tree",  "research",   1,  2,  "5 localities, 20–30 pockets locked; no expansion"),
+    ("Corridor selection & market tree",  "research",   1,  2,  "6 localities, 20–30 pockets locked; no expansion"),
     ("Deep desk research — Phase 1",      "research",   2,  5,  ">=80% source completeness on Phase-1 field set"),
     ("Field intelligence programme",      "field",      2,  6,  ">=3 independent field inputs per locality"),
     ("Price truth & comparable engine",   "research",   3,  5,  "Registered / asking / RR separated with n and basis"),
@@ -432,7 +447,7 @@ PILOT_90 = [
      "20-hour training underway; DPDP notice, consent text and retention policy drafted",
      "No regulated marketing until certificate issued", 12),
     (2,  "research", "Corridor lock",
-     "One corridor; 5 localities; 20–30 pockets named and mapped on verified boundaries",
+     "One corridor; 6 localities; 20–30 pockets named and mapped on verified boundaries",
      "Geography frozen for 90 days — written and dated", 30),
     (3,  "research", "Statutory project register",
      "MahaRERA extract per project: promoter, RERA id, status, QPR, possession date",
@@ -720,3 +735,78 @@ CORRECTIONS = [
      "'Divide the work' means naming the hours. A plan that does not fit inside a week is not a "
      "plan.", "model"),
 ]
+
+# ===========================================================================
+# ECONOMICS CORE — shared by the playbook, the figures, the CSVs and the deck.
+# Kept here so no artefact can quote a commission, a cost base, a cash trough
+# or a capital requirement that disagrees with another artefact.
+# ===========================================================================
+
+ONE_OFF  = sum(a for _, a, _, _ in COST_BASE)          # Rs, one-time setup
+MONTHLY  = sum(m for _, _, m, _ in COST_BASE)          # Rs/month incl. drawings
+DRAWINGS = 60_000                                       # Rs/month founder living
+OPEX     = MONTHLY - DRAWINGS                           # Rs/month business cost
+
+
+def commission_for(n_closures):
+    """Gross commission (Rs) for n closures at the modelled segment mix."""
+    return sum(n_closures * share * consid * rate
+               for _, share, consid, rate, _ in TICKET_MIX)
+
+
+def income_tax(profit):
+    """FY2025-26 new-regime individual slabs + 4% cess. Indicative only."""
+    slabs = [(400_000, 0.00), (800_000, 0.05), (1_200_000, 0.10), (1_600_000, 0.15),
+             (2_000_000, 0.20), (2_400_000, 0.25), (float("inf"), 0.30)]
+    tax, last = 0.0, 0.0
+    for cap, rate in slabs:
+        if profit > last:
+            tax += (min(profit, cap) - last) * rate
+        last = cap
+    return tax * 1.04
+
+
+# Closure schedules, 24 months. Month 1-4 produce nothing: registration,
+# certification and corridor research come before any commission.
+SCHEDULE_BASE = [0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3,
+                 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5]
+SCHEDULE_CONS = [0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1,
+                 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3]
+
+
+def cash_curve(closures, lag=1.5):
+    """Cumulative cash (Rs) from a standing start, before any outside funding."""
+    per = commission_for(1)
+    inflow = [0.0] * len(closures)
+    for i, c in enumerate(closures):
+        j = int(round(i + lag))
+        if j < len(inflow):
+            inflow[j] += c * per * 0.98          # net of 2% TDS at source
+    out = [float(OPEX + DRAWINGS)] * len(closures)
+    out[0] += ONE_OFF
+    cum, running = [], 0.0
+    for i in range(len(closures)):
+        running += inflow[i] - out[i]
+        cum.append(running)
+    return cum
+
+
+def trough(closures, lag=1.5):
+    """The cash trough — the number that actually sets the capital requirement."""
+    return min(cash_curve(closures, lag))
+
+
+TROUGH_BASE = trough(SCHEDULE_BASE)
+TROUGH_CONS = trough(SCHEDULE_CONS)
+CAPITAL     = abs(TROUGH_CONS) * 1.4     # conservative trough plus 40% headroom
+
+N_CONS, N_BASE, N_STRETCH = FUNNEL_STAGES[-1][1], FUNNEL_STAGES[-1][2], FUNNEL_STAGES[-1][3]
+GROSS_CONS, GROSS_BASE, GROSS_STRETCH = (commission_for(N_CONS),
+                                         commission_for(N_BASE),
+                                         commission_for(N_STRETCH))
+
+
+def post_tax(n_closures):
+    """Year-1 cash to the founder after operating cost, setup and income tax."""
+    profit = commission_for(n_closures) - OPEX * 12 - ONE_OFF
+    return profit - income_tax(max(profit, 0.0))

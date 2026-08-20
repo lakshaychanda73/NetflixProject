@@ -14,36 +14,12 @@ CR = 10_000_000      # one crore
 
 
 # ------------------------------------------------------------------ model --
-def commission_for(n_closures):
-    """Gross commission (Rs) for n closures at the modelled segment mix."""
-    tot = 0.0
-    for seg, share, consid, rate, lag in E.TICKET_MIX:
-        tot += n_closures * share * consid * rate
-    return tot
-
-
-def blended():
-    consid = sum(sh * c for _, sh, c, _, _ in E.TICKET_MIX)
-    comm = sum(sh * c * r for _, sh, c, r, _ in E.TICKET_MIX)
-    return consid, comm / consid
-
-
-ONE_OFF = sum(a for _, a, _, _ in E.COST_BASE)
-MONTHLY = sum(m for _, _, m, _ in E.COST_BASE)
-DRAWINGS = 60_000
-OPEX = MONTHLY - DRAWINGS
-
-
-def income_tax(profit):
-    """FY2025-26 new-regime individual slabs + 4% cess. Indicative only."""
-    slabs = [(400_000, 0.00), (800_000, 0.05), (1_200_000, 0.10), (1_600_000, 0.15),
-             (2_000_000, 0.20), (2_400_000, 0.25), (float("inf"), 0.30)]
-    tax, last = 0.0, 0.0
-    for cap, rate in slabs:
-        if profit > last:
-            tax += (min(profit, cap) - last) * rate
-        last = cap
-    return tax * 1.04
+# Every economic quantity comes from evidence.py so the report, the figures,
+# the CSVs, the workbook and the deck cannot drift apart.
+commission_for = E.commission_for
+blended        = E.blended
+income_tax     = E.income_tax
+ONE_OFF, MONTHLY, DRAWINGS, OPEX = E.ONE_OFF, E.MONTHLY, E.DRAWINGS, E.OPEX
 
 
 # ---------------------------------------------------------------- D1 -------
@@ -155,7 +131,7 @@ def fig_unit_economics():
     tds = gross * 0.02
     steps = [
         ("Average consideration", consid, BLUE_RAMP[1], "the flat's price"),
-        ("Commission at 1.33%", gross, BLUE, "blended across the segment mix"),
+        (f"Commission at {rate*100:.2f}%", gross, BLUE, "blended across the segment mix"),
         ("GST added, 18%", gst, GRID, "collected from client, remitted"),
         ("TDS withheld, 2%", -tds, WARN, "recoverable against income tax"),
         ("Cash on receipt", gross - tds, GOOD, "what actually lands in the bank"),

@@ -2,7 +2,7 @@ week,workstream,primary_goal,output,gate_or_kpi,planned_hours
 1,compliance,Legal right to operate,"MahaRERA application filed; training slot booked; entity, PAN/TAN, bank; CA engaged",Application reference number in hand,40
 1,system,Schema v1,Geo hierarchy L0–L6; price_type and area_basis enums; source registry; immutable IDs,Every fact requires geo_id + source_ref + observed_date,15
 2,compliance,Certification in progress,"20-hour training underway; DPDP notice, consent text and retention policy drafted",No regulated marketing until certificate issued,12
-2,research,Corridor lock,One corridor; 5 localities; 20–30 pockets named and mapped on verified boundaries,Geography frozen for 90 days — written and dated,30
+2,research,Corridor lock,One corridor; 6 localities; 20–30 pockets named and mapped on verified boundaries,Geography frozen for 90 days — written and dated,30
 3,research,Statutory project register,"MahaRERA extract per project: promoter, RERA id, status, QPR, possession date",100% of in-scope projects have a RERA record or an explicit 'not registered' flag,34
 3,system,Data health harness,stale_after_days per domain; conflict_flag; confidence; freshness dashboard,"Dashboard renders on real records, not samples",10
 4,research,Price truth,Registered (IGR) vs asking (portal) vs Ready Reckoner — each with area basis and n,Zero blended price types; every aggregate shows n,32
