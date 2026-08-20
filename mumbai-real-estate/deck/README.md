@@ -4,6 +4,7 @@
 |---|---|
 | `out/Brickrock_Realty_Pitch_Deck.pdf` | **The deck.** Exactly 12 slides, true 16:9 (960 × 540 pt). |
 | `out/Brickrock_Deck_Diligence_Index.pdf` | 3-page appendix mapping every claim on every slide to its page in the playbook. |
+| `out/Brickrock_Presenter_Brief.pdf` | 14-page speaking brief — one page per slide: what to say, the number to land, the likely questions. |
 
 Both are compressed from the 60-page *Mumbai Real Estate Master Playbook* in
 `../report/`. The playbook is the research database; the deck is the argument.
@@ -104,7 +105,7 @@ against South Mumbai, and no tourist Jaipur.
 
 ```bash
 cd build
-make all        # figures + deck PDF + diligence index PDF
+make all        # figures + deck + diligence index + presenter's brief
 ```
 
 or individually:
@@ -113,6 +114,7 @@ or individually:
 python3 fig_deck.py      # -> ../figures/s*.png
 python3 build_deck.py    # -> ../out/deck.html
 python3 build_index.py   # -> ../out/diligence_index.html
+python3 build_notes.py   # -> ../out/presenter_brief.html
 ```
 
 ## Design notes
