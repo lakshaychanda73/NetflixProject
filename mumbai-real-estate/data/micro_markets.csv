@@ -1,0 +1,19 @@
+micro_market,corridor,asking_psf_low,asking_psf_high,rent_2bhk_month,gross_yield_low_pct,gross_yield_high_pct,infra_score,note,confidence,source_id
+Powai,Eastern/Central,28000,42000,78000,2.6,3.4,9,IT/GCC catchment; Metro 6 alignment,low,SRC-027/SRC-028
+Kanjurmarg,Eastern/Central,24000,31000,58000,2.8,3.6,9,Metro 6 + JVLR; large redevelopment pipeline,low,SRC-027/SRC-028
+Vikhroli,Eastern/Central,22000,30000,60000,2.8,3.6,8,Godrej land bank; Eastern Express Highway,low,SRC-027/SRC-028
+Bhandup,Eastern/Central,18000,24000,42000,3.0,3.8,7,Value corridor; Metro 6 terminus vicinity,low,SRC-027/SRC-028
+Mulund,Eastern/Central,19000,26000,48000,2.9,3.7,8,Thane–Borivali tunnel catchment,low,SRC-027/SRC-028
+Ghatkopar,Eastern/Central,20000,28000,52000,2.9,3.7,8,Metro 1 + Metro 2B interchange,low,SRC-027/SRC-028
+Chembur,Eastern/Central,24000,36000,62000,2.5,3.3,8,"Monorail, Metro 2B, EEH; conflict in portal ranges",low,SRC-027/SRC-028
+Wadala,Harbour,26000,34000,60000,2.4,3.2,8,Monorail; Eastern Waterfront redevelopment,low,SRC-027/SRC-028
+Thane (Pokhran/Kolshet),Thane,17000,24000,42000,3.2,4.2,8,Metro 4; Thane–Borivali tunnel,low,SRC-027/SRC-028
+Thane (Ghodbunder),Thane,12000,18000,32000,3.5,4.6,7,Metro 4A; corridor congestion risk,low,SRC-027/SRC-028
+Airoli,Navi Mumbai,21000,23000,40000,3.4,4.4,8,Thane–Belapur belt; office catchment,low,SRC-027/SRC-028
+Kharghar,Navi Mumbai,19000,21000,34000,3.4,4.5,10,NMIA + Metro 8 proposal; strong price momentum,low,SRC-027/SRC-028
+Panvel,Navi Mumbai,13000,17000,24000,3.6,4.8,10,NMIA proximity; Atal Setu,low,SRC-027/SRC-028
+Andheri E (Western),Western,28000,40000,72000,2.5,3.2,9,Metro 1/2A/7; airport catchment,low,SRC-027/SRC-028
+Goregaon/Malad,Western,24000,34000,58000,2.5,3.3,8,Metro 2A/7; Coastal Road Phase 2,low,SRC-027/SRC-028
+Borivali,Western,22000,30000,50000,2.6,3.4,8,Metro 7; Thane–Borivali tunnel,low,SRC-027/SRC-028
+Lower Parel/Worli,South-Central,45000,75000,150000,1.8,2.6,8,Metro 3 fully operational; Coastal Road,low,SRC-027/SRC-028
+South Mumbai (core),South Mumbai,55000,110000,200000,1.5,2.4,7,Metro 3 terminus; thin transaction depth,low,SRC-027/SRC-028

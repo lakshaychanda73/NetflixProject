@@ -1,0 +1,11 @@
+asset,catchment,status,milestone,target,confidence,source_id,scoring_weight
+Metro Line 3 (Aqua),South/Central/Western,operational,33.5 km fully commissioned 8 Oct 2025,Done,high,SRC-007,1.0
+Navi Mumbai Int'l Airport,Navi Mumbai,operational,Domestic 25 Dec 2025; 24x7 Feb 2026; international live 2026,Ramping,high,SRC-010,1.0
+Atal Setu (MTHL),Navi Mumbai/Harbour,operational,Operational; re-pricing Navi Mumbai and Raigad,Done,high,SRC-029,1.0
+Metro Line 4 / 4A,Thane/Eastern,commissioning,Thane Cadbury Jn–Gaimukh 10.5 km phased opening,2026,medium,SRC-029,0.75
+Metro Line 2B,Western/Eastern link,commissioning,DN Nagar–Saraswat Nagar western section,Mid-2026,medium,SRC-009,0.75
+Metro Line 6 (Pink),Eastern/Central (JVLR),under_construction,15.31 km; station works 79.63% at 30 Dec 2025,Mid-2026,high,SRC-008,0.6
+Coastal Road Phase 2,Western,under_construction,Bandra–Kandivali ~19 km,May 2026 target,medium,SRC-029,0.6
+Thane–Borivali Twin Tunnel,Thane/Western,under_construction,Major milestone Dec 2025,2028+,medium,SRC-029,0.45
+Metro Line 8 (Gold),Navi Mumbai/Airport link,approved,"CSMIA–NMIA 35 km, PPP approved late 2025",2030+,medium,SRC-029,0.3
+Virar–Alibaug Corridor,Outer MMR,approved,"126 km, 14-lane, MSRDC; part MCZMA clearance",2030+,medium,SRC-029,0.25

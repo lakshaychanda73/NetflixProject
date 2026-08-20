@@ -1,0 +1,8 @@
+criterion_key,criterion,weight,rationale
+deal_flow,Transaction depth,0.2,Registered transaction volume the corridor actually produces
+infra,Infrastructure catalyst,0.16,"Operational-weighted, not announcement-weighted"
+entry_cost,Entry cost (inverse),0.14,"Lower ticket = faster first closure, lower client risk"
+data_access,Data accessibility,0.12,RERA/IGR coverage and pocket-level observability
+rental_depth,Rental depth,0.12,Second revenue line and lead nursery
+whitespace,Competitive whitespace,0.12,Advisory-grade competitors per pocket
+execution,Execution simplicity,0.14,"Founder travel time, site access, broker reachability"

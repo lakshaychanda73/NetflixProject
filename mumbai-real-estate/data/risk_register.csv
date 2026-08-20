@@ -1,0 +1,15 @@
+risk,likelihood_1_5,impact_1_5,severity,early_warning,control,owner_phase
+Marketing before certification,3,5,15,"Any ad, brief or listing published pre-certificate",Hard compliance gate at week 6; no campaign asset leaves the folder before the MahaRERA number and QR code exist,Month 1–2
+Price-basis contamination,4,4,16,A single number compared against another without a declared basis,area_basis and price_type mandatory NOT NULL; comparisons blocked across bases in the workbook,Month 1
+Founder overload crowds out selling,5,4,20,Zero qualified leads by end of month 3,"Hard cap of 20 h/week research after month 4; the workload model is a budget, not a description",Month 3–6
+Revenue arrives later than runway,4,5,20,Month 6 with no closure and no offer on the table,12-month runway funded before start; rental desk switched on by month 6 to cover fixed costs,Month 4–8
+Portal dependence and ToU breach,3,3,9,"Listings vanish, duplicates rise, or a scraping notice arrives",Manual/permitted collection only; own field observations and closed deals become the primary asset,Continuous
+DPDP non-compliance on lead data,3,4,12,"KYC or contact data held without notice, consent or retention limit",Notice + consent at first capture; minimum-necessary collection; documented retention and deletion,Month 1–2
+Infrastructure narrative slips,4,3,12,A target date moves twice,Status ladder with slippage_months; only operational assets carry full weight in scoring,Continuous
+Commission dispute or non-payment,3,4,12,Client or developer disputes entitlement after closure,Written terms before every engagement; documented introduction trail; payout-days tracked per counterparty,Per deal
+Developer payout concentration,3,3,9,One developer above 40% of pipeline commission,Concentration tracked monthly; co-broking and resale kept live alongside primary,Month 6+
+Legal/title misstatement to a client,2,5,10,Advice given beyond the verified record,Title opinions only from qualified counsel; unknowns flagged as unknown in writing,Per deal
+Lead-quality illusion,4,3,12,"High enquiry count, few site visits","Qualified lead is the KPI, defined by budget + timeline + decision authority + area fit",Month 3+
+Data staleness erodes credibility,3,3,9,A client finds a number that moved and you did not know,stale_after_days per domain; freshness shown on every client-facing screen,Continuous
+Expansion before the model repeats,3,4,12,Corridor 2 opened while corridor 1 still needs the founder in every deal,Expansion gate: corridor 1 must produce closures without founder presence in every step,Month 8+
+Key-person illness or interruption,2,4,8,Single point of failure across all six workstreams,Written playbooks from day one; every process documented so it can be handed over,Continuous

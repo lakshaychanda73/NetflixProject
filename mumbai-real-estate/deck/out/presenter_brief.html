@@ -1,0 +1,383 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Brickrock Realty · Presenter's brief</title>
+<style>
+@page { size: 297mm 210mm; margin: 0; }
+:root{
+  --light:#FAFAF7; --card:#FFFFFF; --cardalt:#F2F1EC;
+  --ink:#10131A; --ink2:#4C5361; --muted:#8C93A0; --hair:#E4E3DC; --rule:#CFCEC5;
+  --orange:#E8722C; --orange-d:#B8511A; --blue:#2D6FCB; --green:#0E9E5E; --purple:#7B4FD6;
+  --dark:#0F1621; --dark2:#18202D; --dink:#FFFFFF; --dink2:#A9B4C4; --dmuted:#6B7889;
+  --dhair:#242E3D;
+}
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:#fff; }
+body{ font-family:"Inter","Liberation Sans",sans-serif; color:var(--ink);
+      font-size:9pt; line-height:1.5;
+      -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.page{ position:relative; width:297mm; height:210mm; overflow:hidden;
+       page-break-after:always; break-after:page;
+       background:var(--light); padding:12mm 14mm 11mm 14mm; }
+.page:last-child{ page-break-after:auto; }
+.page.dark{ background:var(--dark); color:var(--dink); }
+.kick{ font-size:7pt; font-weight:800; letter-spacing:.18em; text-transform:uppercase;
+       color:var(--orange); margin-bottom:2.5mm; }
+h1{ margin:0; font-size:15.5pt; line-height:1.2; letter-spacing:-.015em; font-weight:700;
+    max-width:250mm; }
+.dark h1{ color:var(--dink); }
+.job{ margin:2.6mm 0 0 0; font-size:8.6pt; line-height:1.45; color:var(--ink2); }
+.job b{ color:var(--orange-d); font-weight:800; letter-spacing:.08em;
+        text-transform:uppercase; font-size:6.8pt; margin-right:2mm; }
+.rule{ height:0.8pt; background:var(--rule); margin:4.5mm 0 4.5mm 0; }
+.page:first-child .rule{ margin:3.4mm 0 3.4mm 0; }
+.brand{ position:absolute; bottom:6mm; left:14mm; font-size:6.4pt; font-weight:700;
+        letter-spacing:.16em; color:var(--muted); }
+.dark .brand{ color:var(--dmuted); }
+.pnum{ position:absolute; bottom:6mm; right:14mm; font-size:6.4pt; color:var(--muted); }
+.dark .pnum{ color:var(--dmuted); }
+
+.row{ display:flex; gap:9mm; }
+.col{ flex:1; min-width:0; }
+h4{ margin:0 0 2.4mm 0; font-size:6.8pt; font-weight:800; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--muted); }
+
+/* the script */
+.say p{ margin:0 0 3.1mm 0; font-size:10.2pt; line-height:1.52; color:var(--ink); }
+.say p:first-child{ font-weight:600; }
+
+/* right rail */
+.big{ background:var(--card); border:0.8pt solid var(--hair); border-left:1.8mm solid var(--orange);
+      border-radius:2.4mm; padding:4mm 4.5mm; margin-bottom:5mm; }
+.big .v{ font-size:22pt; font-weight:700; line-height:1.05; letter-spacing:-.02em; }
+.big .l{ font-size:7.4pt; color:var(--ink2); margin-top:1.8mm; line-height:1.4; }
+.qa{ margin-bottom:4mm; }
+.qa .q{ font-size:8pt; font-weight:700; color:var(--ink); line-height:1.4;
+        margin-bottom:1.4mm; }
+.qa .q:before{ content:"Q  "; color:var(--blue); font-weight:800; }
+.qa .a{ font-size:7.6pt; line-height:1.5; color:var(--ink2); padding-left:4.4mm;
+        border-left:0.8pt solid var(--hair); }
+.trap{ background:#FCF3EC; border:0.8pt solid var(--orange); border-radius:2.4mm;
+       padding:3.4mm 4mm; font-size:7.6pt; line-height:1.5; color:var(--ink2); }
+.trap b{ display:block; font-size:6.6pt; font-weight:800; letter-spacing:.14em;
+         text-transform:uppercase; color:var(--orange-d); margin-bottom:1.6mm; }
+
+/* cover */
+.lede{ font-size:10pt; line-height:1.45; color:var(--ink2); max-width:200mm;
+       margin:3mm 0 0 0; }
+.dark .lede{ color:var(--dink2); }
+.card{ background:var(--card); border:0.8pt solid var(--hair); border-radius:2.4mm;
+       padding:5mm 5.5mm; }
+.dark .card{ background:var(--dark2); border-color:var(--dhair); }
+.card h3{ margin:0 0 2.6mm 0; font-size:10pt; font-weight:700; }
+.dark .card h3{ color:var(--dink); }
+.card p{ margin:0 0 2.4mm 0; font-size:8.2pt; line-height:1.5; color:var(--ink2); }
+.dark .card p{ color:var(--dink2); }
+.quote{ font-size:11.5pt; line-height:1.35; font-weight:600; color:var(--ink);
+        border-left:1.6mm solid var(--orange); padding-left:5mm; margin:0 0 4mm 0; }
+.dark .quote{ color:var(--dink); }
+table{ width:100%; border-collapse:collapse; }
+td{ padding:1.05mm 2mm 1.05mm 0; font-size:8pt; line-height:1.45; color:var(--ink2);
+    border-bottom:0.5pt solid var(--hair); vertical-align:top; }
+.dark td{ color:var(--dink2); border-bottom-color:var(--dhair); }
+td.n{ width:9mm; font-weight:800; color:var(--orange); }
+td.t{ width:52mm; font-weight:700; color:var(--ink); }
+.dark td.t{ color:var(--dink); }
+td.s{ width:16mm; color:var(--muted); white-space:nowrap; }
+.hq{ margin-bottom:5mm; }
+.hq .q{ font-size:10pt; font-weight:700; color:var(--ink); margin-bottom:1.8mm; }
+.hq .a{ font-size:8.4pt; line-height:1.55; color:var(--ink2); padding-left:5mm;
+        border-left:1.2mm solid var(--blue); }
+</style></head><body>
+<div class="page ">
+  <div class="kick">Presenter's brief · Brickrock Realty</div>
+  <h1>What to say on each of the twelve slides</h1>
+  <div class="lede">One page per slide. The script is written to be spoken, not read —
+  short sentences, because long ones collapse under pressure. Say it in your own words;
+  the job is to land the one number and the one idea on each page.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.35">
+      <h4>The twelve slides &middot; 11 min 45 s of speaking</h4>
+      <table><tr><td class="n">01</td><td class="t">Opening</td><td class="s">~55s</td><td>Establish that the market is real, liquid and badly served — in that order.</td></tr><tr><td class="n">02</td><td class="t">The customer's problem</td><td class="s">~60s</td><td>Make the pain specific. Six real questions beat any amount of 'the market is opaque'.</td></tr><tr><td class="n">03</td><td class="t">What Brickrock is</td><td class="s">~55s</td><td>Stop them mis-categorising you. Precision here buys credibility for everything after.</td></tr><tr><td class="n">04</td><td class="t">How it works</td><td class="s">~50s</td><td>Show this is an operating system you already know how to run, not an intention.</td></tr><tr><td class="n">05</td><td class="t">Where we start</td><td class="s">~65s</td><td>Prove the geography was chosen, not assumed. This is the slide that shows you think.</td></tr><tr><td class="n">06</td><td class="t">Customer–market fit</td><td class="s">~55s</td><td>Show you know who actually pays, and that you have read your own revenue mix.</td></tr><tr><td class="n">07</td><td class="t">Competitive positioning</td><td class="s">~55s</td><td>Pre-empt 'isn't this crowded?' before they ask it.</td></tr><tr><td class="n">08</td><td class="t">The moat</td><td class="s">~55s</td><td>Answer 'what is defensible here?' with something physical, not a slogan.</td></tr><tr><td class="n">09</td><td class="t">Business model and economics</td><td class="s">~60s</td><td>Prove you can count, and that you know which of your numbers are guesses.</td></tr><tr><td class="n">10</td><td class="t">Go to market</td><td class="s">~55s</td><td>Show demand is solvable without a marketing budget you do not have.</td></tr><tr><td class="n">11</td><td class="t">Capital and the proof</td><td class="s">~65s</td><td>Make the ask small, specific and — most importantly — testable.</td></tr><tr><td class="n">12</td><td class="t">Founder and the long arc</td><td class="s">~75s</td><td>Make them believe you specifically. Then show where this ends.</td></tr></table>
+    </div>
+    <div class="col">
+      <h4>Open with this</h4>
+      <div class="quote">&ldquo;Mumbai has no shortage of property data. It has a shortage
+      of decision-grade advice. I am going to show you a business that sells the second
+      thing.&rdquo;</div>
+      <h4>Close with this</h4>
+      <div class="quote">&ldquo;I am not asking you to believe a forecast. I am asking you
+      to fund ninety days that will tell us both whether the forecast is real.&rdquo;</div>
+      <div class="card">
+        <h3>Three rules for the room</h3>
+        <p><strong>1. Never upgrade the business.</strong> No &lsquo;platform&rsquo;, no
+        &lsquo;AI&rsquo;, no &lsquo;tech-enabled&rsquo;. Slide 3 spends its whole life
+        killing that framing — do not hand it back verbally.</p>
+        <p><strong>2. Never claim the family land.</strong> If anyone says
+        &lsquo;so you have 310 acres&rsquo;, the answer is: <em>my family does, I do not.
+        That is context, not my balance sheet.</em></p>
+        <p><strong>3. Volunteer the weak numbers.</strong> Say GST is not revenue. Say
+        drawings are the biggest cost. Say which figures are assumptions. Every one of
+        those buys credibility you cannot get any other way.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col"><h4>If you have five minutes</h4>
+      <div class="job">Slides <b style="color:var(--ink)">1 · 3 · 5 · 9 · 12</b>.
+      The problem, what the business is, why this corridor, the economics, and you.</div></div>
+    <div class="col"><h4>If you have fifteen</h4>
+      <div class="job">All twelve, roughly a minute each. Do not over-run slide 4 —
+      it is the easiest one to lose the room on.</div></div>
+    <div class="col"><h4>If they want to go deep</h4>
+      <div class="job">Hand them the 3-page diligence index. Every claim on every slide
+      maps to a page in the 60-page playbook.</div></div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">1 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 01 &middot; Opening &middot; about 55 seconds</div>
+  <h1>&ldquo;Mumbai has no shortage of property data. It has a shortage of decision-grade advice.&rdquo;</h1>
+  <div class="job"><b>The job</b>Establish that the market is real, liquid and badly served — in that order.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>Mumbai registers about thirteen thousand property transactions a month.</p><p>In the first half of this year: eighty thousand registrations. Six thousand nine hundred crore in stamp duty. The best half-year since 2013.</p><p>Every one of those is a public document. Dated. Free to look up.</p><p>At the same time — one lakh fifty-seven thousand unsold flats. The largest pile in India. Six and a half quarters to clear it.</p><p>So the market is busy and oversupplied at the same time. That is exactly when advice is worth paying for.</p><p>And there are forty-two thousand registered agents in Maharashtra. Almost none of them work from that record.</p><p>Mumbai does not have a data problem. It has an advice problem.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">42,865</div><div class="l">registered agents — almost none using the registered record</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">Isn't an oversupplied market bad news for a broker?</div><div class="a">The opposite. In a market that clears in two quarters, anything sells and advice is worthless. At six and a half quarters, choosing correctly is the entire job.</div></div><div class="qa"><div class="q">Isn't all of this already on the portals?</div><div class="a">The asking price is. The registered price is not, and that is the number that settles a negotiation.</div></div>
+      <div class="trap"><b>Watch out</b>Do not say 'disrupt', 'platform' or 'tech-enabled'. You spend slide 3 killing that framing — do not hand it back on slide 1.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">2 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 02 &middot; The customer's problem &middot; about 60 seconds</div>
+  <h1>&ldquo;A ₹2.3 crore decision, made on an asking price and a brochure.&rdquo;</h1>
+  <div class="job"><b>The job</b>Make the pain specific. Six real questions beat any amount of 'the market is opaque'.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>Here is what actually happens.</p><p>Someone is about to spend two point three crore. Six questions decide whether that is a good deal or a bad one.</p><p>Is this asking price above or below what flats in this building actually registered for?</p><p>Is that eleven-fifty square feet carpet, built-up or saleable? Get that wrong and your price per square foot is off by twenty to thirty percent.</p><p>Has this builder ever delivered on time?</p><p>Will the society clear my loan, my tenant, my renovation?</p><p>What is the commute really like at nine on a Tuesday?</p><p>And if I need to sell in three years — who buys this?</p><p>A portal answers none of them.</p><p>None of this is secret. All of it is public. It just never reaches the buyer before the cheque is written.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">20–30%</div><div class="l">the error in ₹/sq ft from one wrong area basis</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">Don't good brokers already do this?</div><div class="a">Some do it in their head. Almost none do it in writing, and none of them keep the record afterwards. That is the difference.</div></div><div class="qa"><div class="q">Which of the six matters most?</div><div class="a">The first one. Every other question changes the price by a few percent. The registered comparable changes whether you are overpaying at all.</div></div>
+      <div class="trap"><b>Watch out</b>Do not rush this slide. It is the only one where the investor pictures themselves as the customer. Ask the six questions slowly and let them land.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">3 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 03 &middot; What Brickrock is &middot; about 55 seconds</div>
+  <h1>&ldquo;One business. One revenue line. One by-product that compounds.&rdquo;</h1>
+  <div class="job"><b>The job</b>Stop them mis-categorising you. Precision here buys credibility for everything after.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>Let me be precise about what this is, because the temptation in this category is to oversell.</p><p>Brickrock is a micro-market advisory and brokerage desk.</p><p>I do the advisory work. Research, comparables, shortlists, diligence, site visits, negotiation. I am not paid for any of it.</p><p>I am paid once — when the client transacts. One point three two percent, blended across resale, primary and rental.</p><p>That is the only revenue line. No subscription. No retainer. No licence.</p><p>What I keep is the record. Closed price against asking. Why offers failed. Society rules. The real commute.</p><p>That costs nothing to capture, and it compounds.</p><p>This is not a portal. Not a SaaS product. Not an AI platform. Not a technology company.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">1.32%</div><div class="l">blended commission — the only revenue line</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">Why not build the software and sell it to other brokers?</div><div class="a">Because the data has no value without the transactions that generate it, and every Indian real-estate data tool is competing on the same public sources. The commission is the business. The record is the moat.</div></div><div class="qa"><div class="q">So you're just a broker?</div><div class="a">Yes. A broker who does the work in writing and keeps the evidence. That is a smaller claim than most people in this category make, and it is one I can actually defend.</div></div>
+      <div class="trap"><b>Watch out</b>Never soften the 'what it is not' list to sound more ambitious. That list is why the rest of the deck is believed.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">4 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 04 &middot; How it works &middot; about 50 seconds</div>
+  <h1>&ldquo;Seven steps, one loop, and an evidence layer that is a working tool — not a product.&rdquo;</h1>
+  <div class="job"><b>The job</b>Show this is an operating system you already know how to run, not an intention.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>Seven steps. And the seventh feeds back into the first.</p><p>Acquire. Qualify. Shortlist. Site visit. Negotiate. Transact. Capture.</p><p>Capture is the step everyone skips. Closed price. Objections. The referral ask.</p><p>Underneath sits the evidence layer.</p><p>Registered prices from IGR, normalised to one area basis. The RERA project register, with each builder's real delivery record. A pocket file — society rules, timed commutes. Supply and rent. And my own deal record.</p><p>Each one feeds specific steps in the loop.</p><p>That layer is a spreadsheet and a CRM. It is never sold, never licensed, and never shown to anyone as a platform.</p><p>It exists to win the mandate and hold the line in a negotiation. That is all.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">7 → 1</div><div class="l">the loop closes; every deal makes the next shortlist better</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">How is a spreadsheet a moat?</div><div class="a">The spreadsheet is not. What goes into it is — and the only way to fill it is to transact.</div></div><div class="qa"><div class="q">What happens when you have more work than one person can do?</div><div class="a">The loop is the training document. Step three and step five are the two that need judgement; the rest is process. That is what makes a second person hireable.</div></div>
+      <div class="trap"><b>Watch out</b>Do not walk all seven steps one by one — you will lose the room. Name them fast, then spend your time on capture and on the evidence layer.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">5 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 05 &middot; Where we start &middot; about 65 seconds</div>
+  <h1>&ldquo;Six localities on one spine, chosen by a model that survives being wrong.&rdquo;</h1>
+  <div class="job"><b>The job</b>Prove the geography was chosen, not assumed. This is the slide that shows you think.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>One corridor. Six localities. All on one spine.</p><p>Mulund. Bhandup. Kanjurmarg. Powai. Vikhroli. Ghatkopar.</p><p>The Eastern Express Highway and JVLR, with Metro Line 6 running through it.</p><p>End to end inside an hour. For one person, travel time is the binding constraint — not market size.</p><p>Entry runs from eighteen thousand a square foot in Bhandup to forty-two thousand in Powai. Gross yields two point six to three point eight.</p><p>I chose it with seven weighted criteria, applied identically to every corridor in MMR. Eastern and Central scores eight point zero zero.</p><p>Then I tested whether that survives being wrong. Five thousand randomised weightings, every weight moved fifty percent either way. It stays first ninety-nine percent of the time.</p><p>Navi Mumbai and Western tie at seven point four eight. The model cannot separate them. So I say so, rather than invent a third decimal.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">99%</div><div class="l">of 5,000 randomised weightings still rank it first</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">Why not the Western suburbs? More transactions there.</div><div class="a">Western wins transaction depth outright with a ten — and still finishes fourth. It scores four on competitive whitespace. That four is what a new entrant actually experiences on their first day of calling.</div></div><div class="qa"><div class="q">Six localities is very narrow. Isn't that limiting?</div><div class="a">Deliberately. Twenty to thirty pockets is roughly what one person can know at flat level in a year. Knowing six localities properly beats knowing the city vaguely.</div></div>
+      <div class="trap"><b>Watch out</b>Do not say 'five localities'. It is six, and you name six. Getting your own corridor count wrong in the room undoes the whole slide.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">6 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 06 &middot; Customer–market fit &middot; about 55 seconds</div>
+  <h1>&ldquo;The buyer is already in the corridor — and 25% of closures pay 43% of the bills.&rdquo;</h1>
+  <div class="job"><b>The job</b>Show you know who actually pays, and that you have read your own revenue mix.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>The buyer is already living in this corridor.</p><p>The upgrader moving from a 2BHK to a 3BHK. The first-time buyer priced into five hundred to a thousand square feet.</p><p>That is not a guess. Eighty-one percent of Mumbai registrations are flats of a thousand square feet or less. And homes above one crore went from forty-nine to fifty-four percent of sales in a single year.</p><p>Small and expensive at the same time. That is a selection problem.</p><p>Now look at the mix.</p><p>Primary is twenty-five percent of my closures — and forty-three percent of my commission. The developer pays two percent instead of one.</p><p>Rental is fifteen percent of closures and four percent of revenue. It is not a revenue line. It is a lead nursery. Today's tenant is the buyer in eighteen months — and it pays the rent while I wait.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">25% → 43%</div><div class="l">share of closures → share of commission, primary market</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">If primary pays double, why not do only primary?</div><div class="a">Because primary is where the conflict of interest lives. Resale is where trust gets built, and the referrals come out of resale. Doing only primary turns me into a channel partner, which is the thing slide 7 says I am not.</div></div><div class="qa"><div class="q">Isn't rental a distraction?</div><div class="a">It is four percent of revenue and it covers fixed costs in month four, before the first resale closes. It buys time, and it fills the pipeline.</div></div>
+      <div class="trap"><b>Watch out</b>Do not present rental as a growth engine. Calling it a lead nursery is more honest and more persuasive.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">7 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 07 &middot; Competitive positioning &middot; about 55 seconds</div>
+  <h1>&ldquo;Everyone competes on inventory. Nobody competes on the decision.&rdquo;</h1>
+  <div class="job"><b>The job</b>Pre-empt 'isn't this crowded?' before they ask it.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>Two questions. How much of the market does someone show you. And how much of the decision do they carry.</p><p>Portals show you everything and carry none of it. They are paid by the listing — so stale and duplicate inventory is income, not a defect.</p><p>National brokerages have the primary inventory and the developer access. They are paid two to five percent by the developer. The buyer is never told which project pays best.</p><p>Local brokers have real pocket knowledge — held in one person's head. No written record, no continuity. The knowledge dies with the deal.</p><p>Brickrock sits deliberately narrow and high. Fewer properties. The decision carried.</p><p>Same commission, earned the same way.</p><p>What changes is that the recommendation comes with evidence — and a written reason for every property I rejected.</p><p>My competition is not the portals. It is those forty-two thousand agents.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">Narrow + high</div><div class="l">fewer properties shown, the whole decision carried</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">What stops a large brokerage doing exactly this?</div><div class="a">Nothing, except their economics. They need volume, and their salespeople are paid on transactions closed, not on decisions improved. Writing down why you rejected a flat slows a volume business down.</div></div><div class="qa"><div class="q">Isn't 'the decision' just what every broker claims?</div><div class="a">Every broker claims it. Almost none put it in writing, and a written reason for rejection is checkable afterwards. That is the test.</div></div>
+      <div class="trap"><b>Watch out</b>Do not attack the portals. They are useful, and dismissing them makes you sound defensive. Say what they are good at first.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">8 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 08 &middot; The moat &middot; about 55 seconds</div>
+  <h1>&ldquo;It is not the software. It is the transaction record that only we will hold.&rdquo;</h1>
+  <div class="job"><b>The job</b>Answer 'what is defensible here?' with something physical, not a slogan.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>Advise. Transact. Capture. Sharpen. Back to advise.</p><p>The loop costs nothing to run. It just requires doing the work.</p><p>Here is what builds up.</p><p>Closed prices — not asking prices — pocket by pocket, on one area basis.</p><p>The reason eleven buyers walked away. No public source anywhere records a transaction that did not happen.</p><p>The society file. Rules, real maintenance, parking reality. Collected building by building, on foot.</p><p>And a referral base that picks up the phone.</p><p>At month twelve that is fifteen closures and twenty-five pockets known at flat level. At year three it is a registered-price series for this corridor that nobody else built.</p><p>Someone with ten times my capital still starts that curve at zero. Because it is generated by transacting. You cannot buy it, licence it or scrape it.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">Year 3</div><div class="l">a price series for this corridor nobody else has built</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">Couldn't someone just scrape the IGR records?</div><div class="a">Anyone can pull registered prices. Nobody can pull why a buyer walked away, or what the society actually said in its last resolution. That half is only produced by being in the room.</div></div><div class="qa"><div class="q">How big does this get before it matters?</div><div class="a">It matters from about deal twenty, which is month fifteen. Before that I am buying the data with my own time. That is the honest position.</div></div>
+      <div class="trap"><b>Watch out</b>Do not call it 'proprietary data' and stop there. Name the four things — closed prices, failed deals, the society file, the referral base. Specific beats grand.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">9 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 09 &middot; Business model and economics &middot; about 60 seconds</div>
+  <h1>&ldquo;One revenue line at 1.32% blended — and almost no capital at risk.&rdquo;</h1>
+  <div class="job"><b>The job</b>Prove you can count, and that you know which of your numbers are guesses.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>Fifteen closures in the base case. Average deal two point three crore. One point three two percent blended.</p><p>Forty-five point seven lakh gross commission in year one.</p><p>Costs. Forty-nine thousand one-time — registration, certificate, entity, insurance. Thirty-five thousand a month to run the business. Sixty thousand a month drawings — the biggest line, and the fastest lever if runway gets tight.</p><p>After cost and tax: thirty-two point six lakh.</p><p>Conservative is seven closures — twenty-one lakh. Stretch is twenty-seven — eighty-two lakh.</p><p>Two points of honesty. GST at eighteen percent is a tax I collect from the client. It is not my revenue. And TDS of two percent is withheld at source and credited back against income tax.</p><p>And the conversion rates are assumptions. The ninety-day pilot exists to replace them with measured numbers.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">₹45.7 L</div><div class="l">gross commission, base case · ₹32.6 L after cost and tax</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">Is fifteen closures realistic for one person?</div><div class="a">It is a bit over one a month, out of nine hundred enquiries. The two numbers I am least sure of are qualified-lead rate and site-visit conversion — and those are the first two the pilot measures.</div></div><div class="qa"><div class="q">What if commission rates compress?</div><div class="a">A quarter-point off the blended rate takes about eight lakh off year one. It does not change the shape of the business, and it is the reason primary and rental are in the mix at all.</div></div>
+      <div class="trap"><b>Watch out</b>Volunteer the GST and TDS point before they raise it. Saying 'GST is not my revenue' unprompted is worth more than any slide on this deck.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">10 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 10 &middot; Go to market &middot; about 55 seconds</div>
+  <h1>&ldquo;The first hundred conversations come from work, not from spend.&rdquo;</h1>
+  <div class="job"><b>The job</b>Show demand is solvable without a marketing budget you do not have.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>Nine hundred enquiries. Two hundred and forty qualified. One hundred and ten site visits. Forty-five offers. Fifteen closures.</p><p>Now the channels, ranked by what a competitor cannot buy.</p><p>Referrals from closed clients: about three hundred rupees a qualified lead. But they take six to nine months to start.</p><p>Content and pocket briefs: nine hundred. Three to six months.</p><p>Society and RWA relationships: six hundred. Co-broking: twelve hundred.</p><p>Portal listings: four thousand two hundred. Paid ads: six thousand eight hundred. Both immediate. Both buyable by anyone with a credit card.</p><p>The cheap, defensible channels are the slow ones.</p><p>That is exactly why the first ninety days go into building them instead of buying leads.</p><p>And content is where the capability already exists. Four hundred and eighty thousand organic views on property explainers. Zero spend.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">₹300 vs ₹6,800</div><div class="l">cost per qualified lead — referral against paid advertising</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">So no leads for six months?</div><div class="a">No. Co-broking and society relationships produce inside four to eight weeks. The referral engine is what compounds after that, and it is why year two costs less to run than year one.</div></div><div class="qa"><div class="q">Why not just buy leads to get started?</div><div class="a">I will, selectively. But a business built on bought leads has no cost advantage in year three, and I would rather spend the ninety days on the channels that do.</div></div>
+      <div class="trap"><b>Watch out</b>The 480k views is the strongest founder proof on this slide. Say it as evidence of distribution capability, not as a vanity number.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">11 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 11 &middot; Capital and the proof &middot; about 65 seconds</div>
+  <h1>&ldquo;₹11.3 lakh, twelve months, and a ninety-day test that replaces the assumptions.&rdquo;</h1>
+  <div class="job"><b>The job</b>Make the ask small, specific and — most importantly — testable.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>The number that sets the raise is not annual profit. It is the cash trough.</p><p>Base case bottoms at minus six point two lakh in month six. Conservative — only seven deals close all year — bottoms at minus eight point one lakh in month eight.</p><p>I am raising against the conservative case plus forty percent headroom. Eleven point three lakh. Twelve months of runway.</p><p>Seven point two lakh of that is my own drawings. Three point one, field and marketing. One point one, compliance and tools. Forty-nine thousand, setup.</p><p>Now the test.</p><p>Weeks one to two: RERA registration filed, Certificate of Competency booked. It has been mandatory since January. Six weeks of critical path that no amount of effort compresses — so it is booked before the research starts, and the research happens while the clock runs.</p><p>Weeks two to four: corridor frozen, project register built.</p><p>Weeks four to six: price baseline, society files, timed commutes.</p><p>Weeks six to twelve: certificate issues, marketing opens. Thirty-plus qualified leads. Five accompanied visit cycles.</p><p>No advertising, no listing, no client work before that certificate.</p><p>In ninety days we will both know whether this deck is real.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">₹11.3 L</div><div class="l">the conservative trough, plus 40% headroom</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">Why is your own drawing the largest line?</div><div class="a">Because it is, and pretending otherwise would be dishonest. It is also the fastest lever I have — cutting it extends runway by roughly a month per ten thousand.</div></div><div class="qa"><div class="q">What happens if the ninety days fails?</div><div class="a">Then eleven point three lakh bought that answer in ninety days instead of three years. The pilot is designed so failure is legible: if qualified-lead rate or site-visit conversion come in well below plan, the funnel does not work, and I will say so rather than raise again.</div></div>
+      <div class="trap"><b>Watch out</b>Do not apologise for the size of the ask. Small and testable is the point — it is the strongest structural feature of this business.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">12 / 14</div></div>
+<div class="page ">
+  <div class="kick">Slide 12 &middot; Founder and the long arc &middot; about 75 seconds</div>
+  <h1>&ldquo;I have already built a business from zero. Brokerage in Mumbai is how I earn the right to build.&rdquo;</h1>
+  <div class="job"><b>The job</b>Make them believe you specifically. Then show where this ends.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col" style="flex:1.42">
+      <h4>Say this</h4>
+      <div class="say"><p>I have already built a business from zero.</p><p>Sheesham dot in. My own business. A hundred percent bootstrapped — no outside money.</p><p>FY twenty-five: fifty-one point eight lakh. FY twenty-six: one point zero eight crore. Up a hundred and eight percent.</p><p>Seventeen point one lakh net profit at a sixteen percent margin. A hundred and eighty-three invoices. Return rate zero point five percent, against an industry standard of three.</p><p>I am also already selling real estate. At brickrockrealty. A thousand followers, top reel three hundred and sixty-six thousand views, about four hundred and eighty thousand in total. Built by explaining — which is the same act this business sells.</p><p>Now, separately, and I want to be exact about this.</p><p>My family has been in Jaipur real estate for twenty-four years, as Chanda Properties. There is roughly three hundred and ten acres of family land. My father owns and is developing a hundred and twenty-four acres as a scheme.</p><p>That is context and access. It is not my balance sheet, and I am not asking you to underwrite it.</p><p>I am asking you to underwrite the track record on the left.</p><p>And the arc. Brokerage. Then the transaction intelligence. Then network, capital and execution capability. Then development. Then building in Jaipur.</p><p>Each stage funds the next and de-risks it.</p><p>Nothing here needs a leap. Only that the stage before it actually worked.</p></div>
+    </div>
+    <div class="col">
+      <h4>Land this number</h4>
+      <div class="big"><div class="v">₹1.08 Cr</div><div class="l">FY26 revenue, +108%, 100% bootstrapped — his own business</div></div>
+      <h4>If they ask</h4>
+      <div class="qa"><div class="q">Why Mumbai first? Why not just build in Jaipur?</div><div class="a">Because Mumbai has the deepest transaction volume, the strictest regulator and the most sophisticated buyers in India. Capability built here transfers down-market. The reverse is not true. And Jaipur will still be there — the family ecosystem is twenty-four years old and it is not going anywhere.</div></div><div class="qa"><div class="q">You sell furniture. Why do you think you can do this?</div><div class="a">Sheesham proves I can build demand, hold a margin and run a P&L with no capital. Those transfer. And I have not walked in cold — twenty-four years of family context, and I am already producing real-estate content that reaches half a million people.</div></div>
+      <div class="trap"><b>Watch out</b>The attribution line is the most important sentence on the deck. Say 'that is not my balance sheet' out loud. Volunteering it is what makes everything else credible — never let anyone leave the room thinking you own 310 acres.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">13 / 14</div></div>
+<div class="page ">
+  <div class="kick">Presenter's brief &middot; the five hardest questions</div>
+  <h1>The questions that decide the meeting</h1>
+  <div class="lede">None of these are unfair. Answer each one by agreeing with the part
+  that is true first — that is what makes the rest of the answer land.</div>
+  <div class="rule"></div>
+  <div class="row">
+    <div class="col"><div class="hq"><div class="q">“This is a job, not a business. Where is the scale?”</div><div class="a">Agree with them first. Year one is a job — deliberately, because it is the cheapest way to buy corridor knowledge and a transaction record. The business is stage two and three. Slide 11 says exactly what must be true before I widen: corridor-one economics repeat, closures happen without me at every step, referral coefficient above zero point five, and twelve months of runway still intact.</div></div><div class="hq"><div class="q">“₹32 lakh in year one is less than a good salary.”</div><div class="a">Correct — and it is on the slide rather than hidden. Year one is not the case. The case is that eleven point three lakh and twelve months buys a registered-price series, a broker network and a transaction record that a developer relationship is built on. A salary does not buy any of those.</div></div><div class="hq"><div class="q">“What if you cannot get the closures?”</div><div class="a">Then the ninety-day pilot tells us in ninety days, not three years. The two numbers that would show it are qualified-lead rate and site-visit conversion, and both are measured before any money is spent on marketing.</div></div></div>
+    <div class="col"><div class="hq"><div class="q">“What exactly am I funding, and what do I get?”</div><div class="a">Be straight. This is currently framed as twelve months of runway against a testable ninety-day plan, not as a priced equity round. If they want a return structure, say that is the next conversation and that you would rather agree it after the pilot has produced real numbers than before.</div></div><div class="hq"><div class="q">“Why should the family not just fund this?”</div><div class="a">Because the entire point of stage one is to fund the next stage from commission rather than from family. Taking family money to do brokerage skips the thing the stage is for.</div></div>
+      <div class="trap" style="margin-top:1mm"><b>The one-line fallback</b>
+      If a question goes somewhere you cannot answer, say so and say when you will know:
+      &ldquo;I do not have that yet — it is one of the things the ninety days is designed
+      to measure.&rdquo; That is a strong answer, not a weak one, because it is the same
+      answer the deck gives.</div>
+    </div>
+  </div>
+<div class="brand">BRICKROCK REALTY &middot; PRESENTER’S BRIEF</div><div class="pnum">14 / 14</div></div>
+</body></html>

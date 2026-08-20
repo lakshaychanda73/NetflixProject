@@ -1,0 +1,8 @@
+level,level_name,example,analysis_role
+L0,Metropolitan region,MMR,Macro context only — never the unit of advice
+L1,Zone / corridor,Eastern & Central Suburbs,Expansion sequencing unit
+L2,Sub-corridor,JVLR / Powai–Kanjurmarg,Pilot boundary — frozen for 90 days
+L3,Locality,Powai,Reporting unit for briefs
+L4,Pocket / sub-locality,Hiranandani Gardens,PRIMARY RESEARCH UNIT
+L5,Project / society,L&T Emerald Isle,Inventory and comparable unit
+L6,Unit / flat,"Tower 3, 14th floor, 2BHK",CLOSURE UNIT — where commission is earned

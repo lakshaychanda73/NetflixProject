@@ -1,0 +1,25 @@
+week,workstream,primary_goal,output,gate_or_kpi,planned_hours
+1,compliance,Legal right to operate,"MahaRERA application filed; training slot booked; entity, PAN/TAN, bank; CA engaged",Application reference number in hand,40
+1,system,Schema v1,Geo hierarchy L0–L6; price_type and area_basis enums; source registry; immutable IDs,Every fact requires geo_id + source_ref + observed_date,15
+2,compliance,Certification in progress,"20-hour training underway; DPDP notice, consent text and retention policy drafted",No regulated marketing until certificate issued,12
+2,research,Corridor lock,One corridor; 6 localities; 20–30 pockets named and mapped on verified boundaries,Geography frozen for 90 days — written and dated,30
+3,research,Statutory project register,"MahaRERA extract per project: promoter, RERA id, status, QPR, possession date",100% of in-scope projects have a RERA record or an explicit 'not registered' flag,34
+3,system,Data health harness,stale_after_days per domain; conflict_flag; confidence; freshness dashboard,"Dashboard renders on real records, not samples",10
+4,research,Price truth,Registered (IGR) vs asking (portal) vs Ready Reckoner — each with area basis and n,Zero blended price types; every aggregate shows n,32
+4,field,First field wave,8–10 site visits; 3 brokers per locality; society rules; maintenance; commute ×3 windows,>=3 independent field inputs per locality,14
+5,field,Field depth,"Negotiability log: initial ask, revised quote, incentives, last closed comparable",Discount-to-close observed on >=10 units,20
+5,research,Rental layer,Rents by BHK and furnishing; deposit norms; tenant restrictions; vacancy proxies,>=10 usable rental observations per locality,16
+6,system,Decision model,"Pocket scorecard; risk matrix; compare view; EMI, yield and all-in-cost calculators",Every score traceable to a source_ref,22
+6,compliance,Certificate + go-live gate,Certificate of Competency issued; MahaRERA number live; QR artwork for all ads,COMPLIANCE GATE: marketing may now begin,10
+7,demand,Lead engine switch-on,"Buyer personas; referral map (alumni, CA, lender, corporate HR); pocket brief #1",First 10 qualified leads; source tagged on every one,24
+7,deal,Deal workflow,"Client-fit questionnaire, shortlist template, visit script, negotiation and document checklists",Playbook written before first live client,12
+8,demand,Distribution,Weekly brief cadence; 2 co-broking agreements; 1 developer channel registration,"Inbound response rate measured, not assumed",22
+8,deal,First live clients,Client matching run against real inventory; 5+ site visits accompanied,Every lead has a next action and a date,16
+9,deal,Negotiation cycle,"Offers, counters, seller and developer coordination, diligence with counsel",First offers on the table,24
+9,system,CRM discipline,"Every lead, unit, visit, objection and next action recorded in the workbook",Zero deals tracked in WhatsApp only,10
+10,deal,Closure push,"Live negotiations driven to agreement; loan, legal and registration coordinated",First closure or documented near-term pipeline,26
+10,demand,Referral loop,Post-visit follow-up system; referral ask scripted into every interaction,Referral coefficient measured,12
+11,system,Evidence capture,"Closed prices, lost reasons, objections and counterparty response times captured",Top 5 objections and top 5 data gaps visible,18
+11,research,Gap remediation,The data gaps live deals exposed are filled — the only gaps that matter,Gap list shrinks week over week,16
+12,compliance,Half-yearly readiness,"Books, client files, source records and deal files in filing-ready state",MahaRERA half-yearly report can be produced in one day,12
+12,system,Decision gate,90-day review against every gate; the go / hold / pivot memo written and dated,Expand only on evidence — decision recorded and dated,22

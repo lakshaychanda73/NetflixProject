@@ -1,0 +1,13 @@
+domain,phase1_minimum_fields,refresh,stale_after_days,primary_sources,granularity
+Geography,"geo_id, parent_geo_id, level, name, boundary_ref, analysis_role",On change,365,BMC/MMRDA/verified GIS,L0–L6
+Pricing,"geo_id, project_id, price_type, area_basis, price_psf, sample_size, observed_date, source_ref",Asking weekly; registered monthly; RR annual,30,"IGR e-Search, portals, RR",L4–L6
+Rental,"geo_id, configuration, furnishing, asking_rent, closed_rent, deposit, maintenance, restrictions",Monthly / per live deal,45,"Portals, field, own deals",L4–L6
+Projects,"rera_id, promoter, configuration, inventory, possession_date, status, qpr_ref",Monthly / on change,60,"MahaRERA, developer filings",L5
+Developers,"promoter_id, delivery_record, avg_delay_months, complaints, litigation_ref, active_projects",Quarterly,120,"MahaRERA orders, filings",Promoter
+Supply,"active_listings, new_launch, absorption, qts, listing_age, availability",Monthly / quarterly,45,"Portals, consultancy research",L3–L5
+Infrastructure,"asset_id, status, target_date, slippage_months, catchment_geo, impact_note",Quarterly / on change,90,"MMRDA, MSRDC, BMC, operator",L1–L4
+Risk,"geo_id, risk_type, severity, evidence_ref, last_verified",Change-driven,180,"BMC, CRZ, MahaRERA, field",L4–L6
+Demand,"lead_id, source, persona, budget, timeline, authority, area_fit",Every interaction,7,Own CRM,Lead
+Deals,"deal_id, stage, units_shown, visits, offers, closed_price, commission, lost_reason",Every interaction,7,Own CRM,Deal/unit
+Field,"observation_id, geo_id, observation_type, value, method, observed_date, observer",Continuous,90,Own field programme,L4–L6
+Compliance,"obligation_id, due_date, status, evidence_ref",Continuous,30,Own records,Entity
