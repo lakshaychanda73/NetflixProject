@@ -82,6 +82,7 @@ strong{ font-weight:700; color:var(--ink); }
 .fig.c100 img{ max-height:100mm; }
 .fig.c104 img{ max-height:104mm; }
 .fig.c112 img{ max-height:112mm; }
+.fig.c62 img{ max-height:62mm; }
 
 /* ---------- stat tiles ---------- */
 .stat{ background:var(--card); border:0.8pt solid var(--hair); border-radius:2.4mm;
@@ -145,4 +146,18 @@ ul.tight li{ margin-bottom:1.4mm; font-size:8.2pt; }
 .band{ height:1.6mm; width:64mm; background:linear-gradient(90deg,
        var(--orange) 0 25%, var(--blue) 25% 50%, var(--green) 50% 75%, var(--purple) 75% 100%);
        margin-bottom:8mm; }
+
+/* ---------- photographs ---------- */
+.photo{ position:relative; overflow:hidden; border-radius:2.4mm; background:var(--cardalt); }
+.dark .photo{ background:var(--dark2); }
+.photo img{ display:block; width:100%; height:100%; object-fit:cover; }
+.photo.wide{ width:100%; height:23mm; margin-bottom:4.5mm; }
+.photo.rail{ height:100%; }
+.photo.port{ width:100%; }
+.photo .cap{ position:absolute; left:0; right:0; bottom:0; padding:3mm 4mm 2.4mm 4mm;
+             font-size:6.6pt; font-weight:700; letter-spacing:.10em; text-transform:uppercase;
+             color:#fff; background:linear-gradient(180deg, rgba(15,22,33,0) 0%,
+             rgba(15,22,33,.82) 68%, rgba(15,22,33,.92) 100%); }
+.photo .cap em{ font-style:normal; font-weight:500; letter-spacing:.02em;
+                text-transform:none; color:rgba(255,255,255,.78); }
 """

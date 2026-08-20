@@ -15,6 +15,11 @@ sys.path.insert(0, os.path.abspath("../../build"))
 from deck_css import CSS
 import evidence as E
 import founder as F
+import images as IM
+
+# Photographs are optional. Every slot that is filled is placed; every slot that
+# is empty falls back to the typography-led layout, so the deck always builds.
+IM.place_all()
 
 L, CR = 100_000, 10_000_000
 RATE_L = E.BLENDED_RATE_LABEL
@@ -29,6 +34,18 @@ def slide(body, cls="", foot=""):
 
 def fig(name, cls=""):
     return f'<div class="fig {cls}"><img src="../figures/{name}"></div>'
+
+
+def photo(slot, cls, caption=None, sub=None):
+    """A photo panel, or an empty string when the slot has no file in ../images/."""
+    if not IM.have(slot):
+        return ""
+    cap = ""
+    if caption:
+        cap = (f'<div class="cap">{caption}'
+               + (f' <em>{sub}</em>' if sub else '') + '</div>')
+    return (f'<div class="photo {cls}">'
+            f'<img src="../figures/{IM.placed(slot)}">{cap}</div>')
 
 
 def head(kick, title, lede=None):
@@ -59,8 +76,11 @@ slide(f"""
       <div class="d" style="color:var(--dmuted)">almost none work from the registered record</div></div>
   </div>
 
+  {photo("s1_corridor", "wide", "The Eastern &amp; Central corridor",
+         "&middot; Powai, where the pilot starts")}
+
   <div class="row" style="align-items:flex-start">
-    <div class="col" style="flex:1.5">{fig("s1_pulse.png")}</div>
+    <div class="col" style="flex:1.5">{fig("s1_pulse.png", "c62" if IM.have("s1_corridor") else "")}</div>
     <div class="col" style="flex:1; padding-top:1mm">
       <h4>What Brickrock is</h4>
       <div class="body" style="margin-bottom:3mm">
@@ -137,7 +157,11 @@ slide(f"""
 slide(f"""
   {head("Where we start",
         "Six localities on one spine, chosen by a model that survives being wrong.")}
-  {fig("s5_corridor.png")}
+  <div class="row" style="gap:6mm; align-items:stretch">
+    <div class="col" style="flex:1">{fig("s5_corridor.png")}</div>
+    {'<div class="col" style="flex:0 0 44mm">' + photo("s5_corridor", "rail",
+       "Powai", "&middot; the head of the spine") + '</div>' if IM.have("s5_corridor") else ''}
+  </div>
 """, foot="Micro-market asking bands and rents: portal-derived, medium confidence · entry model: analyst")
 
 
@@ -213,6 +237,10 @@ slide(f"""
   </div>
 
   <div class="row" style="align-items:flex-start; margin-bottom:4mm">
+    {'<div class="col" style="flex:0 0 38mm">' + photo("s12_founder", "port")
+     + ('<div style="height:4mm"></div>' + photo("s12_jaipur", "port", "Jaipur",
+        "&middot; where the arc ends") if IM.have("s12_jaipur") else '')
+     + '</div>' if IM.have("s12_founder") or IM.have("s12_jaipur") else ''}
     <div class="col" style="flex:1.16">
       {fig("s12_founder.png")}
       <div class="attr"><span class="tag own">My own business</span>

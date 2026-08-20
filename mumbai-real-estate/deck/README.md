@@ -82,6 +82,24 @@ Two corrections were made at source in this round:
   rounded value typed in as a literal string. The rate is now derived everywhere
   from `E.BLENDED_RATE`.
 
+## Photographs
+
+Photographs are optional and slot-based. Drop a file into `images/` named after
+its slot and it is cropped, resized and placed on the next build; leave a slot
+empty and the slide falls back to its typography-led layout.
+
+| File | Lands on | Must show |
+|---|---|---|
+| `images/s1_corridor.jpg` | Slide 1, wide band under the stat row | The corridor at scale — the Powai golden-hour panorama |
+| `images/s5_corridor.jpg` | Slide 5, tall rail beside the priced ladder | Powai lake and the Hiranandani towers — the head of the spine |
+| `images/s12_founder.jpg` | Slide 12, beside the Sheesham P&L | The founder portrait |
+| `images/s12_jaipur.jpg` | Slide 12, under the portrait (optional) | A Chanda Properties site or scheme — not a fort, not a skyline |
+
+`python3 build/images.py` reports which slots are filled and places them.
+See `images/README.md` for the editorial rule on what does *not* belong —
+in short: nothing watermarked, no South Mumbai landmarks on a deck that argues
+against South Mumbai, and no tourist Jaipur.
+
 ## Rebuilding
 
 ```bash
