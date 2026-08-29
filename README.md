@@ -19,6 +19,15 @@ intelligent conversation with a developer, broker, investor or buyer in Mumbai.
 | Every link in one table | [`master-resource-library.md`](course/master-resource-library.md) |
 | A specific topic | [`modules/`](course/modules) |
 
+## Download (works offline)
+
+| File | What it is |
+|---|---|
+| **[`course/MahaRERA-Field-Manual.pdf`](course/MahaRERA-Field-Manual.pdf)** | 103-page print edition. Clickable contents and 453 live links. Quiz answers are printed open. |
+| **[`course/MahaRERA-Field-Manual-offline.html`](course/MahaRERA-Field-Manual-offline.html)** | Single self-contained web page. Zero external requests — open it with no internet. Sidebar navigation, collapsible quiz answers, light/dark. |
+
+Both are generated from the Markdown in `course/`. Re-run `course/build/` scripts after editing.
+
 ## Read it as a web page
 
 **[MahaRERA Field Manual](https://claude.ai/code/artifact/961ff8ce-1dfe-40d3-b5df-9999676698f8)** — the whole course as one navigable page, built from these files.
