@@ -1,0 +1,1187 @@
+<title>God City Sindhudurg Dossier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --ground:#eaeff1; --surface:#ffffff; --surface-2:#f5f8f9; --surface-3:#e3eaec;
+  --ink:#0d1a20; --ink-2:#4a5f68; --ink-3:#7a9099;
+  --rule:#d3dee1; --rule-2:#bccace;
+  --accent:#0f4c5c; --accent-soft:#dfeef1; --accent-ink:#0b3c49;
+  --flag:#b23c14; --flag-soft:#fbe9e1;
+  --good:#1a7a55; --good-soft:#e2f2eb;
+  --warn:#8a6100; --warn-soft:#f8eed6;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+  --s1-soft:#c9defa;
+  --shadow:0 1px 2px rgba(13,26,32,.06), 0 8px 24px -12px rgba(13,26,32,.22);
+  --measure:66ch;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --ground:#080f12; --surface:#111d22; --surface-2:#16242a; --surface-3:#1d2f36;
+    --ink:#e9f1f3; --ink-2:#a3b8bf; --ink-3:#78909a;
+    --rule:#25373e; --rule-2:#31474f;
+    --accent:#5fb3c9; --accent-soft:#16333c; --accent-ink:#9fd6e4;
+    --flag:#e8825c; --flag-soft:#3a2018;
+    --good:#4fc396; --good-soft:#132e26;
+    --warn:#d8ad51; --warn-soft:#312717;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+    --s1-soft:#1c3f63;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 8px 24px -12px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --ground:#080f12; --surface:#111d22; --surface-2:#16242a; --surface-3:#1d2f36;
+  --ink:#e9f1f3; --ink-2:#a3b8bf; --ink-3:#78909a;
+  --rule:#25373e; --rule-2:#31474f;
+  --accent:#5fb3c9; --accent-soft:#16333c; --accent-ink:#9fd6e4;
+  --flag:#e8825c; --flag-soft:#3a2018;
+  --good:#4fc396; --good-soft:#132e26;
+  --warn:#d8ad51; --warn-soft:#312717;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  --s1-soft:#1c3f63;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 8px 24px -12px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  font-size:16px; line-height:1.62; margin:0;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:0 24px 96px}
+
+/* ---------- masthead ---------- */
+.mast{
+  border-bottom:2px solid var(--ink);
+  padding:44px 0 20px; margin-bottom:34px;
+}
+.mast .eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-3); display:flex; flex-wrap:wrap; gap:6px 18px; margin-bottom:18px;
+}
+h1{
+  font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif;
+  font-weight:700; font-size:clamp(34px,6.2vw,60px); line-height:1.02;
+  letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance;
+}
+h1 em{font-style:normal; color:var(--accent); display:block; font-size:.56em; letter-spacing:.005em; margin-top:10px}
+.standfirst{font-size:18px; color:var(--ink-2); max-width:62ch; margin:0 0 22px}
+.mast-meta{
+  display:flex; flex-wrap:wrap; gap:8px 26px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px;
+  color:var(--ink-2); border-top:1px solid var(--rule); padding-top:14px;
+}
+.mast-meta b{color:var(--ink); font-weight:600}
+
+/* ---------- confidence chips ---------- */
+.chip{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:9.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  padding:2px 6px; border-radius:3px; white-space:nowrap; vertical-align:2px;
+  border:1px solid transparent;
+}
+.c-ver{background:var(--good-soft); color:var(--good); border-color:color-mix(in srgb,var(--good) 30%,transparent)}
+.c-rep{background:var(--accent-soft); color:var(--accent-ink); border-color:color-mix(in srgb,var(--accent) 30%,transparent)}
+.c-est{background:var(--warn-soft); color:var(--warn); border-color:color-mix(in srgb,var(--warn) 30%,transparent)}
+.c-gap{background:var(--flag-soft); color:var(--flag); border-color:color-mix(in srgb,var(--flag) 30%,transparent)}
+
+/* ---------- sections ---------- */
+section{margin:0 0 64px; scroll-margin-top:20px}
+.sec-head{display:flex; align-items:baseline; gap:14px; border-top:1px solid var(--ink); padding-top:12px; margin-bottom:8px}
+.sec-num{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12px; font-weight:600;
+  color:var(--accent); letter-spacing:.06em; flex:none; padding-top:6px;
+}
+h2{
+  font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:700;
+  font-size:clamp(24px,3.4vw,34px); line-height:1.1; letter-spacing:-.01em; margin:0; text-wrap:balance;
+}
+h3{
+  font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:600;
+  font-size:19px; letter-spacing:.005em; margin:34px 0 10px; color:var(--ink); text-wrap:balance;
+}
+h4{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-weight:600; font-size:11px;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3); margin:26px 0 8px;
+}
+p{margin:0 0 14px; max-width:var(--measure)}
+p.wide{max-width:none}
+ul,ol{margin:0 0 16px; padding-left:22px; max-width:var(--measure)}
+li{margin-bottom:7px}
+a{color:var(--accent); text-underline-offset:2px}
+strong{font-weight:600}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+.note{font-size:14px; color:var(--ink-2); max-width:var(--measure)}
+
+/* ---------- tables ---------- */
+.tbl-wrap{overflow-x:auto; margin:16px 0 8px; border:1px solid var(--rule); border-radius:4px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:13.5px; min-width:600px}
+caption{
+  text-align:left; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3);
+  padding:10px 14px; border-bottom:1px solid var(--rule); background:var(--surface-2);
+}
+th,td{padding:8px 12px; text-align:left; vertical-align:top; border-bottom:1px solid var(--rule)}
+thead th{
+  font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:600; font-size:12px;
+  letter-spacing:.02em; color:var(--ink-2); background:var(--surface-2); position:sticky; top:0;
+  border-bottom:1px solid var(--rule-2);
+}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:var(--surface-2)}
+td.num,th.num{text-align:right; font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums; white-space:nowrap}
+tr.hi td{background:var(--accent-soft); font-weight:600}
+tr.hi td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+td small{display:block; color:var(--ink-3); font-size:11.5px; line-height:1.4}
+
+/* ---------- dashboard tiles ---------- */
+.dash{display:grid; grid-template-columns:repeat(auto-fit,minmax(196px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin:20px 0}
+.tile{background:var(--surface); padding:14px 16px 15px; display:flex; flex-direction:column; gap:3px}
+.tile .k{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:9.5px; letter-spacing:.11em; text-transform:uppercase; color:var(--ink-3)}
+.tile .v{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:700; font-size:23px; line-height:1.15; letter-spacing:-.01em; font-variant-numeric:tabular-nums}
+.tile .s{font-size:12px; color:var(--ink-2); line-height:1.4}
+.tile.accent .v{color:var(--accent)}
+.tile.flag .v{color:var(--flag)}
+
+/* ---------- score block ---------- */
+.scorebox{
+  display:flex; flex-wrap:wrap; align-items:center; gap:24px 40px;
+  background:var(--surface); border:1px solid var(--rule); border-left:4px solid var(--accent);
+  border-radius:4px; padding:22px 26px; margin:20px 0;
+}
+.scorebox .big{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:700; font-size:64px; line-height:.9; letter-spacing:-.03em; color:var(--accent); font-variant-numeric:tabular-nums}
+.scorebox .big span{font-size:26px; color:var(--ink-3)}
+.scorebox .txt{max-width:52ch}
+.scorebox .txt p{margin:0; font-size:14.5px}
+.verdict{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:700; font-size:17px; letter-spacing:.01em; margin-bottom:4px}
+
+/* ---------- callouts ---------- */
+.callout{
+  background:var(--surface); border:1px solid var(--rule); border-left:4px solid var(--flag);
+  border-radius:4px; padding:16px 20px; margin:20px 0;
+}
+.callout.pos{border-left-color:var(--good)}
+.callout.neu{border-left-color:var(--accent)}
+.callout h4{margin-top:0; color:var(--flag)}
+.callout.pos h4{color:var(--good)}
+.callout.neu h4{color:var(--accent)}
+.callout p:last-child{margin-bottom:0}
+.callout p{max-width:none}
+
+/* ---------- findings list ---------- */
+.numlist{counter-reset:f; list-style:none; padding:0; max-width:none; display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:4px; overflow:hidden}
+.numlist li{counter-increment:f; margin:0; background:var(--surface); padding:13px 18px 13px 52px; position:relative; font-size:14.5px}
+.numlist li::before{
+  content:counter(f,decimal-leading-zero); position:absolute; left:16px; top:14px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; font-weight:600; color:var(--accent);
+}
+.numlist li b{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:600; font-size:15px}
+
+/* ---------- swot ---------- */
+.swot{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin:20px 0}
+.swot > div{background:var(--surface); padding:16px 18px}
+.swot h4{margin:0 0 8px}
+.swot ul{margin:0; padding-left:18px; max-width:none; font-size:13.5px}
+.swot li{margin-bottom:6px}
+.swot .s h4{color:var(--good)} .swot .w h4{color:var(--flag)}
+.swot .o h4{color:var(--accent)} .swot .t h4{color:var(--warn)}
+
+/* ---------- charts ---------- */
+figure{margin:22px 0; background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:18px 20px 14px}
+figure .ftitle{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:600; font-size:16px; margin-bottom:2px}
+figure .fsub{font-size:12.5px; color:var(--ink-2); margin-bottom:14px; max-width:70ch}
+figcaption{font-size:11.5px; color:var(--ink-3); margin-top:10px; border-top:1px solid var(--rule); padding-top:9px; font-family:"IBM Plex Mono",ui-monospace,monospace; line-height:1.5}
+.svg-scroll{overflow-x:auto}
+svg{display:block; max-width:100%; height:auto; min-width:520px}
+.legend{display:flex; flex-wrap:wrap; gap:6px 18px; margin-bottom:12px; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; color:var(--ink-2)}
+.legend span{display:inline-flex; align-items:center; gap:6px}
+.legend i{width:11px; height:11px; border-radius:2px; display:inline-block}
+text{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+.ax{font-size:10.5px; fill:var(--ink-3)}
+.rowlbl{font-size:11.5px; fill:var(--ink-2)}
+.rowlbl.on{fill:var(--ink); font-weight:600}
+.vlbl{font-size:11.5px; fill:var(--ink); font-weight:500}
+.grid{stroke:var(--rule); stroke-width:1}
+.axis{stroke:var(--rule-2); stroke-width:1}
+
+/* ---------- toc ---------- */
+.toc{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin:0 0 44px}
+.toc a{background:var(--surface); padding:11px 15px; text-decoration:none; color:var(--ink); display:flex; gap:10px; font-size:13.5px; align-items:baseline}
+.toc a:hover{background:var(--accent-soft)}
+.toc a span{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px; color:var(--accent); font-weight:600}
+
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+details{margin:14px 0; border:1px solid var(--rule); border-radius:4px; background:var(--surface)}
+summary{padding:11px 16px; cursor:pointer; font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:600; font-size:14.5px}
+details[open] summary{border-bottom:1px solid var(--rule)}
+details .body{padding:14px 16px}
+details .body p, details .body ul{max-width:none; font-size:13.5px}
+.srclist{font-size:12.5px; columns:2; column-gap:36px; max-width:none}
+.srclist li{margin-bottom:8px; break-inside:avoid}
+@media(max-width:640px){.srclist{columns:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="eyebrow">
+    <span>Market · Feasibility · Investment Dossier</span>
+    <span>Prepared 9 September 2026</span>
+    <span>Data cut-off: Sept 2026</span>
+  </div>
+  <h1>God City, Sindhudurg<em>A 150-acre plotted township on the Maharashtra&ndash;Goa border, assessed</em></h1>
+  <p class="standfirst">The land story is strong and getting stronger. The asking price already assumes most of it has happened. This dossier separates what is verified from what is claimed, benchmarks the price against every comparable scheme we could find, and sets out what has to change before the project is investable.</p>
+  <div class="mast-meta">
+    <span><b>Subject</b> God City LLP &middot; &ldquo;New Goa&rdquo; township</span>
+    <span><b>District</b> Sindhudurg, Maharashtra</span>
+    <span><b>Scale</b> 150 acres &middot; Phase 1 22.5 acres</span>
+    <span><b>List price</b> from &#8377;35,000/sq&nbsp;yd</span>
+    <span><b>Score</b> 59/100</span>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <a href="#exec"><span>00</span>Executive Summary</a>
+  <a href="#loc"><span>01</span>Project &amp; Location</a>
+  <a href="#mkt"><span>02</span>Market &amp; Pricing</a>
+  <a href="#comp"><span>03</span>Competitor Analysis</a>
+  <a href="#dem"><span>04</span>Customer &amp; Demand</a>
+  <a href="#growth"><span>05</span>Location &amp; Future Growth</a>
+  <a href="#pos"><span>06</span>Project Positioning</a>
+  <a href="#fin"><span>07</span>Financial &amp; Investment</a>
+  <a href="#legal"><span>08</span>Legal &amp; Development Risk</a>
+  <a href="#price"><span>09</span>Pricing &amp; Sales Strategy</a>
+  <a href="#swot"><span>10</span>SWOT &amp; Thesis</a>
+  <a href="#data"><span>11</span>Data Quality &amp; Sources</a>
+</nav>
+
+<section id="exec">
+  <div class="sec-head"><div class="sec-num">00</div><h2>Executive Summary</h2></div>
+  <p class="wide">Read this page before the meeting. Everything after it is evidence.</p>
+
+  <div class="scorebox">
+    <div class="big">59<span>/100</span></div>
+    <div class="txt">
+      <div class="verdict">Conditional &mdash; buy the land story, not the current price</div>
+      <p>A genuinely scarce 150-acre contiguous holding inside the strongest infrastructure catchment in coastal Maharashtra, offered at a price 3.7&ndash;5&times; the nearest comparable developed-plot benchmark, by a two-year-old LLP with no publicly visible MahaRERA registration. Five specific fixes take the score to <b>70/100</b>.</p>
+    </div>
+  </div>
+
+  <h3>Top 10 findings</h3>
+  <ol class="numlist">
+    <li><b>The price is the risk, not the land.</b> God City lists from &#8377;35,000/sq&nbsp;yd (&#8776;&#8377;3,889/sq&nbsp;ft). Developed MOPA-side layouts in Sawantwadi trade at &#8377;7,000&ndash;9,500/sq&nbsp;yd and Goa-side land near Mopa at roughly &#8377;4,200&ndash;10,000/sq&nbsp;yd. Only one scheme in the district prices higher &mdash; and it has a golf course. <span class="chip c-rep">Reported</span></li>
+    <li><b>Its nearest competitor is bigger, dearer and further along.</b> Yugen Golf City / Garden of Eden at Village Banda, Sawantwadi is a 500-acre master plan at &#8377;49,990/sq&nbsp;yd with a 9-hole IDG golf course, Wyndham-managed amenities, a helipad and a MahaRERA-registered plotted phase backed by &#8377;350 crore. <span class="chip c-rep">Reported</span></li>
+    <li><b>No MahaRERA number, village, survey number or coordinates are publicly discoverable</b> for God City. Under Section 3 of RERA, a plotted scheme above 500&nbsp;sq&nbsp;m <em>and</em> eight plots must be registered before it is marketed. This is the single largest diligence gap. <span class="chip c-gap">Gap</span></li>
+    <li><b>The developer entity is two years old.</b> God City LLP (LLPIN ACF-3634) was incorporated 6 February 2024 at RoC-Kanpur with a &#8377;1,00,000 contribution, two designated partners and a registered office in Noida, Uttar Pradesh. No completed project was found. <span class="chip c-ver">Verified</span></li>
+    <li><b>Mopa is working.</b> Manohar International Airport handled 5.38&nbsp;million passengers in FY2025&ndash;26, up 15.8%, on 38,111 aircraft movements (+21%) against 7.7&nbsp;million capacity &mdash; the demand engine for this entire micro-market is real and still has headroom. <span class="chip c-ver">Verified</span></li>
+    <li><b>The Shaktipeeth Expressway terminates in this taluka.</b> The revised 856.765&nbsp;km Pavnar&ndash;Patradevi alignment approved 1 April 2026 ends at Banda in Sawantwadi taluka, Sindhudurg, with &#8377;20,787 crore sanctioned for land acquisition and completion targeted 2028&ndash;29. No other catalyst matters as much to this specific location. <span class="chip c-rep">Reported</span></li>
+    <li><b>Land within 25&ndash;30&nbsp;km of Mopa appreciated about 28% in 18 months</b> across 2024&ndash;25, and Pernem on the Goa side is reported up 261.5% over three years &mdash; but that appreciation has already been priced into schemes at God City's level. <span class="chip c-rep">Reported</span></li>
+    <li><b>Environmental overhang is live, not historic.</b> The Centre re-issued the 7th Western Ghats ESA draft on 27 July 2026 covering 17,340&nbsp;sq&nbsp;km in Maharashtra; the Bombay High Court has directed that the Sawantwadi&ndash;Dodamarg wildlife corridor be declared an ESZ with a tree-felling embargo until notification; and the 29.53&nbsp;sq&nbsp;km Tillari Conservation Reserve sits in Dodamarg. <span class="chip c-rep">Reported</span></li>
+    <li><b>At 150 acres the project qualifies for Integrated Township status</b> (60.7&nbsp;ha against a 40&nbsp;ha threshold) &mdash; unlocking additional FSI on premium and a 50% stamp-duty concession on the first sale to each buyer. Almost none of the 11&ndash;78 acre competitors can access this. <span class="chip c-rep">Reported</span></li>
+    <li><b>&ldquo;New Goa&rdquo; is not an ownable position.</b> GMR markets Mopa as &ldquo;New Goa International Airport&rdquo;, at least one other developer sells a &ldquo;New Goa&rdquo; scheme in Sindhudurg, and the phrase is generic across the corridor. The brand is currently undifferentiated. <span class="chip c-ver">Verified</span></li>
+  </ol>
+
+  <h3>Top 10 recommendations</h3>
+  <ol class="numlist">
+    <li><b>Publish the MahaRERA registration number, village, survey numbers and layout sanction &mdash; this week.</b> Nothing else in this list works until a buyer can verify the asset on maharera.maharashtra.gov.in. If registration is not yet obtained, stop pre-selling until it is.</li>
+    <li><b>Reprice the standard inventory to &#8377;18,000&ndash;24,000/sq&nbsp;yd</b> and reserve &#8377;28,000&ndash;35,000 for genuinely differentiated stock (view, corner, water-facing, clubhouse-adjacent). Hold the headline number by moving it onto a minority of plots rather than defending it across the whole layout.</li>
+    <li><b>Apply for Integrated Township Project status immediately.</b> 150 acres clears the 40&nbsp;ha threshold. The 50% stamp-duty concession is worth roughly &#8377;2.5&ndash;3 lakh on a &#8377;1 crore plot &mdash; a closing tool no small competitor can match.</li>
+    <li><b>Build one anchor amenity that Yugen cannot copy cheaply</b> and finish it before Phase 1 closes. A completed, photographable clubhouse plus a wellness or water asset converts far better in this segment than a rendered golf course a buyer cannot see.</li>
+    <li><b>Commission and publish an environmental and title pack:</b> ESA/ESZ non-applicability, CRZ non-applicability (or the MCZMA position), Section 44 NA order, Form D-3 layout sanction, 7/12 extracts and a search report. Sell the file, not the brochure.</li>
+    <li><b>Front-load Phase 1 so it self-funds the project.</b> On our estimates, roughly 37% of Phase 1 at list price covers all Phase 1 costs; the full 22.5 acres at list price returns about &#8377;221 crore against &#8377;96 crore of cost. Do not open Phase 2 land spend before Phase 1 crosses break-even.</li>
+    <li><b>Sell a villa, not a plot.</b> Plots yield nothing. Offer a fixed-price build package and a managed rental programme; on our estimates a built 300&nbsp;sq&nbsp;yd villa runs to a 5&ndash;6% net yield versus 0% on bare land, and it converts investors who will not otherwise buy dirt.</li>
+    <li><b>Target Mumbai and Pune first, NCR second, NRI third.</b> The sponsor's Noida base is a real distribution asset for a Delhi-NCR channel that most Konkan developers cannot reach &mdash; but Mumbai and Pune are where the second-home money for this coast actually lives.</li>
+    <li><b>Replace &ldquo;New Goa&rdquo; with an ownable proposition.</b> Lead on what is verifiable and scarce: registered title, 150 contiguous acres, 30 minutes to an international airport, and the expressway terminus. &ldquo;Goa prices you out. Sindhudurg lets you in.&rdquo;</li>
+    <li><b>Publish a phase-wise price ladder and honour it.</b> 8&ndash;12% escalation per phase, announced in advance, creates urgency honestly and protects early buyers &mdash; the single most effective retention tool in plotted sales.</li>
+  </ol>
+
+  <h3>Most important numbers</h3>
+  <div class="dash">
+    <div class="tile"><div class="k">Project area</div><div class="v">150 ac</div><div class="s">Phase 1: 22.5 ac open</div></div>
+    <div class="tile accent"><div class="k">God City price</div><div class="v">&#8377;35,000</div><div class="s">per sq yd &middot; &#8776;&#8377;3,889/sq ft</div></div>
+    <div class="tile"><div class="k">Local market price</div><div class="v">&#8377;7&ndash;9.5k</div><div class="s">per sq yd &middot; Sawantwadi MOPA-side layouts</div></div>
+    <div class="tile"><div class="k">Competitor range</div><div class="v">&#8377;3.6&ndash;50k</div><div class="s">per sq yd &middot; Goa2 Malvan to Yugen Banda</div></div>
+    <div class="tile"><div class="k">Avg ticket size</div><div class="v">&#8377;63 L</div><div class="s">300 sq yd at recommended pricing</div></div>
+    <div class="tile flag"><div class="k">Demand / supply</div><div class="v">Supply-led</div><div class="s">&gt;1,300 ac announced within 30 km of Mopa</div></div>
+    <div class="tile"><div class="k">Current inventory</div><div class="v">Not disclosed</div><div class="s">No public absorption data for any scheme</div></div>
+    <div class="tile"><div class="k">Historical appreciation</div><div class="v">+28%</div><div class="s">18 months, land within 25&ndash;30 km of Mopa</div></div>
+    <div class="tile"><div class="k">Expected appreciation</div><div class="v">+90%</div><div class="s">5-yr base case, micro-market land value</div></div>
+    <div class="tile"><div class="k">Rental yield</div><div class="v">5&ndash;6%</div><div class="s">net, built villa &middot; 0% on bare plot</div></div>
+    <div class="tile accent"><div class="k">Key catalyst</div><div class="v">Shaktipeeth</div><div class="s">Expressway terminus at Banda, 2028&ndash;29</div></div>
+    <div class="tile flag"><div class="k">Investment score</div><div class="v">59/100</div><div class="s">70/100 achievable after five fixes</div></div>
+  </div>
+  <p class="note">Every figure above is sourced and dated in the sections that follow. Tiles marked <em>Not disclosed</em> are genuine information gaps, not omissions.</p>
+</section>
+
+<section id="loc">
+  <div class="sec-head"><div class="sec-num">01</div><h2>Project &amp; Location</h2></div>
+  <p>God City LLP markets a gated plotted township under the banner <b>&ldquo;New Goa&rdquo;</b>: 150 acres in total, with 22.5 acres released as Phase 1, positioned as roughly 30 minutes from Manohar International Airport (Mopa) and adjacent to North Goa. Those four facts are published by the developer. Almost nothing else about the site is.</p>
+
+  <div class="callout">
+    <h4>The central diligence gap</h4>
+    <p>Across MahaRERA-adjacent listings, property portals, MCA records and the developer's own indexed pages, we could not retrieve a <b>village name, taluka, survey / gat number, site coordinates, layout sanction, or MahaRERA registration number</b> for this project. Every location statement below is therefore either the developer's own claim or an independently sourced benchmark for the <em>candidate</em> micro-market. Treat the micro-market analysis as sound and the site-specific analysis as pending verification of a single document: the Form D-3 layout sanction with survey numbers.</p>
+  </div>
+
+  <h3>What is published, and what is not</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Project fact sheet &mdash; status of each data point</caption>
+    <thead><tr><th>Attribute</th><th>Value</th><th>Status</th><th>Source / note</th></tr></thead>
+    <tbody>
+      <tr><td>Project name</td><td>&ldquo;New Goa&rdquo; gated township</td><td><span class="chip c-ver">Verified</span></td><td>godcityprojects.in</td></tr>
+      <tr><td>Developer</td><td>God City LLP</td><td><span class="chip c-ver">Verified</span></td><td>godcity.in; MCA record</td></tr>
+      <tr><td>Total land area</td><td class="num">150 acres</td><td><span class="chip c-ver">Verified</span></td><td>Developer claim; not cross-checked against 7/12</td></tr>
+      <tr><td>Phase 1 area</td><td class="num">22.5 acres</td><td><span class="chip c-ver">Verified</span></td><td>Developer claim &mdash; 15% of total</td></tr>
+      <tr><td>Product type</td><td>NA residential plots, gated</td><td><span class="chip c-rep">Reported</span></td><td>Implied by &#8377;/sq&nbsp;yd pricing and &ldquo;plots&rdquo; language</td></tr>
+      <tr><td>Launch price</td><td class="num">from &#8377;35,000/sq yd</td><td><span class="chip c-ver">Verified</span></td><td>&#8776; &#8377;3,889/sq ft &middot; &#8776; &#8377;41,860/sq m</td></tr>
+      <tr><td>Distance to Mopa (GOX)</td><td class="num">~30 min</td><td><span class="chip c-rep">Reported</span></td><td>Developer claim; Sawantwadi&ndash;Mopa is 35 km / ~42 min, Banda ~15 min</td></tr>
+      <tr class="hi"><td>Exact village / taluka</td><td>Not published</td><td><span class="chip c-gap">Gap</span></td><td>Candidate belt: Banda&ndash;Sawantwadi&ndash;Dodamarg</td></tr>
+      <tr class="hi"><td>Survey / gat numbers</td><td>Not published</td><td><span class="chip c-gap">Gap</span></td><td>Required for title search</td></tr>
+      <tr class="hi"><td>Coordinates</td><td>Not published</td><td><span class="chip c-gap">Gap</span></td><td>Required for CRZ / ESA / ESZ overlay</td></tr>
+      <tr class="hi"><td>MahaRERA number</td><td>Not found</td><td><span class="chip c-gap">Gap</span></td><td>Mandatory above 500 sq m <em>and</em> 8 plots</td></tr>
+      <tr><td>Plot size range</td><td>Not published</td><td><span class="chip c-gap">Gap</span></td><td>Peer range in this belt: 200&ndash;1,000 sq yd</td></tr>
+      <tr><td>Amenity schedule</td><td>Not published</td><td><span class="chip c-gap">Gap</span></td><td>Material to defending the price</td></tr>
+      <tr><td>Phasing / possession</td><td>Not published</td><td><span class="chip c-gap">Gap</span></td><td>Only &ldquo;Phase 1 now open&rdquo; is stated</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>The micro-market: the Banda &ndash; Sawantwadi &ndash; Dodamarg belt</h3>
+  <p>A 150-acre contiguous parcel, priced against North Goa, roughly 30 minutes from Mopa and inside Sindhudurg district, points to the border belt in the south of the district. This is the same belt in which every serious competitor has assembled land, and it has three distinct sub-pockets:</p>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Candidate sub-markets and their character</caption>
+    <thead><tr><th>Sub-market</th><th>Character</th><th>To Mopa</th><th>Competing schemes present</th></tr></thead>
+    <tbody>
+      <tr><td><b>Banda</b> (Sawantwadi taluka)</td><td>On NH-66; the Shaktipeeth Expressway terminus; flat, developable, best access</td><td class="num">~15 min</td><td>Yugen Golf City / Garden of Eden (500 ac)</td></tr>
+      <tr><td><b>Sawantwadi</b> town belt</td><td>Established town, palace, rail terminus, schools, market</td><td class="num">~42 min / 35 km</td><td>Neworld Northern Hills, Malgaon (51 ac)</td></tr>
+      <tr><td><b>Dodamarg</b> (incl. Sasoli, Parme)</td><td>Forested, hilly, closest to Goa border; wildlife corridor overlaps</td><td class="num">~15&ndash;35 min</td><td>Axon The Origin, Sasoli (600 ac); Parme township</td></tr>
+      <tr><td><b>Vengurla / coastal</b></td><td>Beach frontage, CRZ-bound, highest &#8377;/sq ft, smallest parcels</td><td class="num">~45&ndash;60 min</td><td>Cida De Luxora (11 ac); Womeki Eye of Goa (78 ac)</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Distances are from published route data between town centroids. Site-specific drive times cannot be confirmed until the developer publishes coordinates.</p>
+
+  <h3>Connectivity</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Connectivity from the Banda &ndash; Sawantwadi belt</caption>
+    <thead><tr><th>Node</th><th class="num">Distance</th><th class="num">Time</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Manohar Intl Airport, Mopa (GOX)</td><td class="num">~15&ndash;35 km</td><td class="num">15&ndash;42 min</td><td>Operational; 5.38 M pax FY26</td></tr>
+      <tr><td>Sindhudurg Airport, Chipi (SDW)</td><td class="num">~60&ndash;70 km</td><td class="num">~1 hr 15 min</td><td>Operational; 73,022 pax FY26</td></tr>
+      <tr><td>Sawantwadi Road railway station</td><td class="num">~15&ndash;25 km</td><td class="num">20&ndash;35 min</td><td>Terminus Ph-I complete; daily CSMT express from 3 Sep 2026</td></tr>
+      <tr><td>NH-66 (Mumbai&ndash;Goa)</td><td class="num">On alignment</td><td class="num">&mdash;</td><td>Four-laning targeted end-2026</td></tr>
+      <tr><td>Goa border (Patradevi)</td><td class="num">~10&ndash;20 km</td><td class="num">15&ndash;25 min</td><td>Open</td></tr>
+      <tr><td>Panaji</td><td class="num">~60&ndash;75 km</td><td class="num">~1 hr 30 min</td><td>&mdash;</td></tr>
+      <tr><td>Mumbai</td><td class="num">~530 km</td><td class="num">9&ndash;11 hrs</td><td>To fall to ~6 hrs on NH-66 completion</td></tr>
+      <tr><td>Pune</td><td class="num">~430 km</td><td class="num">8&ndash;9 hrs</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Tourism, beaches and landmarks nearby</h3>
+  <p>Sindhudurg is <b>Maharashtra's first declared tourism district</b>, holds 37 forts &mdash; the highest count of any district in the state &mdash; and has 5,207&nbsp;sq&nbsp;km of area with a population of 849,651 that is only 12.59% urban (Census 2011). The relevant attractions for a second-home buyer within 30&ndash;90 minutes are Vengurla, Nivati, Bhogwe, Shiroda, Mochemad and Redi beaches; Tarkarli and Malvan with Sindhudurg Fort and Maharashtra's only marine sanctuary (Malvan Marine Sanctuary, 27&nbsp;sq&nbsp;km, established 1987); Amboli hill station and waterfall; and Sawantwadi Palace with its ganjifa and lacquerware crafts.</p>
+
+  <h3>Social infrastructure</h3>
+  <p>This is the belt's genuine weakness and should be handled honestly in the sales pitch. <b>Healthcare</b> is the strongest element: Government Medical College Sindhudurg at Oros, Kudal (established 2021) is a tertiary teaching hospital and among the largest in the district, and SSPM Medical College &amp; Lifetime Hospital, Kudal (2020) adds private capacity &mdash; both roughly 40&ndash;60&nbsp;km north of the border belt. Beyond that, retail, schooling and restaurant infrastructure at an urban standard is thin; buyers with young children will treat this as a holiday and retirement location, not a primary residence. Panaji and Goa's private schools and hospitals are the practical fallback at 60&ndash;90 minutes.</p>
+
+  <h3>FSI / FAR and development potential</h3>
+  <p>For a plotted scheme the developer sells land, not built area &mdash; FSI accrues to the plot buyer at the time of construction, and is governed by the <b>UDCPR 2020</b> as applied to Sindhudurg's non-corporation areas together with the district's regional plan. In rural and gram-panchayat settlement classes the basic residential FSI is typically at the low end (around 1.0), with premium FSI of 0.5 purchasable at 35% of the annual statement of rates land value. Buyers in this belt are routinely told &ldquo;G+4 permissible&rdquo; by competing schemes; that should be verified against the sanctioned layout rather than accepted.</p>
+  <div class="callout neu">
+    <h4>The overlooked structural advantage</h4>
+    <p>At 150 acres the project is <b>60.7 hectares</b> &mdash; comfortably above the <b>40-hectare contiguous threshold for Integrated Township Project status</b> in Maharashtra. That status carries additional built-up area on payment of premium and, commercially far more important, a <b>50% stamp-duty concession</b> both on the developer's land purchase and on the first transaction with each buyer of a unit under the approved master layout. Competing schemes of 11, 51 and 78 acres cannot access this. It is the single strongest un-played card in the project.</p>
+  </div>
+</section>
+
+<section id="mkt">
+  <div class="sec-head"><div class="sec-num">02</div><h2>Market &amp; Pricing</h2></div>
+  <p>The Sindhudurg plotted market is not one market. It is a wide, thinly-traded spread running from &#8377;3,591/sq&nbsp;yd for older inland layouts to &#8377;49,990/sq&nbsp;yd for a golf-anchored township &mdash; a fourteen-fold range inside one district. Where a scheme sits in that spread is determined almost entirely by amenity, brand and proximity to Mopa, not by land quality.</p>
+
+  <figure>
+    <div class="ftitle">Where God City sits in the Sindhudurg price ladder</div>
+    <div class="fsub">Residential plot and land benchmarks, &#8377; per square yard. Bars show reported ranges; dots show single reported or listed prices. All values normalised to &#8377;/sq&nbsp;yd from the source unit.</div>
+    <div class="svg-scroll">
+    <svg viewBox="0 0 900 384" role="img" aria-labelledby="c1t"><title id="c1t">Price ladder: God City at 35,000 rupees per square yard sits between Sindhudurg sea-view plots and Yugen Golf City at 49,990, and 3.7 to 5 times above Sawantwadi MOPA-side layouts at 7,000 to 9,500</title>
+      <line class="grid" x1="220" y1="30" x2="220" y2="336"/>
+      <line class="grid" x1="307.3" y1="30" x2="307.3" y2="336"/>
+      <line class="grid" x1="394.5" y1="30" x2="394.5" y2="336"/>
+      <line class="grid" x1="481.8" y1="30" x2="481.8" y2="336"/>
+      <line class="grid" x1="569.1" y1="30" x2="569.1" y2="336"/>
+      <line class="grid" x1="656.4" y1="30" x2="656.4" y2="336"/>
+      <line class="axis" x1="220" y1="344" x2="700" y2="344"/>
+      <text class="ax" x="220" y="362" text-anchor="middle">0</text>
+      <text class="ax" x="307.3" y="362" text-anchor="middle">10k</text>
+      <text class="ax" x="394.5" y="362" text-anchor="middle">20k</text>
+      <text class="ax" x="481.8" y="362" text-anchor="middle">30k</text>
+      <text class="ax" x="569.1" y="362" text-anchor="middle">40k</text>
+      <text class="ax" x="656.4" y="362" text-anchor="middle">&#8377;50k</text>
+
+      <text class="rowlbl" x="206" y="51" text-anchor="end">Sanskruti Goa2, Malvan</text>
+      <circle cx="251.3" cy="47" r="5.5" fill="var(--s1)"/>
+      <text class="vlbl" x="712" y="51">&#8377;3,591</text>
+
+      <text class="rowlbl" x="206" y="85" text-anchor="end">Goa-side land, Pernem</text>
+      <rect x="256.5" y="74" width="51" height="12" rx="4" fill="var(--s1)"/>
+      <text class="vlbl" x="712" y="85">&#8377;4,180&ndash;10,030</text>
+
+      <text class="rowlbl" x="206" y="119" text-anchor="end">Sawantwadi layouts (MOPA)</text>
+      <rect x="281.1" y="108" width="21.8" height="12" rx="4" fill="var(--s1)"/>
+      <text class="vlbl" x="712" y="119">&#8377;7,000&ndash;9,500</text>
+
+      <text class="rowlbl" x="206" y="153" text-anchor="end">Sindhudurg inland plots</text>
+      <rect x="298.5" y="142" width="78.6" height="12" rx="4" fill="var(--s1)"/>
+      <text class="vlbl" x="712" y="153">&#8377;9,000&ndash;18,000</text>
+
+      <text class="rowlbl on" x="206" y="187" text-anchor="end">Recommended launch band</text>
+      <rect x="377.1" y="176" width="52.4" height="12" rx="4" fill="var(--s3)"/>
+      <text class="vlbl" x="712" y="187">&#8377;18,000&ndash;24,000</text>
+
+      <text class="rowlbl" x="206" y="221" text-anchor="end">Pernem, N Goa (avg)</text>
+      <circle cx="404.6" cy="217" r="5.5" fill="var(--s1)"/>
+      <text class="vlbl" x="712" y="221">&#8377;21,150</text>
+
+      <text class="rowlbl on" x="206" y="255" text-anchor="end">God City (list price)</text>
+      <circle cx="525.5" cy="251" r="7.5" fill="var(--s2)" stroke="var(--surface)" stroke-width="2"/>
+      <text class="vlbl" x="712" y="255" font-weight="600">&#8377;35,000</text>
+
+      <text class="rowlbl" x="206" y="289" text-anchor="end">Sindhudurg sea-view plots</text>
+      <rect x="455.6" y="278" width="235.7" height="12" rx="4" fill="var(--s1)"/>
+      <text class="vlbl" x="712" y="289">&#8377;27,000&ndash;54,000</text>
+
+      <text class="rowlbl" x="206" y="323" text-anchor="end">Yugen Golf City, Banda</text>
+      <circle cx="656.3" cy="319" r="5.5" fill="var(--s1)"/>
+      <text class="vlbl" x="712" y="323">&#8377;49,990</text>
+    </svg>
+    </div>
+    <figcaption>Sources: developer sites (God City, Yugen); 99acres / MagicBricks locality data 2025&ndash;26; plotsgoa 2026; sindhudurgdevelopments &amp; ninedivinegroup 2025; Sanskruti Goa2 listing. Sq-m and sq-ft figures converted at 1 sq yd = 9 sq ft = 0.8361 sq m. Green band is this report's recommendation, not a market observation.</figcaption>
+  </figure>
+
+  <h3>Price benchmarks by unit</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Normalised price benchmarks &mdash; &#8377;/sq yd, &#8377;/sq ft, &#8377;/acre</caption>
+    <thead><tr><th>Benchmark</th><th class="num">&#8377;/sq yd</th><th class="num">&#8377;/sq ft</th><th class="num">&#8377;/acre</th><th>Date &amp; status</th></tr></thead>
+    <tbody>
+      <tr><td>Sanskruti Goa2, Malvan (marketed base)</td><td class="num">3,591</td><td class="num">399</td><td class="num">&#8377;1.74 cr</td><td>Listing <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Goa-side land near Mopa, Pernem</td><td class="num">4,180&ndash;10,030</td><td class="num">464&ndash;1,114</td><td class="num">&#8377;2.0&ndash;4.9 cr</td><td>2026 <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Sawantwadi layouts (MOPA)</td><td class="num">7,000&ndash;9,500</td><td class="num">778&ndash;1,056</td><td class="num">&#8377;3.4&ndash;4.6 cr</td><td>2025 <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Sindhudurg inland plots</td><td class="num">9,000&ndash;18,000</td><td class="num">1,000&ndash;2,000</td><td class="num">&#8377;4.4&ndash;8.7 cr</td><td>2025 <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Malvan land (broad)</td><td class="num">4,050&ndash;15,750</td><td class="num">450&ndash;1,750</td><td class="num">&#8377;2.0&ndash;7.6 cr</td><td>2026 <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Pernem, North Goa (all-property avg)</td><td class="num">21,150</td><td class="num">2,350</td><td class="num">&#8377;10.2 cr</td><td>2026 <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Sindhudurg sea-view plots</td><td class="num">27,000&ndash;54,000</td><td class="num">3,000&ndash;6,000</td><td class="num">&#8377;13.1&ndash;26.1 cr</td><td>2025 <span class="chip c-rep">Rep</span></td></tr>
+      <tr class="hi"><td>God City (list)</td><td class="num">35,000</td><td class="num">3,889</td><td class="num">&#8377;16.9 cr</td><td>2026 <span class="chip c-ver">Ver</span></td></tr>
+      <tr><td>Yugen Golf City, Banda</td><td class="num">49,990</td><td class="num">5,554</td><td class="num">&#8377;24.2 cr</td><td>2025&ndash;26 <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Ratnagiri district average (all property)</td><td class="num">33,948</td><td class="num">3,772</td><td class="num">&mdash;</td><td>Q2 2025 <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Goa state average (all property)</td><td class="num">~106,650</td><td class="num">11,850&ndash;11,950</td><td class="num">&mdash;</td><td>Jun&ndash;Aug 2026 <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Goa villas</td><td class="num">~163,800</td><td class="num">18,200</td><td class="num">&mdash;</td><td>Jun 2026 <span class="chip c-rep">Rep</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">&#8377;/acre is the notional gross value of one saleable acre at that rate (1 acre = 4,840 sq yd) and is <b>not</b> a land acquisition price. Cross-unit comparison carries error: portal &ldquo;average &#8377;/sq ft&rdquo; for a district mixes apartments, houses and land and should be read as directional only.</p>
+
+  <h3>Historical appreciation</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Reported appreciation, 2022&ndash;2026</caption>
+    <thead><tr><th>Market</th><th class="num">Change</th><th>Period</th><th>Reliability</th></tr></thead>
+    <tbody>
+      <tr><td>Land within 25&ndash;30 km of Mopa</td><td class="num">+28%</td><td>18 months, 2024&ndash;25</td><td>Trade source; directionally consistent <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Pernem, North Goa</td><td class="num">+261.5%</td><td>3 years to 2026</td><td>Portal locality data; very low base <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Anjuna, North Goa</td><td class="num">+105.4%</td><td>3 years to 2026</td><td>Portal locality data <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Goa overall</td><td class="num">+10&ndash;15%</td><td>2024 &rarr; 2026</td><td>Portal aggregate <span class="chip c-rep">Rep</span></td></tr>
+      <tr><td>Maharashtra ready reckoner</td><td class="num">+3.89%</td><td>FY2025&ndash;26, from 1 Apr 2025</td><td>Government notification <span class="chip c-ver">Ver</span></td></tr>
+      <tr><td>Sindhudurg forecast &ldquo;+29.2% p.a.&rdquo;</td><td class="num">&mdash;</td><td>issued Sept 2022</td><td><b>Promotional forecast, four years stale &mdash; do not quote to buyers</b> <span class="chip c-gap">Caution</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Demand, supply and absorption</h3>
+  <p>There is no published inventory, absorption or sales-velocity series for Sindhudurg plotted schemes &mdash; not from MahaRERA in usable aggregate form, not from the portals, and not from the developers. Any absorption number quoted in a sales meeting for this district is an assertion. What can be established is the <b>supply side</b>, and it is heavy:</p>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Announced plotted supply in the Sindhudurg&ndash;Goa border catchment</caption>
+    <thead><tr><th>Scheme</th><th>Location</th><th class="num">Announced area</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Axon &ldquo;The Origin&rdquo;</td><td>Sasoli, Dodamarg</td><td class="num">600 acres</td><td>Selling; RERA P52900033460</td></tr>
+      <tr><td>Yugen Golf City + Garden of Eden</td><td>Banda, Sawantwadi</td><td class="num">500 acres (master)</td><td>Selling; RERA registered phase</td></tr>
+      <tr class="hi"><td>God City &ldquo;New Goa&rdquo;</td><td>Undisclosed</td><td class="num">150 acres</td><td>Phase 1 open, 22.5 ac</td></tr>
+      <tr><td>Sanskruti Goa2</td><td>Malvan / Palsamb</td><td class="num">128 acres</td><td>519 units; RERA P52900010017</td></tr>
+      <tr><td>Womeki &ldquo;Eye of Goa&rdquo;</td><td>Kalavi beach</td><td class="num">78 acres</td><td>&#8377;350 cr development</td></tr>
+      <tr><td>Neworld Northern Hills</td><td>Malgaon, Sawantwadi</td><td class="num">51 acres</td><td>Selling; RERA approved</td></tr>
+      <tr><td>Cida De Luxora</td><td>Coastal belt</td><td class="num">11 acres</td><td>50 villa plots; RERA applied</td></tr>
+      <tr><td>GoBoundry &ldquo;New Goa&rdquo;</td><td>Sindhudurg</td><td class="num">11 acres</td><td>Selling</td></tr>
+      <tr><td colspan="2"><b>Identified total (excl. unbranded layouts)</b></td><td class="num"><b>~1,529 acres</b></td><td><span class="chip c-est">Estimate</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="callout">
+    <h4>Read the supply number carefully</h4>
+    <p>At an assumed 58% saleable efficiency, ~1,529 announced acres is roughly <b>4.3 million saleable square yards</b>, or about <b>14,300 plots of 300 sq yd</b>. Sindhudurg's entire population is 849,651. This inventory is not being built for local demand &mdash; it is a bet on Mumbai, Pune, NCR and NRI second-home buyers arriving in numbers that no one has yet demonstrated. That is the defining supply-side risk in this market, and it argues strongly for pricing to move volume early rather than holding out for a headline rate.</p>
+  </div>
+
+  <h3>Rental market</h3>
+  <p>Bare plots generate no rent. The rental case rests on building a villa and operating it as a short-stay let. Malvan alone lists 210+ vacation rentals, and the argument advanced by local promoters &mdash; that North Goa's short-let market is saturated at 70&ndash;90% peak occupancy while Sindhudurg offers North Goa-style returns at a fraction of the entry cost &mdash; is directionally credible. But Sindhudurg is materially more seasonal than Goa: the June&ndash;September monsoon is effectively dead for beach tourism, which caps realistic annual occupancy well below Goa's. Our modelled yield in Section 07 uses 38% annual occupancy for that reason.</p>
+</section>
+
+<section id="comp">
+  <div class="sec-head"><div class="sec-num">03</div><h2>Competitor Analysis</h2></div>
+  <p>Fifteen competing schemes were identified in and around the catchment. Two of them &mdash; Axon and Yugen &mdash; have announced land banks four times God City's size, both are RERA-registered, and both are inside the same 30-minute Mopa radius. This is a crowded, capital-heavy field, not an empty one.</p>
+
+  <h3>Direct and indirect competitors</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Competitor set &mdash; product, price and status</caption>
+    <thead><tr>
+      <th>#</th><th>Project / developer</th><th>Location</th><th class="num">Size</th><th>Product &amp; unit sizes</th><th class="num">Price</th><th class="num">Ticket size</th><th>RERA</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td><b>Yugen Golf City / Garden of Eden</b><br>Yugen Infra<small>Golf, Wyndham-managed amenities, helipad, lake</small></td><td>Banda, Sawantwadi<small>Same belt &mdash; direct</small></td><td class="num">500 ac master<br><small>44&ndash;55 ac phase</small></td><td>Villa plots<br>200&ndash;1,000 sq yd<br><small>~278 plots</small></td><td class="num">&#8377;49,990/sq yd</td><td class="num">&#8377;1.0&ndash;5.0 cr</td><td>Registered<small>&#8377;350 cr project</small></td></tr>
+      <tr><td class="num">2</td><td><b>The Origin</b><br>Axon Development<small>Zen garden, wellness centre, spa, club</small></td><td>Sasoli, Dodamarg<small>15 min from Mopa</small></td><td class="num">600 ac</td><td>NA plots<br>5,500&ndash;44,000 sq ft</td><td class="num">Not published<br><small>by area</small></td><td class="num">&#8377;55 L&ndash;3.52 cr</td><td>P52900033460</td></tr>
+      <tr><td class="num">3</td><td><b>Northern Hills</b><br>Neworld Developers<small>G+4 claimed, freehold NA</small></td><td>Malgaon, Sawantwadi<small>20 min Mopa, 5 min Goa border</small></td><td class="num">51 ac</td><td>Villa plots<br>270&ndash;1,000 sq yd</td><td class="num">Not published</td><td class="num">Not published</td><td>Stated approved</td></tr>
+      <tr><td class="num">4</td><td><b>Cida De Luxora</b><br><small>Roman-themed, 50 villas only, retail + office</small></td><td>Coastal belt<small>2 min NH-66, 15 min Vengurla, 30 min Mopa</small></td><td class="num">11 ac</td><td>Villa plots<br>600+ sq yd</td><td class="num">Not published</td><td class="num">Not published</td><td>Applied<small>NA-converted, title-clear claimed</small></td></tr>
+      <tr><td class="num">5</td><td><b>Sanskruti Goa2</b><br><small>112 m elevation, pool, gym, club, banquet</small></td><td>Palsamb / Malvan<small>Near Achara beach</small></td><td class="num">128 ac</td><td>NA plots<br>5,500&ndash;13,000 sq ft<br><small>519 units</small></td><td class="num">&#8377;3,591/sq yd</td><td class="num">from ~&#8377;34 L</td><td>P52900010017</td></tr>
+      <tr><td class="num">6</td><td><b>Eye of Goa</b><br>Womeki Group</td><td>Kalavi beach</td><td class="num">78 ac</td><td>Residential units</td><td class="num">&#8377;20,000/sq m<br><small>&#8776;&#8377;16,722/sq yd</small></td><td class="num">&#8377;50&ndash;60 L</td><td>Not confirmed</td></tr>
+      <tr><td class="num">7</td><td><b>Goa-side plots</b><br>Pernem / Tuem / Mopa<small>The real alternative for the same buyer</small></td><td>North Goa<small>Indirect &mdash; decisive</small></td><td class="num">Fragmented</td><td>NA plots, small parcels</td><td class="num">&#8377;4,180&ndash;10,030/sq yd<br><small>land basis</small></td><td class="num">&#8377;20 L&ndash;2 cr</td><td>Goa RERA</td></tr>
+      <tr><td class="num">8</td><td><b>Tathastu</b> portfolio<br>Konkan Estates<small>Grandscapes, Riverfront, Mango Valley, Boulevard, Serenity Farms</small></td><td>Nate &amp; Konkan coast<small>45 min Sindhudurg airport</small></td><td class="num">Multiple</td><td>Villa plots, managed mango farms</td><td class="num">Not published</td><td class="num">Not published</td><td>Varies</td></tr>
+      <tr><td class="num">9</td><td><b>&ldquo;New Goa&rdquo;</b><br>GoBoundry<small>Direct name collision with God City</small></td><td>Sindhudurg</td><td class="num">11 ac</td><td>Villa plots</td><td class="num">Not published</td><td class="num">Not published</td><td>Not confirmed</td></tr>
+      <tr><td class="num">10</td><td><b>Shantim</b><br>Avira Dream Homes</td><td>Maneri, Sindhudurg</td><td class="num">Not published</td><td>Plotted</td><td class="num">Not published</td><td class="num">Not published</td><td>P52900079987<small>completion end-2026</small></td></tr>
+      <tr><td class="num">11</td><td><b>Parme township</b></td><td>Parme, Dodamarg<small>18 km from Mopa</small></td><td class="num">Not published</td><td>Plots from 5,500 sq ft<br><small>24/7 security, spa, club, pool</small></td><td class="num">&#8776;&#8377;10,800/sq yd</td><td class="num">from &#8377;66 L</td><td>Not confirmed</td></tr>
+      <tr><td class="num">12</td><td><b>Jaitapkar Group</b><small>Local incumbent since 1995</small></td><td>Across Sindhudurg</td><td class="num">Multiple</td><td>Second homes</td><td class="num">Not published</td><td class="num">Not published</td><td>Varies</td></tr>
+      <tr><td class="num">13</td><td><b>Shri Swami Samarth Paradise II</b><br>Ranco Realty</td><td>Sindhudurg</td><td class="num">Not published</td><td>Plotted villas</td><td class="num">Not published</td><td class="num">Not published</td><td>Not confirmed</td></tr>
+      <tr><td class="num">14</td><td><b>Rover Aarambh Residency</b><br>Rover Estate</td><td>Kankavli</td><td class="num">Not published</td><td>Residential</td><td class="num">Not published</td><td class="num">Not published</td><td>Not confirmed</td></tr>
+      <tr><td class="num">15</td><td><b>Dodamarg half-acre NA plots</b><br>Unbranded layouts<small>The price floor of the market</small></td><td>Dodamarg</td><td class="num">Fragmented</td><td>0.5 acre NA plots<br>300&ndash;1,200 sq m</td><td class="num">&#8776;&#8377;4,500/sq yd</td><td class="num">from &#8377;11 L</td><td>Varies / none</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">&ldquo;Not published&rdquo; means the figure was not discoverable in public sources at the data cut-off &mdash; it does not mean the figure does not exist. Sales teams should verify competitor pricing by mystery shopping before using this table in a pitch.</p>
+
+  <h3>Competitive ranking &mdash; threat to God City</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Ranked by competitive threat</caption>
+    <thead><tr><th class="num">Rank</th><th>Competitor</th><th>Target customer &amp; USP</th><th>Strengths</th><th>Weaknesses</th><th>Threat</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td><b>Yugen Golf City / Garden of Eden</b></td><td>HNI second-home &amp; NRI buyer; &ldquo;golf township on the Goa border&rdquo;</td><td>Only golf course in the belt; hotel-brand association; 500-acre scale; RERA-registered; &#8377;350 cr committed; same taluka as the Shaktipeeth terminus</td><td>Highest price in the district; golf and hotel components are long-dated promises; heavy capital requirement</td><td><b>Severe</b> &mdash; sets the price ceiling God City is pricing into without matching the product</td></tr>
+      <tr><td class="num">2</td><td><b>Axon The Origin, Sasoli</b></td><td>Mid-to-upper second-home buyer; &ldquo;600 acres of green, 15 min from Mopa&rdquo;</td><td>Largest land bank; RERA-registered; wide ticket ladder from &#8377;55 L; closest to Mopa; wellness-led amenity story</td><td>Dodamarg location sits in the wildlife-corridor / ESZ overhang; large plots push ticket sizes high</td><td><b>Severe</b> &mdash; out-scales God City and undercuts on entry ticket</td></tr>
+      <tr><td class="num">3</td><td><b>Goa-side plots (Pernem / Tuem)</b></td><td>The buyer who wants a Goa address</td><td>Actual Goa; Goa RERA; established resale market; the address God City is borrowing</td><td>Small fragmented parcels; no gated amenity; higher legal complexity for non-Goans</td><td><b>High</b> &mdash; every &ldquo;New Goa&rdquo; pitch invites this comparison and loses it on authenticity</td></tr>
+      <tr><td class="num">4</td><td><b>Neworld Northern Hills</b></td><td>Value-conscious plot buyer</td><td>RERA approved, NA, freehold; 5 min to Goa border; credible 51-acre scale; clear plot ladder 270&ndash;1,000 sq yd</td><td>No headline amenity; smaller scale limits phasing story</td><td><b>Medium-high</b> &mdash; the credible, boring alternative</td></tr>
+      <tr><td class="num">5</td><td><b>Sanskruti Goa2</b></td><td>Entry-level / first-time second-home buyer</td><td>&#8377;3,591/sq yd anchors the floor; 519 units; long-registered RERA; real amenities</td><td>Malvan is far from Mopa; older vintage stock</td><td><b>Medium</b> &mdash; defines &ldquo;how cheap Sindhudurg can be&rdquo; in a buyer's mind</td></tr>
+      <tr><td class="num">6</td><td><b>Cida De Luxora</b></td><td>Ultra-premium, scarcity buyer</td><td>Only 50 villas &mdash; genuine scarcity; strong content marketing; NA-converted, title-clear claim; coastal proximity</td><td>11 acres gives no phasing runway; RERA only applied</td><td><b>Medium</b> &mdash; competes on narrative, not scale</td></tr>
+      <tr><td class="num">7</td><td><b>Womeki Eye of Goa</b></td><td>&#8377;50&ndash;60 L ticket buyer wanting beach</td><td>Beachfront at Kalavi; &#8377;350 cr; sharp entry ticket</td><td>CRZ exposure on a beach site; developer unfamiliar in this market</td><td><b>Medium</b></td></tr>
+      <tr><td class="num">8</td><td><b>Unbranded Dodamarg NA layouts</b></td><td>Price-first buyer, local investor</td><td>&#8377;11 L entry; immediate NA title; no waiting</td><td>No amenity, no gating, no exit story</td><td><b>Medium</b> &mdash; drags the anchor price down in every negotiation</td></tr>
+      <tr><td class="num">9</td><td><b>GoBoundry &ldquo;New Goa&rdquo;</b></td><td>Same positioning, smaller scheme</td><td>Occupies the exact brand phrase God City uses</td><td>11 acres; limited credibility</td><td><b>Low-medium</b> &mdash; but it neutralises God City's tagline</td></tr>
+      <tr><td class="num">10</td><td><b>Konkan Estates / Tathastu</b></td><td>Managed-farm and lifestyle investor</td><td>Portfolio breadth; managed mango-farm product creates yield where plots have none</td><td>Spread across Ratnagiri &amp; Sindhudurg, not concentrated in this belt</td><td><b>Low-medium</b> &mdash; but its yield product is the gap God City should copy</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <h4>The competitive verdict</h4>
+    <p>God City is priced in the top 15% of the district but is, on all publicly available evidence, in the middle of the pack on <b>scale</b> (150 acres vs 500 and 600), at the bottom on <b>verifiable compliance</b> (no discoverable RERA number vs registered competitors), and unranked on <b>amenity</b> because no amenity schedule has been published. A price at the top of a market must be earned by something the buyer can see. Right now, the buyer cannot see it.</p>
+  </div>
+</section>
+
+<section id="dem">
+  <div class="sec-head"><div class="sec-num">04</div><h2>Customer &amp; Demand Analysis</h2></div>
+  <p>India's second-home market has passed <b>$3 billion</b>, leisure-housing demand is up 30&ndash;40% since 2020 and the segment is expanding 18&ndash;22% a year. The HNI base &mdash; roughly 850,000 individuals in 2024, projected to reach 1.65 million by 2027, with UHNIs up 50% by 2028 &mdash; allocates about 25% of its real-estate portfolio to holiday homes, the second-largest allocation after commercial. NRI real-estate investment is growing 20&ndash;30% annually in 2026. The demand pool is real. The question is what share of it reaches this specific district.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <caption>Demand by buyer segment &mdash; sizing, motivation and objections</caption>
+    <thead><tr><th>Segment</th><th>Est. share of sales</th><th>Purchasing power</th><th>Preferred product &amp; ticket</th><th>Buying motivation</th><th>Key objection</th><th>Return expectation</th></tr></thead>
+    <tbody>
+      <tr class="hi"><td><b>Mumbai</b><small>Andheri&ndash;Borivali&ndash;Thane, Navi Mumbai</small></td><td class="num">30&ndash;35%</td><td>High &mdash; &#8377;50 L&ndash;3 cr discretionary</td><td>300&ndash;500 sq yd<br>&#8377;60 L&ndash;1.3 cr</td><td>Weekend/holiday home; Goa alternative at half price; NH-66 completion makes a 6-hour drive plausible</td><td>&ldquo;It's still 9 hours today.&rdquo; Drive time is the single biggest blocker until NH-66 finishes</td><td>12&ndash;15% p.a. capital; rent secondary</td></tr>
+      <tr class="hi"><td><b>Pune</b><small>Baner, Kharadi, Hinjewadi IT belt</small></td><td class="num">18&ndash;22%</td><td>High &mdash; strong salaried &amp; startup wealth</td><td>200&ndash;400 sq yd<br>&#8377;40 L&ndash;85 L</td><td>Priced out of Lonavala; wants coast not hills; strong DIY villa-building culture</td><td>No direct flight; compares against Lonavala's 2-hour drive</td><td>12&ndash;15% p.a. capital</td></tr>
+      <tr><td><b>NRIs</b><small>Gulf, Singapore, US/UK</small></td><td class="num">10&ndash;15%</td><td>Very high &mdash; FX advantage</td><td>500&ndash;1,000 sq yd<br>&#8377;1.3&ndash;3.2 cr</td><td>India anchor asset; retirement optionality; Goa proximity with lower entry</td><td>Cannot inspect; needs airtight title, RERA and a managed-build service. Will not buy an unregistered plot</td><td>10&ndash;14% p.a. plus rental</td></tr>
+      <tr><td><b>HNIs / UHNIs</b><small>Pan-India</small></td><td class="num">8&ndash;12%</td><td>Very high</td><td>1,000+ sq yd estate plots<br>&#8377;3 cr+</td><td>Portfolio diversification; land banking; privacy</td><td>Wants a branded or managed product, not raw land; Yugen's hotel association speaks directly to this buyer</td><td>15%+ p.a.; accepts illiquidity</td></tr>
+      <tr><td><b>Investors / land bankers</b></td><td class="num">10&ndash;15%</td><td>Medium&ndash;high</td><td>200&ndash;300 sq yd, multiple units<br>&#8377;40&ndash;65 L each</td><td>Pure infrastructure arbitrage &mdash; Shaktipeeth, NH-66, Mopa scaling</td><td>Entry price already reflects the catalysts; needs a resale exit that does not exist yet</td><td>2&ndash;3&times; over 5&ndash;7 years</td></tr>
+      <tr><td><b>Local Maharashtra</b><small>Sindhudurg, Kolhapur, Belagavi</small></td><td class="num">8&ndash;12%</td><td>Low&ndash;medium</td><td>200&ndash;300 sq yd<br>&#8377;15&ndash;45 L</td><td>Genuine end-use; family land; proximity to work at Mopa/Kudal</td><td>&#8377;35,000/sq yd is 4&times; what local land trades at &mdash; this segment is largely priced out</td><td>End-use, not return-driven</td></tr>
+      <tr><td><b>Retirement buyers</b></td><td class="num">5&ndash;8%</td><td>Medium</td><td>300&ndash;500 sq yd, single-storey<br>&#8377;60 L&ndash;1.2 cr</td><td>Climate, air quality, medical college at Kudal, Marathi-speaking community</td><td>Distance to tertiary healthcare; monsoon isolation; thin retail and services</td><td>Capital preservation</td></tr>
+      <tr><td><b>Goa residents / expat community</b></td><td class="num">3&ndash;5%</td><td>Medium&ndash;high</td><td>300&ndash;600 sq yd<br>&#8377;60 L&ndash;1.5 cr</td><td>Goa land scarcity and price escalation; same lifestyle, lower cost</td><td>Maharashtra land law and non-agriculturist restrictions are unfamiliar and off-putting</td><td>10&ndash;15% p.a.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note"><span class="chip c-est">Estimate</span> Segment shares are this report's allocation based on how comparable coastal second-home schemes sell in western India, cross-checked against the national HNI and NRI data cited above. There is no published buyer-origin data for Sindhudurg; treat these as planning assumptions to be replaced by the developer's own CRM data after the first 50 sales.</p>
+
+  <div class="callout neu">
+    <h4>The demand insight that should drive the sales plan</h4>
+    <p>Roughly <b>half of the addressable demand (Mumbai + Pune) is drive-time sensitive and price sensitive</b>, while the highest-paying segments (NRI, HNI) are <b>compliance sensitive</b> and will not transact without RERA, clear title and a managed build. God City's current posture &mdash; a high price with no published registration &mdash; is the one combination that fails both halves of the market at once. Fixing registration unlocks the top; fixing price unlocks the volume.</p>
+  </div>
+</section>
+
+<section id="growth">
+  <div class="sec-head"><div class="sec-num">05</div><h2>Location &amp; Future Growth</h2></div>
+  <p>This is the strongest chapter of the God City case. Sindhudurg's border belt is the intersection of an operating international airport, a highway finishing next year, a proposed expressway that terminates in the taluka, and a state actively spending tourism capital in the district. No other stretch of the Maharashtra coast has this concentration.</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <caption>Infrastructure catalysts &mdash; distance, status, timeline, impact</caption>
+    <thead><tr><th>Project</th><th>Distance / relevance</th><th>Current status</th><th>Timeline</th><th>Impact on God City</th></tr></thead>
+    <tbody>
+      <tr class="hi"><td><b>Shaktipeeth Expressway</b><br>Pavnar (Wardha) &rarr; Patradevi<small>856.765 km, MSRDC</small></td><td><b>Terminates at Banda, Sawantwadi taluka</b> &mdash; inside the candidate micro-market</td><td>Revised alignment approved 1 Apr 2026 (up from 802.592 km after farmer protests); &#8377;20,787 cr sanctioned Jun 2025 for land acquisition across 13 districts; joint surveys and DPR under way</td><td>Completion targeted <b>2028&ndash;29</b></td><td><b>Very high.</b> Cuts Nagpur&ndash;Goa from 18 to 8 hours and puts an expressway head in the taluka. The single largest potential re-rating event for this land</td></tr>
+      <tr class="hi"><td><b>Manohar Intl Airport, Mopa (GOX)</b></td><td>~15&ndash;42 min &mdash; the demand engine</td><td><b>Operational.</b> 5.38 M passengers FY2025&ndash;26, +15.8% YoY; 38,111 aircraft movements, +21%; capacity 7.7 M; features in Skytrax top 100. Net loss &#8377;331.2 cr FY26; concession fee to state &#8377;101.3 cr</td><td>Live; headroom to 7.7 M</td><td><b>Very high &mdash; already delivered.</b> This is why the market exists. Note the operator's losses: route growth is not guaranteed</td></tr>
+      <tr class="hi"><td><b>NH-66 four-laning</b><br>Mumbai&ndash;Goa</td><td>Runs through the belt</td><td>Substantially complete; the 84 km Panvel&ndash;Indapur stretch lags at ~73% on flyover redesigns and contractor changes. Deadline moved from 31 Mar 2026 to end-2026</td><td><b>End 2026</b> (has slipped repeatedly since 2011)</td><td><b>High.</b> Halves Mumbai&ndash;Goa from ~12 to ~6 hours. Removes the biggest Mumbai buyer objection</td></tr>
+      <tr><td><b>Konkan Expressway (ME-6)</b><br>Panvel &rarr; Sindhudurg<small>388&ndash;389 km, 6-lane greenfield</small></td><td>Terminates in Sindhudurg district</td><td>Revised DPR complete &mdash; 41 tunnels, 21 major bridges, 51 viaducts, 14 interchanges &mdash; awaiting final approval and environmental clearance. Est. cost &#8377;68,720 cr. Passes 232 villages across 17 talukas</td><td><b>Not sanctioned</b>; no credible date</td><td><b>High if built.</b> Would cut Mumbai&ndash;Sindhudurg to ~3 hours. Treat as upside, never as a sales promise</td></tr>
+      <tr><td><b>Sindhudurg Airport, Chipi (SDW)</b></td><td>~60&ndash;70 km north</td><td>Fully operational Oct 2025; 73,022 passengers FY2025&ndash;26 (+398%); Fly91 to Bengaluru, Hyderabad, Pune; complimentary coach links to Panaji. Navi Mumbai&ndash;Sindhudurg route still not on sale as of Aug 2026</td><td>Live; Mumbai link pending</td><td><b>Medium.</b> Growth rate is spectacular but the base is tiny &mdash; 1.4% of Mopa's traffic</td></tr>
+      <tr><td><b>Konkan Railway</b><br>Sawantwadi Road terminus</td><td>~15&ndash;25 km</td><td>Route fully electrified Mar 2022 (741 km). Terminus Phase-I complete (&#8377;11.42 cr), Phase-II sanctioned (&#8377;8.15 cr). <b>New daily CSMT&ndash;Sawantwadi Road express flagged off 3 Sept 2026</b>, 510 km, 22 halts. Patch-doubling survey for Vaibhavwadi&ndash;Majorda (151 km) near completion Jun 2026</td><td>Express live now; doubling 2028+</td><td><b>Medium-high.</b> A daily direct Mumbai train is an immediate, tangible sales asset &mdash; use it</td></tr>
+      <tr><td><b>India's first underwater museum</b><br>Ex-INS Guldar, Nivati Rock</td><td>~45&ndash;60 min &mdash; Vengurla taluka</td><td>Warship installed on the seabed at 22 m depth on <b>19 May 2026</b> with Mazagon Dock. &#8377;46.91 cr Union funding + &#8377;112.46 cr state sanction under the SASCI iconic-tourist-centre scheme</td><td>Bookings indicated in 2026 after safety clearances</td><td><b>Medium.</b> A genuine national first that lifts Sindhudurg's tourism profile and the short-let case</td></tr>
+      <tr><td><b>Revas&ndash;Reddi Coastal Highway (MSH-4)</b></td><td>498 km ending at Reddi, Vengurla taluka</td><td>Design approved Mar 2022; four-laning plus 8 creek bridges incl. 1.6 km Kunkeshwar bridge. <b>Delayed on Maharashtra Maritime Board vertical clearances</b>; Deputy CM has pressed for urgency</td><td>Open-ended</td><td><b>Medium.</b> Would open the coastal tourism belt; do not underwrite a timeline</td></tr>
+      <tr><td><b>Sagarmala / Redi Port</b></td><td>Redi, Vengurla taluka</td><td>Programme-wide: 315 projects worth &#8377;1.57 lakh cr complete as at 24 Mar 2026; 210 under implementation, 320 planned</td><td>Rolling</td><td><b>Low-medium.</b> Industrial, not residential demand; adds local employment slowly</td></tr>
+      <tr><td><b>Medical &amp; education</b></td><td>Oros / Kudal, ~40&ndash;60 km</td><td>Government Medical College Sindhudurg (2021, tertiary) and SSPM Medical College &amp; Lifetime Hospital (2020) both operating</td><td>Live</td><td><b>Medium.</b> Materially strengthens the retirement-buyer case</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout pos">
+    <h4>How to sequence the story for buyers</h4>
+    <p>Sell what has <b>already happened</b> &mdash; Mopa at 5.38 million passengers and growing 15%+, a daily Mumbai train since September 2026, a medical college at Kudal, a national-first underwater museum installed in May 2026. Then present NH-66's end-2026 completion as near-term. Present Shaktipeeth (2028&ndash;29) as the medium-term thesis, clearly labelled as under construction. <b>Never sell the Konkan Expressway</b> &mdash; it is unsanctioned, and a buyer who later discovers that will discount everything else in the pitch.</p>
+  </div>
+</section>
+
+<section id="pos">
+  <div class="sec-head"><div class="sec-num">06</div><h2>Project Positioning</h2></div>
+
+  <h3>What God City's strongest USP actually is</h3>
+  <p>Not &ldquo;New Goa&rdquo; &mdash; that phrase is used by GMR for the Mopa airport itself, by at least one competing developer for its own Sindhudurg scheme, and generically across the corridor. It is unownable and it invites the one comparison God City cannot win: against actual Goa.</p>
+  <p>The real USP is structural and defensible: <b>150 contiguous acres inside the Shaktipeeth terminus taluka, 30 minutes from a working international airport, at a scale that qualifies for Integrated Township status.</b> Scale is what God City has that Cida De Luxora (11 acres), GoBoundry (11 acres) and Northern Hills (51 acres) do not, and township status is a legal advantage that even Yugen's phased 44&ndash;55 acre releases may not claim as cleanly.</p>
+
+  <h3>Ideal target customer</h3>
+  <p>A <b>Mumbai or Pune professional or business owner, aged 38&ndash;55, buying a 300&ndash;400 sq yd plot at a &#8377;60&ndash;85 lakh ticket</b>, intending to build within three to five years, motivated by the Goa-adjacency and the NH-66 drive time, and requiring a MahaRERA number before signing. The NRI and HNI segments pay more but convert far more slowly and demand a managed-build service God City does not yet offer &mdash; they are the Phase 2 and 3 customer, not the launch customer.</p>
+
+  <h3>Premium or mass market?</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>The positioning decision</caption>
+    <thead><tr><th>Option</th><th>Price</th><th>What it requires</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td><b>Full premium</b> &mdash; compete with Yugen</td><td class="num">&#8377;35,000&ndash;50,000/sq yd</td><td>A golf course or equivalent anchor, a hotel-brand tie-up, a delivered clubhouse, and a promoter balance sheet that can carry &#8377;300 cr+ of un-recovered spend</td><td><b>Not available.</b> A two-year-old LLP with a &#8377;1 lakh contribution cannot credibly out-spend a &#8377;350 cr competitor</td></tr>
+      <tr class="hi"><td><b>Upper-mid, volume-led</b> &mdash; the recommendation</td><td class="num">&#8377;18,000&ndash;24,000/sq yd standard<br>&#8377;28,000&ndash;35,000 premium stock</td><td>Township status, a completed clubhouse, published RERA, a build-and-manage service, and a disciplined phase-wise price ladder</td><td><b>Recommended.</b> Undercuts Yugen by 50&ndash;60% while sitting well above unbranded layouts; the widest addressable segment; funds itself from Phase 1</td></tr>
+      <tr><td><b>Mass market</b> &mdash; compete on price</td><td class="num">&#8377;9,000&ndash;14,000/sq yd</td><td>Minimal amenity, fast absorption, thin margins</td><td><b>Not advisable.</b> Sacrifices the scale advantage and puts the project into a knife-fight with unbranded Dodamarg layouts at &#8377;4,500/sq yd</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Product and amenity gaps in this market</h3>
+  <p>Every competitor in the belt sells the same thing: a fenced plot with a promised clubhouse. The gaps are consistent and none of them are expensive relative to a golf course:</p>
+  <ul>
+    <li><b>Nobody is selling yield.</b> Plots produce nothing until built. Konkan Estates' managed mango-farm product is the only yield-bearing structure in the region and it is not in this belt. A fixed-price build package plus a managed short-let programme converts the investor segment that will not buy dirt.</li>
+    <li><b>Nobody has finished a clubhouse.</b> Every scheme markets renders. The first developer to hand a buyer a photograph of a completed, operating clubhouse on site wins the credibility contest outright.</li>
+    <li><b>Nobody publishes a compliance pack.</b> 7/12 extracts, search report, NA order, Form D-3 sanction, CRZ and ESA position &mdash; assembled into a downloadable file &mdash; would be unique in this market and directly targets the NRI and HNI objection.</li>
+    <li><b>Nobody offers monsoon-proofing.</b> This coast floods. A published drainage and access design, and a guarantee of year-round road access, addresses a fear every buyer has and no brochure mentions.</li>
+    <li><b>No branded hospitality anchor below Yugen's price point.</b> A 20&ndash;30 key boutique resort or serviced-villa operator inside the township gives buyers a rental channel and gives the developer a photographable asset at a fraction of a golf course's cost.</li>
+  </ul>
+
+  <div class="callout neu">
+    <h4>What God City should offer that competitors do not</h4>
+    <p><b>A completed clubhouse before Phase 1 closes, a published compliance file, Integrated Township stamp-duty savings passed to the buyer, and a fixed-price build-plus-manage programme.</b> Together these cost a fraction of a golf course, are deliverable inside 24 months, and attack precisely the four objections that stop this market's buyers from signing.</p>
+  </div>
+</section>
+
+<section id="fin">
+  <div class="sec-head"><div class="sec-num">07</div><h2>Financial &amp; Investment Analysis</h2></div>
+  <div class="callout">
+    <h4>Read this first</h4>
+    <p>The developer has published <b>no</b> cost, revenue, land-basis or absorption data. Everything in this section is a model built from public benchmarks, with every assumption stated. It is a framework for interrogating the developer at the meeting &mdash; not a valuation. Replace each assumption with the developer's actual number and the conclusions will move.</p>
+  </div>
+
+  <h3>Assumptions</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Model assumptions &mdash; all estimates unless marked</caption>
+    <thead><tr><th>Assumption</th><th class="num">Value</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr><td>Gross land</td><td class="num">150 acres = 726,000 sq yd</td><td>Developer <span class="chip c-ver">Ver</span></td></tr>
+      <tr><td>Saleable efficiency</td><td class="num">58%</td><td>Roads ~18%, open space ~10%, amenities ~8%, buffers ~6% <span class="chip c-est">Est</span></td></tr>
+      <tr><td>Net saleable area</td><td class="num">421,080 sq yd</td><td>Derived</td></tr>
+      <tr><td>Land acquisition</td><td class="num">&#8377;60 lakh/acre &rarr; &#8377;90 cr</td><td>Sindhudurg bulk agricultural comparables range &#8377;12 lakh&ndash;&#8377;1.3 cr/acre depending on frontage and NA status; &#8377;40&ndash;80 L is the realistic band for a 150-acre interior assembly <span class="chip c-est">Est</span></td></tr>
+      <tr><td>Site development</td><td class="num">&#8377;1.25 cr/acre &rarr; &#8377;187.5 cr</td><td>Roads, storm-water, water supply, electrification, STP, boundary, landscaping <span class="chip c-est">Est</span></td></tr>
+      <tr><td>Amenities &amp; clubhouse</td><td class="num">&#8377;35 cr</td><td>Front-loaded into Phase 1 <span class="chip c-est">Est</span></td></tr>
+      <tr><td>Approvals, NA, RERA, legal, survey</td><td class="num">&#8377;18 cr</td><td><span class="chip c-est">Est</span></td></tr>
+      <tr><td>Selling &amp; marketing</td><td class="num">10% of revenue</td><td>Channel-partner brokerage 4&ndash;8% + marketing 3&ndash;5% for out-of-state plotted sales <span class="chip c-est">Est</span></td></tr>
+      <tr><td>Finance &amp; contingency</td><td class="num">8% of hard cost = &#8377;26.4 cr</td><td><span class="chip c-est">Est</span></td></tr>
+      <tr><td><b>Fixed cost base</b></td><td class="num"><b>&#8377;357 cr</b></td><td>Land + development + amenities + approvals + finance/contingency</td></tr>
+      <tr><td>Sell-through period</td><td class="num">7&ndash;8 years, 5 phases</td><td><span class="chip c-est">Est</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Scenario outcomes</h3>
+  <figure>
+    <div class="ftitle">Full-project economics under three realised-price scenarios</div>
+    <div class="fsub">&#8377; crore over the full 150 acres and a 7&ndash;8 year sell-through. Scenarios differ only in blended realised price per square yard, net of discounts; the cost base is held constant except for selling costs, which scale with revenue.</div>
+    <div class="legend">
+      <span><i style="background:var(--s1)"></i>Gross revenue</span>
+      <span><i style="background:var(--s2)"></i>Total cost</span>
+      <span><i style="background:var(--s3)"></i>Net profit</span>
+    </div>
+    <div class="svg-scroll">
+    <svg viewBox="0 0 900 400" role="img" aria-labelledby="c3t"><title id="c3t">Bear case at 14,000 rupees per square yard returns 174 crore profit on 590 crore revenue; base case at 22,000 returns 477 crore on 926 crore; bull case at 32,000 returns 856 crore on 1,348 crore</title>
+      <line class="grid" x1="80" y1="340" x2="860" y2="340"/>
+      <line class="grid" x1="80" y1="265" x2="860" y2="265"/>
+      <line class="grid" x1="80" y1="190" x2="860" y2="190"/>
+      <line class="grid" x1="80" y1="115" x2="860" y2="115"/>
+      <line class="grid" x1="80" y1="40" x2="860" y2="40"/>
+      <text class="ax" x="72" y="344" text-anchor="end">0</text>
+      <text class="ax" x="72" y="269" text-anchor="end">350</text>
+      <text class="ax" x="72" y="194" text-anchor="end">700</text>
+      <text class="ax" x="72" y="119" text-anchor="end">1050</text>
+      <text class="ax" x="72" y="44" text-anchor="end">&#8377;1400 cr</text>
+      <line class="axis" x1="80" y1="340" x2="860" y2="340"/>
+
+      <rect x="122" y="213.7" width="56" height="126.3" rx="4" fill="var(--s1)"/>
+      <rect x="182" y="250.9" width="56" height="89.1" rx="4" fill="var(--s2)"/>
+      <rect x="242" y="302.8" width="56" height="37.2" rx="4" fill="var(--s3)"/>
+      <text class="vlbl" x="150" y="207" text-anchor="middle">590</text>
+      <text class="vlbl" x="210" y="244" text-anchor="middle">416</text>
+      <text class="vlbl" x="270" y="296" text-anchor="middle">174</text>
+      <text class="rowlbl on" x="210" y="362" text-anchor="middle">BEAR &middot; &#8377;14,000/sq yd</text>
+      <text class="ax" x="210" y="378" text-anchor="middle">margin 29% &middot; ROI 42%</text>
+
+      <rect x="382" y="141.5" width="56" height="198.5" rx="4" fill="var(--s1)"/>
+      <rect x="442" y="243.7" width="56" height="96.3" rx="4" fill="var(--s2)"/>
+      <rect x="502" y="237.8" width="56" height="102.2" rx="4" fill="var(--s3)"/>
+      <text class="vlbl" x="410" y="135" text-anchor="middle">926</text>
+      <text class="vlbl" x="470" y="237" text-anchor="middle">450</text>
+      <text class="vlbl" x="530" y="231" text-anchor="middle">477</text>
+      <text class="rowlbl on" x="470" y="362" text-anchor="middle">BASE &middot; &#8377;22,000/sq yd</text>
+      <text class="ax" x="470" y="378" text-anchor="middle">margin 51% &middot; ROI 106%</text>
+
+      <rect x="642" y="51.2" width="56" height="288.8" rx="4" fill="var(--s1)"/>
+      <rect x="702" y="234.6" width="56" height="105.4" rx="4" fill="var(--s2)"/>
+      <rect x="762" y="156.6" width="56" height="183.4" rx="4" fill="var(--s3)"/>
+      <text class="vlbl" x="670" y="45" text-anchor="middle">1348</text>
+      <text class="vlbl" x="730" y="228" text-anchor="middle">492</text>
+      <text class="vlbl" x="790" y="150" text-anchor="middle">856</text>
+      <text class="rowlbl on" x="730" y="362" text-anchor="middle">BULL &middot; &#8377;32,000/sq yd</text>
+      <text class="ax" x="730" y="378" text-anchor="middle">margin 64% &middot; ROI 174%</text>
+    </svg>
+    </div>
+    <figcaption>All figures modelled by this report from the assumptions above. Not developer data. Bull case assumes the full list price is realised across all phases net of discounting &mdash; a demanding assumption given the competitive set.</figcaption>
+  </figure>
+
+  <div class="tbl-wrap">
+  <table>
+    <caption>Scenario detail &mdash; full 150 acres, &#8377; crore</caption>
+    <thead><tr><th>Line</th><th class="num">Bear<br>&#8377;14,000/sq yd</th><th class="num">Base<br>&#8377;22,000/sq yd</th><th class="num">Bull<br>&#8377;32,000/sq yd</th></tr></thead>
+    <tbody>
+      <tr><td>Gross sales revenue</td><td class="num">589.5</td><td class="num">926.4</td><td class="num">1,347.5</td></tr>
+      <tr><td>Land</td><td class="num">90.0</td><td class="num">90.0</td><td class="num">90.0</td></tr>
+      <tr><td>Site development</td><td class="num">187.5</td><td class="num">187.5</td><td class="num">187.5</td></tr>
+      <tr><td>Amenities &amp; clubhouse</td><td class="num">35.0</td><td class="num">35.0</td><td class="num">35.0</td></tr>
+      <tr><td>Approvals &amp; legal</td><td class="num">18.0</td><td class="num">18.0</td><td class="num">18.0</td></tr>
+      <tr><td>Selling &amp; marketing (10%)</td><td class="num">59.0</td><td class="num">92.6</td><td class="num">134.7</td></tr>
+      <tr><td>Finance &amp; contingency</td><td class="num">26.4</td><td class="num">26.4</td><td class="num">26.4</td></tr>
+      <tr><td><b>Total project cost</b></td><td class="num"><b>415.9</b></td><td class="num"><b>449.5</b></td><td class="num"><b>491.6</b></td></tr>
+      <tr class="hi"><td><b>Net profit</b></td><td class="num"><b>173.6</b></td><td class="num"><b>476.9</b></td><td class="num"><b>855.9</b></td></tr>
+      <tr><td>Net margin</td><td class="num">29.4%</td><td class="num">51.5%</td><td class="num">63.5%</td></tr>
+      <tr><td>ROI on total cost</td><td class="num">41.7%</td><td class="num">106.1%</td><td class="num">174.1%</td></tr>
+      <tr><td>Indicative project IRR</td><td class="num">12&ndash;15%</td><td class="num">26&ndash;32%</td><td class="num">38&ndash;45%</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">IRR is indicative only, assuming land and approvals in year 0, phased development spend across years 1&ndash;6, and sales receipts spread across years 1&ndash;8. A precise IRR requires the developer's actual drawdown and collection schedule.</p>
+
+  <h3>Break-even</h3>
+  <div class="dash">
+    <div class="tile accent"><div class="k">Break-even price</div><div class="v">&#8377;9,420</div><div class="s">per sq yd across the full 150 acres &mdash; approximately the level at which unbranded Sawantwadi layouts already trade</div></div>
+    <div class="tile"><div class="k">Break-even volume at list price</div><div class="v">~24%</div><div class="s">101,600 sq yd &mdash; roughly 35 gross acres, or Phase 1 plus half of Phase 2</div></div>
+    <div class="tile"><div class="k">Phase 1 GDV at list</div><div class="v">&#8377;221 cr</div><div class="s">22.5 ac &times; 58% &times; &#8377;35,000</div></div>
+    <div class="tile"><div class="k">Phase 1 cost</div><div class="v">~&#8377;96 cr</div><div class="s">incl. front-loaded clubhouse and full approvals</div></div>
+  </div>
+  <p>The break-even structure is the most encouraging finding in the model. Because plotted development carries no vertical construction cost, the fixed base is low relative to gross development value. Even in the bear case the project clears cost. <b>The risk is not margin &mdash; it is time.</b> If absorption stalls at a high price, the developer holds land it cannot monetise, with no rental income to service anything, and the only source of liquidity is the next sale.</p>
+
+  <h3>Rental yield &mdash; plot versus built villa</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Modelled yield on a built villa, 300 sq yd plot</caption>
+    <thead><tr><th>Line</th><th class="num">Amount</th><th>Assumption</th></tr></thead>
+    <tbody>
+      <tr><td>Plot, 300 sq yd at list</td><td class="num">&#8377;1.05 cr</td><td>&#8377;35,000/sq yd</td></tr>
+      <tr><td>Construction, 2,000 sq ft</td><td class="num">&#8377;52 L</td><td>&#8377;2,600/sq ft <span class="chip c-est">Est</span></td></tr>
+      <tr><td>Furnishing &amp; fit-out</td><td class="num">&#8377;15 L</td><td><span class="chip c-est">Est</span></td></tr>
+      <tr><td><b>Total capital</b></td><td class="num"><b>&#8377;1.72 cr</b></td><td></td></tr>
+      <tr><td>Average daily rate</td><td class="num">&#8377;12,000</td><td>Konkan premium villa short-let <span class="chip c-est">Est</span></td></tr>
+      <tr><td>Occupancy</td><td class="num">38%</td><td>~139 nights &mdash; monsoon-adjusted, below Goa's 70&ndash;90% peak <span class="chip c-est">Est</span></td></tr>
+      <tr><td>Gross annual revenue</td><td class="num">&#8377;16.7 L</td><td>9.7% gross on capital</td></tr>
+      <tr><td>Operating cost &amp; management (45%)</td><td class="num">&#8377;7.5 L</td><td>Housekeeping, OTA fees, maintenance, utilities</td></tr>
+      <tr class="hi"><td><b>Net annual income</b></td><td class="num"><b>&#8377;9.2 L</b></td><td><b>5.3% net yield</b></td></tr>
+      <tr><td>Bare plot, no construction</td><td class="num">&#8377;0</td><td><b>0% yield</b> &mdash; the reason to sell a build package</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Appreciation scenarios</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Micro-market land value appreciation &mdash; not a return on the &#8377;35,000 entry price</caption>
+    <thead><tr><th>Horizon</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th><th>Drivers</th></tr></thead>
+    <tbody>
+      <tr><td>3 years &rarr; 2029</td><td class="num">+12%</td><td class="num">+45%</td><td class="num">+90%</td><td>NH-66 completion; Mopa toward 7 M passengers; Shaktipeeth construction visible on the ground</td></tr>
+      <tr><td>5 years &rarr; 2031</td><td class="num">+25%</td><td class="num">+90%</td><td class="num">+170%</td><td>Shaktipeeth terminus operational at Banda; Konkan Railway doubling; underwater museum matured as a tourism draw</td></tr>
+      <tr><td>10 years &rarr; 2036</td><td class="num">+60%</td><td class="num">+220%</td><td class="num">+450%</td><td>Konkan Expressway if sanctioned; Mopa at capacity; a settled resale market</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="callout">
+    <h4>The caveat that changes the investment case</h4>
+    <p>These are appreciation rates for <b>micro-market land value</b>, benchmarked from unbranded layouts at &#8377;7,000&ndash;9,500/sq yd. A buyer entering at &#8377;35,000/sq yd has already paid roughly a 4&times; premium to that benchmark &mdash; which is to say, <b>the buyer has pre-paid several years of the appreciation shown above.</b> On the base case, land at &#8377;9,000 today reaches about &#8377;17,100 in five years. A buyer who paid &#8377;35,000 needs the <em>premium branded</em> segment to hold and grow from an already-elevated level, not merely the market to rise. That is a materially different, and riskier, bet than the headline appreciation numbers imply, and it is the honest answer to give any investor who asks.</p>
+  </div>
+</section>
+
+<section id="legal">
+  <div class="sec-head"><div class="sec-num">08</div><h2>Legal &amp; Development Risks</h2></div>
+
+  <div class="tbl-wrap">
+  <table>
+    <caption>Risk register</caption>
+    <thead><tr><th>Risk</th><th>Severity</th><th>What we found</th><th>Required action</th></tr></thead>
+    <tbody>
+      <tr class="hi"><td><b>MahaRERA registration</b></td><td><b>Critical</b></td><td>No registration number was discoverable for God City. Under Section 3 of RERA a plotted project is exempt <em>only</em> where it is 500 sq m or less <b>and</b> eight plots or fewer &mdash; a 150-acre scheme is emphatically registrable. Registration requires the NA order or sanctioned layout plan and the Form D-3 final subdivision approval as the commencement certificate</td><td>Obtain and publish the number. Verify it on maharera.maharashtra.gov.in before any payment. If Phase 1 is being sold unregistered, that is a statutory offence and a deal-breaker</td></tr>
+      <tr class="hi"><td><b>Western Ghats Eco-Sensitive Area</b></td><td><b>High</b></td><td>The Union Environment Ministry re-issued the <b>7th ESA draft notification on 27 July 2026</b>, proposing 56,825.7 sq km, of which <b>17,340 sq km is in Maharashtra</b> &mdash; open to objections for 60 days, with the Centre and states still disagreeing on which villages are included. Sindhudurg is specifically named for development, fragmentation and mining pressure</td><td>Obtain the village-wise ESA schedule and confirm in writing whether the project villages appear. This determines what can be built for the next decade</td></tr>
+      <tr class="hi"><td><b>Sawantwadi&ndash;Dodamarg ESZ</b></td><td><b>High</b></td><td>The Bombay High Court has directed the Centre to declare the Sawantwadi&ndash;Dodamarg wildlife corridor an eco-sensitive zone and to <b>continue the embargo on tree felling</b> until the final ESZ notification issues. The 38 km corridor links Radhanagari to Bhimgad and carries elephant and tiger movement</td><td>Overlay the site against the corridor. A tree-felling embargo is fatal to a plotted layout requiring clearance</td></tr>
+      <tr><td><b>Tillari Conservation Reserve</b></td><td>Medium-high</td><td>29.53 sq km of Dodamarg forest range notified as a conservation reserve on 23 June 2020, covering nine villages; Maharashtra's seventh wildlife corridor, connecting Mhadei in Goa to Bhimgad in Karnataka, with breeding tigers</td><td>Confirm the site sits outside the reserve and outside any subsequently notified buffer</td></tr>
+      <tr><td><b>CRZ applicability</b></td><td>Medium</td><td>Maharashtra's ~720 km Konkan coastline falls entirely under the CRZ regime. Deep-Konkan Ratnagiri&ndash;Sindhudurg is largely <b>CRZ-III B with a 200 m No Development Zone from the High Tide Line</b>, where permanent construction is prohibited; MCZMA regulates under the CRZ Notification 2019. An interior Banda/Dodamarg site is likely outside CRZ, but a site near any tidal creek is not</td><td>Obtain an MCZMA position or a certified CRZ non-applicability opinion mapped to the site boundary</td></tr>
+      <tr><td><b>Land title &amp; the non-agriculturist rule</b></td><td>Medium-high</td><td>Under the Maharashtra Tenancy and Agricultural Lands Act 1948, a non-agriculturist generally requires District Collector permission under Section 63 to buy agricultural land. The state signalled in September 2024 an intention to restore Sections 79A and 79B; as of mid-2026 no such law had been passed, so the more permissive position holds &mdash; but it is not guaranteed to persist</td><td>Confirm how the 150 acres was assembled and under what permissions; a defect here is not curable after the fact</td></tr>
+      <tr><td><b>NA conversion &amp; zoning</b></td><td>Medium</td><td>NA conversion runs under Section 44 of the Maharashtra Land Revenue Code 1966 with the 1969 conversion rules. A 2026 reform under Section 47 removes the need for separate NA permission where land is already shown as non-agricultural in a sanctioned Development or Regional Plan</td><td>Obtain the NA order or the regional-plan zoning extract. Verify the sanctioned land use is residential, not agricultural, green or forest</td></tr>
+      <tr><td><b>FSI / FAR</b></td><td>Low-medium</td><td>Governed by UDCPR 2020 as applied to Sindhudurg's non-corporation areas. Premium FSI of 0.5 is chargeable at 35% of the annual statement of rates land value. Competitors advertise &ldquo;G+4 permissible&rdquo;</td><td>Verify the permissible FSI in writing before it is repeated in marketing &mdash; a wrong FSI claim is a mis-selling exposure</td></tr>
+      <tr class="hi"><td><b>Flood, landslide and monsoon access</b></td><td><b>High</b></td><td>The Konkan has extremely heavy rainfall, steep terrain, dense drainage and high landslide susceptibility; Sindhudurg has seen successive years of simultaneous flooding and landslides with NDRF evacuations. Recent daily maxima: Devgad 270 mm, Malvan and Vengurla 170 mm each</td><td>Demand a hydrology and drainage design, contour survey, and a written commitment on year-round road access. This is also a marketing opportunity if handled well</td></tr>
+      <tr class="hi"><td><b>Developer capacity</b></td><td><b>High</b></td><td>God City LLP: LLPIN <b>ACF-3634</b>, incorporated <b>6 February 2024</b> at RoC-Kanpur, registered office in Noida, Uttar Pradesh, two designated partners, contribution <b>&#8377;1,00,000</b>, status Active. No completed project was found in public sources. The modelled fixed cost base for this scheme is <b>&#8377;357 crore</b></td><td>Request audited financials, the funding plan, the land-payment status (owned outright, or under a development agreement or agreement to sell?), and the partners' delivery record on prior entities</td></tr>
+      <tr><td><b>Resale liquidity</b></td><td>Medium</td><td>No secondary market, no published absorption data, and roughly 1,529 acres of announced competing supply in the catchment against a district population of 849,651</td><td>Assume a 5&ndash;8 year hold with no guaranteed exit; do not underwrite a 2&ndash;3 year flip</td></tr>
+      <tr><td><b>Infrastructure slippage</b></td><td>Medium</td><td>NH-66 has slipped since 2011 and again from March 2026 to end-2026. Revas&ndash;Reddi is stalled on maritime clearances. The Konkan Expressway is unsanctioned. Shaktipeeth's alignment was already redrawn once after farmer protests</td><td>Never price or promise on an unbuilt road</td></tr>
+      <tr><td><b>Stamp duty &amp; transaction cost</b></td><td>Low</td><td>Rural Maharashtra: ~4% stamp duty for male buyers, 3% for female, plus 1% Zilla Parishad cess and 1% registration capped at &#8377;30,000. Ready reckoner rates rose 3.89% statewide from 1 April 2025</td><td>Model 5&ndash;6% all-in on top of price; the Integrated Township 50% concession, if secured, materially reduces this</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="price">
+  <div class="sec-head"><div class="sec-num">09</div><h2>Pricing &amp; Sales Strategy</h2></div>
+
+  <h3>Recommended launch pricing</h3>
+  <div class="dash">
+    <div class="tile accent"><div class="k">Standard inventory</div><div class="v">&#8377;18&ndash;24k</div><div class="s">per sq yd &middot; &#8377;2,000&ndash;2,667/sq ft</div></div>
+    <div class="tile accent"><div class="k">Premium inventory</div><div class="v">&#8377;28&ndash;35k</div><div class="s">view, corner, water-facing, clubhouse-adjacent &middot; cap at 25% of plots</div></div>
+    <div class="tile"><div class="k">Blended Phase 1 target</div><div class="v">&#8377;22k</div><div class="s">per sq yd realised, net of discount</div></div>
+    <div class="tile"><div class="k">Floor &mdash; never go below</div><div class="v">&#8377;14k</div><div class="s">below this the premium positioning collapses irrecoverably</div></div>
+  </div>
+  <p>Keeping &#8377;35,000/sq yd as the <b>ceiling on a minority of genuinely superior plots</b> preserves the headline number for marketing while making the bulk of the layout sellable. Attempting to hold &#8377;35,000 across all 421,000 saleable square yards asks the market to absorb roughly &#8377;1,475 crore of inventory at a price only one competitor exceeds &mdash; and that competitor has a golf course.</p>
+
+  <h3>Ticket-size bands</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Recommended product ladder</caption>
+    <thead><tr><th>Band</th><th class="num">Plot size</th><th class="num">&#8377;/sq yd</th><th class="num">Ticket</th><th class="num">Share of plots</th><th>Target segment</th></tr></thead>
+    <tbody>
+      <tr><td><b>Entry</b></td><td class="num">200 sq yd</td><td class="num">20,000</td><td class="num">&#8377;40 L</td><td class="num">25%</td><td>Pune salaried, first-time second-home, local end-use</td></tr>
+      <tr class="hi"><td><b>Core</b></td><td class="num">300 sq yd</td><td class="num">21,000</td><td class="num">&#8377;63 L</td><td class="num">40%</td><td>Mumbai &amp; Pune professionals &mdash; the volume engine</td></tr>
+      <tr><td><b>Premium</b></td><td class="num">500 sq yd</td><td class="num">26,000</td><td class="num">&#8377;1.30 cr</td><td class="num">25%</td><td>NRI, senior professionals, retirement buyers</td></tr>
+      <tr><td><b>Estate</b></td><td class="num">1,000 sq yd</td><td class="num">32,000</td><td class="num">&#8377;3.20 cr</td><td class="num">10%</td><td>HNI / UHNI, land bankers</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">A four-band ladder with a 200 sq yd entry point matters more than the headline rate. Yugen starts at 200&ndash;300 sq yd and Axon's smallest plot is 5,500 sq ft (611 sq yd) &mdash; an entry ticket of &#8377;40 lakh undercuts both and captures buyers neither can reach.</p>
+
+  <h3>Phase-wise price escalation</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Published escalation ladder &mdash; announce it in advance and honour it</caption>
+    <thead><tr><th>Phase</th><th class="num">Area</th><th class="num">Blended &#8377;/sq yd</th><th class="num">Escalation</th><th>Trigger to release</th></tr></thead>
+    <tbody>
+      <tr class="hi"><td>Phase 1 (open)</td><td class="num">22.5 ac</td><td class="num">22,000</td><td class="num">&mdash;</td><td>Launch</td></tr>
+      <tr><td>Phase 2</td><td class="num">~30 ac</td><td class="num">24,400</td><td class="num">+11%</td><td>Phase 1 at 70% sold <b>and</b> clubhouse structurally complete</td></tr>
+      <tr><td>Phase 3</td><td class="num">~35 ac</td><td class="num">27,100</td><td class="num">+11%</td><td>NH-66 four-laning complete</td></tr>
+      <tr><td>Phase 4</td><td class="num">~35 ac</td><td class="num">30,000</td><td class="num">+11%</td><td>Shaktipeeth construction visible in the taluka</td></tr>
+      <tr><td>Phase 5</td><td class="num">~27.5 ac</td><td class="num">33,000</td><td class="num">+10%</td><td>Township infrastructure complete</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Tying each release to a <b>verifiable milestone</b> rather than a calendar date is what separates a credible escalation ladder from a pressure tactic. It also protects early buyers, who become the referral channel.</p>
+
+  <h3>Premium and discount policy</h3>
+  <ul>
+    <li><b>Premiums:</b> corner +8%, water or valley view +12&ndash;15%, clubhouse-adjacent +10%, wider frontage +5%. Publish the grid so buyers see the logic.</li>
+    <li><b>Discounts:</b> cap at 6%. Full upfront payment 5&ndash;6%; launch cohort (first 30 bookings) 4% plus a locked Phase 2 option; bulk purchase of 3+ plots 5%. Never discount below the &#8377;14,000 floor, and never quietly &mdash; an unpublished discount destroys the escalation ladder's credibility.</li>
+    <li><b>Pass through the township stamp-duty concession</b> once Integrated Township status is granted. It is worth &#8377;2.5&ndash;3 lakh on a &#8377;1 crore plot and costs the developer nothing.</li>
+  </ul>
+
+  <h3>Channels and geography</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>Channel mix and target geographies</caption>
+    <thead><tr><th>Channel</th><th class="num">Target share</th><th>Priority markets</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="hi"><td>Channel partners &amp; IPCs</td><td class="num">55%</td><td>Mumbai (Andheri&ndash;Borivali, Thane, Navi Mumbai), Pune (Baner, Kharadi, Hinjewadi)</td><td>The only way to move plotted volume at this ticket. Budget 4&ndash;6% brokerage; run a partner meet before launch</td></tr>
+      <tr><td>Direct digital</td><td class="num">20%</td><td>Mumbai, Pune, Bengaluru, NCR</td><td>Site-visit-led funnel. Weekend fly-and-buy from Mopa; the airport is the pitch</td></tr>
+      <tr><td>NRI</td><td class="num">15%</td><td>Dubai, Abu Dhabi, Singapore, London, US East Coast</td><td>Requires the compliance pack and a managed-build service first. Marathi and Konkani diaspora associations are the warmest route</td></tr>
+      <tr><td>NCR</td><td class="num">7%</td><td>Noida, Gurugram, Delhi</td><td>The sponsor's home market &mdash; a genuine distribution edge no Konkan rival has. Position as a Goa holiday-home play</td></tr>
+      <tr><td>Referral &amp; local</td><td class="num">3%</td><td>Sindhudurg, Kolhapur, Belagavi, Goa</td><td>Low volume but high credibility; local buyers validate the project for outsiders</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Marketing positioning and key sales messages</h3>
+  <div class="callout neu">
+    <h4>Positioning line</h4>
+    <p><b>&ldquo;150 acres. One international airport, 30 minutes away. Goa prices you out &mdash; Sindhudurg lets you in.&rdquo;</b></p>
+  </div>
+  <ol>
+    <li><b>&ldquo;Registered, surveyed, sanctioned.&rdquo;</b> Lead every conversation with the MahaRERA number, the NA order and the layout sanction. In a market where most competitors show renders, showing documents is the differentiator &mdash; and it is the only message that converts NRIs and HNIs.</li>
+    <li><b>&ldquo;The airport is already here.&rdquo;</b> 5.38 million passengers, up 15.8% last year. Not a promise &mdash; a fact you can fly into on the way to the site visit.</li>
+    <li><b>&ldquo;There is now a daily train from CSMT.&rdquo;</b> Live since 3 September 2026. Concrete, checkable, and it dismantles the isolation objection.</li>
+    <li><b>&ldquo;The expressway ends in this taluka.&rdquo;</b> Shaktipeeth terminates at Banda, Sawantwadi &mdash; targeted 2028&ndash;29, alignment approved April 2026. Present as under construction, never as complete.</li>
+    <li><b>&ldquo;Half of Goa's price, an hour from Goa's beaches.&rdquo;</b> Goa averages &#8377;11,950/sq ft; Sindhudurg's border belt is a fraction of that for the same coastline.</li>
+    <li><b>&ldquo;&#8377;40 lakh gets you in.&rdquo;</b> The 200 sq yd entry ticket is the single most powerful number in the whole plan &mdash; it is below both major competitors' entry points.</li>
+    <li><b>&ldquo;We will build it and run it for you.&rdquo;</b> Fixed-price villa package plus managed short-let. Converts investors who will never buy bare land.</li>
+  </ol>
+  <p class="note"><b>Messages to retire:</b> &ldquo;New Goa&rdquo; (unownable and invites an unwinnable comparison); the &ldquo;29.2% annual appreciation&rdquo; forecast (issued September 2022, four years stale); and any reference to the Konkan Expressway (unsanctioned).</p>
+</section>
+
+<section id="swot">
+  <div class="sec-head"><div class="sec-num">10</div><h2>SWOT &amp; Investment Thesis</h2></div>
+
+  <div class="swot">
+    <div class="s">
+      <h4>Strengths</h4>
+      <ul>
+        <li>150 contiguous acres &mdash; scarce, and above the 40 ha Integrated Township threshold</li>
+        <li>Inside the Mopa catchment: 5.38 M passengers, growing 15.8%</li>
+        <li>In or adjacent to the Shaktipeeth Expressway terminus taluka</li>
+        <li>NH-66 on alignment, completing end-2026</li>
+        <li>Maharashtra's first declared tourism district; 37 forts, marine sanctuary, new underwater museum</li>
+        <li>Low land basis relative to Goa &mdash; roughly one-fifth the price for comparable coastline</li>
+        <li>NCR-based sponsor gives access to a distribution market rivals cannot reach</li>
+        <li>Phase 1 can self-fund the project on the modelled economics</li>
+      </ul>
+    </div>
+    <div class="w">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Priced 3.7&ndash;5&times; the nearest developed-plot benchmark</li>
+        <li>No publicly discoverable MahaRERA number, village, survey number or coordinates</li>
+        <li>Developer LLP incorporated February 2024, &#8377;1,00,000 contribution, no delivery record found</li>
+        <li>No published amenity schedule to justify the price</li>
+        <li>&ldquo;New Goa&rdquo; positioning is generic and already used by others</li>
+        <li>Registered office 1,600 km from the asset</li>
+        <li>Plots yield nothing &mdash; no cash flow to carry a slow sales cycle</li>
+        <li>No published phasing, possession or absorption data</li>
+      </ul>
+    </div>
+    <div class="o">
+      <h4>Opportunities</h4>
+      <ul>
+        <li>Integrated Township status: extra FSI on premium plus 50% stamp-duty concession</li>
+        <li>Be the first in the belt to complete and photograph a clubhouse</li>
+        <li>Publish a compliance pack &mdash; unique in this market, and exactly what NRIs demand</li>
+        <li>Build-and-manage villa programme turns a 0% asset into a 5&ndash;6% net yield</li>
+        <li>Goa's land scarcity is actively pushing buyers into Sindhudurg</li>
+        <li>A 200 sq yd, &#8377;40 lakh entry ticket undercuts both major rivals</li>
+        <li>Boutique hospitality anchor at a fraction of a golf course's cost</li>
+      </ul>
+    </div>
+    <div class="t">
+      <h4>Threats</h4>
+      <ul>
+        <li>7th Western Ghats ESA draft, 27 July 2026 &mdash; 17,340 sq km in Maharashtra, village list unsettled</li>
+        <li>Bombay HC direction for a Sawantwadi&ndash;Dodamarg ESZ with a tree-felling embargo</li>
+        <li>Tillari Conservation Reserve and the 38 km wildlife corridor</li>
+        <li>~1,529 announced competing acres against a district population of 849,651</li>
+        <li>Yugen (&#8377;350 cr, golf, hotel brand) and Axon (600 acres) both out-resource the sponsor</li>
+        <li>Monsoon flooding and landslide susceptibility across the Konkan</li>
+        <li>Possible restoration of Sections 79A/79B restricting non-agriculturist land purchase</li>
+        <li>NH-66 and Shaktipeeth timelines have both already slipped</li>
+        <li>No secondary market &mdash; a stalled plotted cycle has no exit</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Investment score</h3>
+  <figure>
+    <div class="ftitle">Investment score by dimension &mdash; today, and after five fixes</div>
+    <div class="fsub">Each dimension scored out of 10. The darker segment is the score on evidence available today; the lighter segment is the additional score achievable if the five actions in the executive summary are completed.</div>
+    <div class="legend">
+      <span><i style="background:var(--s1)"></i>Score today &mdash; 59/100</span>
+      <span><i style="background:var(--s1-soft)"></i>Additional if fixed &mdash; 70/100</span>
+    </div>
+    <div class="svg-scroll">
+    <svg viewBox="0 0 900 430" role="img" aria-labelledby="c2t"><title id="c2t">Location and tourism potential score 8 out of 10; connectivity and demand 7; infrastructure, investment potential and development feasibility 6; competition 5; risk and pricing 3. Pricing and risk carry the largest available improvement.</title>
+      <line class="grid" x1="200" y1="34" x2="200" y2="378"/>
+      <line class="grid" x1="308" y1="34" x2="308" y2="378"/>
+      <line class="grid" x1="416" y1="34" x2="416" y2="378"/>
+      <line class="grid" x1="524" y1="34" x2="524" y2="378"/>
+      <line class="grid" x1="632" y1="34" x2="632" y2="378"/>
+      <line class="grid" x1="740" y1="34" x2="740" y2="378"/>
+      <line class="axis" x1="200" y1="386" x2="740" y2="386"/>
+      <text class="ax" x="200" y="404" text-anchor="middle">0</text>
+      <text class="ax" x="308" y="404" text-anchor="middle">2</text>
+      <text class="ax" x="416" y="404" text-anchor="middle">4</text>
+      <text class="ax" x="524" y="404" text-anchor="middle">6</text>
+      <text class="ax" x="632" y="404" text-anchor="middle">8</text>
+      <text class="ax" x="740" y="404" text-anchor="middle">10</text>
+
+      <text class="rowlbl" x="186" y="54" text-anchor="end">Location</text>
+      <rect x="200" y="43" width="432" height="15" rx="4" fill="var(--s1)"/>
+      <text class="vlbl" x="756" y="54">8 &rarr; 8</text>
+
+      <text class="rowlbl" x="186" y="88" text-anchor="end">Tourism potential</text>
+      <rect x="200" y="77" width="432" height="15" rx="4" fill="var(--s1)"/>
+      <text class="vlbl" x="756" y="88">8 &rarr; 8</text>
+
+      <text class="rowlbl" x="186" y="122" text-anchor="end">Connectivity</text>
+      <rect x="200" y="111" width="378" height="15" rx="4" fill="var(--s1)"/>
+      <text class="vlbl" x="756" y="122">7 &rarr; 7</text>
+
+      <text class="rowlbl" x="186" y="156" text-anchor="end">Demand</text>
+      <rect x="200" y="145" width="378" height="15" rx="4" fill="var(--s1)"/>
+      <text class="vlbl" x="756" y="156">7 &rarr; 7</text>
+
+      <text class="rowlbl" x="186" y="190" text-anchor="end">Infrastructure</text>
+      <rect x="200" y="179" width="324" height="15" rx="4" fill="var(--s1)"/>
+      <text class="vlbl" x="756" y="190">6 &rarr; 6</text>
+
+      <text class="rowlbl" x="186" y="224" text-anchor="end">Investment potential</text>
+      <rect x="200" y="213" width="324" height="15" rx="4" fill="var(--s1)"/>
+      <rect x="526" y="213" width="52" height="15" rx="4" fill="var(--s1-soft)"/>
+      <text class="vlbl" x="756" y="224">6 &rarr; 7</text>
+
+      <text class="rowlbl" x="186" y="258" text-anchor="end">Development feasibility</text>
+      <rect x="200" y="247" width="324" height="15" rx="4" fill="var(--s1)"/>
+      <rect x="526" y="247" width="106" height="15" rx="4" fill="var(--s1-soft)"/>
+      <text class="vlbl" x="756" y="258">6 &rarr; 8</text>
+
+      <text class="rowlbl" x="186" y="292" text-anchor="end">Competition</text>
+      <rect x="200" y="281" width="270" height="15" rx="4" fill="var(--s1)"/>
+      <rect x="472" y="281" width="52" height="15" rx="4" fill="var(--s1-soft)"/>
+      <text class="vlbl" x="756" y="292">5 &rarr; 6</text>
+
+      <text class="rowlbl on" x="186" y="326" text-anchor="end">Risk</text>
+      <rect x="200" y="315" width="162" height="15" rx="4" fill="var(--s1)"/>
+      <rect x="364" y="315" width="160" height="15" rx="4" fill="var(--s1-soft)"/>
+      <text class="vlbl" x="756" y="326">3 &rarr; 6</text>
+
+      <text class="rowlbl on" x="186" y="360" text-anchor="end">Pricing</text>
+      <rect x="200" y="349" width="162" height="15" rx="4" fill="var(--s1)"/>
+      <rect x="364" y="349" width="216" height="15" rx="4" fill="var(--s1-soft)"/>
+      <text class="vlbl" x="756" y="360">3 &rarr; 7</text>
+    </svg>
+    </div>
+    <figcaption>Scoring is this report's judgement against the evidence in Sections 01&ndash;09. The five fixes are: publish MahaRERA and title; reprice to &#8377;18&ndash;24k/sq yd; secure Integrated Township status; deliver an anchor amenity; certify ESA/ESZ/CRZ position.</figcaption>
+  </figure>
+
+  <h3>Investment thesis</h3>
+  <h4>Why this project could succeed</h4>
+  <p>The macro case is real and unusually well-evidenced. Mopa is not a promise &mdash; it moved 5.38 million passengers last year and grew 15.8% with capacity to spare. NH-66 is in its final stretch. The Shaktipeeth Expressway's revised alignment, approved in April 2026 with &#8377;20,787 crore committed to land acquisition, terminates in the very taluka this land sits in or beside. The state and the Centre have between them put &#8377;159 crore into a national-first underwater museum forty minutes away, and a daily express from Mumbai's CSMT started running in September 2026. Meanwhile Goa has priced out its own buyers, and that overflow has to go somewhere; Sindhudurg's border belt is the obvious place. Against that, 150 contiguous acres is a genuinely scarce asset &mdash; and it is large enough to claim Integrated Township status, an advantage that most of the competing schemes, at 11 to 78 acres, structurally cannot match. The modelled economics are forgiving: because plotted development carries no vertical construction cost, break-even sits near &#8377;9,400/sq yd and Phase 1 alone, sold at anything close to list, funds the remainder of the project.</p>
+
+  <h4>Why this project could fail</h4>
+  <p>It is priced as though all of that has already happened. At &#8377;35,000 per square yard the buyer pays roughly four times what comparable developed layouts in the same belt command, and is asked to do so by an LLP incorporated in February 2024 with a &#8377;1,00,000 contribution, a registered office 1,600 kilometres from the site, no discoverable delivery record, and &mdash; most seriously &mdash; no MahaRERA registration number, village name or survey number that a buyer or an investor can verify. In a market where the two largest competitors are registered, better capitalised and four times the size, that combination is not a premium position; it is an unsupported one. Layered on top is an environmental overhang that is active rather than historic: a seventh Western Ghats ESA draft issued in July 2026 whose village schedule is still contested, a High Court direction to declare the adjoining Sawantwadi&ndash;Dodamarg corridor an eco-sensitive zone with a standing tree-felling embargo, and a conservation reserve in Dodamarg. And roughly 1,529 acres of announced competing supply is being aimed at a second-home buyer pool no one has yet demonstrated exists at that volume. Plotted land throws off no cash. If absorption stalls, there is no rent to carry the asset and no secondary market to exit into &mdash; the only liquidity is the next sale.</p>
+
+  <div class="callout neu">
+    <h4>Verdict</h4>
+    <p><b>Conditional &mdash; 59/100 today, 70/100 achievable.</b> For the <b>developer</b>: the land and the timing are right, the price and the disclosure are wrong, and both are entirely within your control. Fix registration, reprice the standard inventory, claim township status, and finish a clubhouse &mdash; and this becomes the best-positioned plotted scheme in the belt. For an <b>investor or buyer</b>: do not transact until the MahaRERA number, the survey numbers, the ESA/ESZ position and the developer's audited financials are in hand. With those four documents, at a price in the &#8377;18,000&ndash;24,000 band, this is a defensible five-to-eight-year hold. Without them, at &#8377;35,000, it is not an investment &mdash; it is a bet on someone else's paperwork.</p>
+  </div>
+</section>
+
+<section id="data">
+  <div class="sec-head"><div class="sec-num">11</div><h2>Data Quality &amp; Sources</h2></div>
+
+  <div class="callout">
+    <h4>Research constraint you must know about</h4>
+    <p>This research was conducted from a restricted network environment in which <b>direct page retrieval was blocked for every external domain</b>, including the developer's own sites (godcity.in, godcityprojects.in), MahaRERA, the ready-reckoner portals and the property portals. All findings were assembled from <b>search-engine indexed content</b> of those pages. Consequently: figures attributed to the developer are the developer's published claims as indexed, not as read from the live site; and an absent data point (a RERA number, a village name) means <b>not discoverable through search</b>, not proven not to exist. Before any transaction or investment decision, every developer-sourced figure in this report must be re-verified against the live site, the MahaRERA portal and the physical documents.</p>
+  </div>
+
+  <h3>Confidence key</h3>
+  <div class="tbl-wrap">
+  <table>
+    <caption>How to read the chips used throughout this report</caption>
+    <thead><tr><th>Chip</th><th>Meaning</th><th>How to treat it</th></tr></thead>
+    <tbody>
+      <tr><td><span class="chip c-ver">Verified</span></td><td>From a government record, an official body, or the developer's own published material</td><td>Reliable, but re-check developer claims against documents</td></tr>
+      <tr><td><span class="chip c-rep">Reported</span></td><td>From a property portal, trade publication, press report or industry source</td><td>Directionally sound; verify before quoting in a sales context</td></tr>
+      <tr><td><span class="chip c-est">Estimate</span></td><td>Modelled or judged by this report, with the basis stated</td><td>A planning assumption, not a fact. Replace with real data when available</td></tr>
+      <tr><td><span class="chip c-gap">Gap</span></td><td>Information that should exist and could not be found</td><td>Treat as a diligence action item, not as a negative finding</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>What could not be established</h3>
+  <ul>
+    <li>God City's exact village, taluka, survey/gat numbers and coordinates</li>
+    <li>Any MahaRERA registration number for God City</li>
+    <li>Plot size range, amenity schedule, phasing plan or possession dates</li>
+    <li>Land acquisition price, project cost, funding structure or land-holding status</li>
+    <li>Sales, absorption, inventory or velocity data &mdash; for God City <em>or any competitor</em> in the district</li>
+    <li>District-level land registration volumes from IGR Maharashtra</li>
+    <li>Sindhudurg district tourist arrival statistics</li>
+    <li>Village-wise Western Ghats ESA schedule for Sindhudurg</li>
+    <li>Sindhudurg ready reckoner rates at taluka or village level for FY2025&ndash;26</li>
+  </ul>
+
+  <details>
+    <summary>Conflicts and cautions in the source data</summary>
+    <div class="body">
+      <ul>
+        <li><b>Yugen project structure.</b> Sources variously describe Yugen Golf City as a 500-acre township, a 44&ndash;55 acre phase, and a 17.5-acre high-rise project at Mopa; the RERA number found in one source (PP1310002501906) follows Goa RERA's format, while a trade report describes MahaRERA approval for Garden of Eden at Village Banda, Sawantwadi. Yugen appears to operate projects on both sides of the border. Verify which entity and which registration applies to the Sindhudurg land before using it as a comparable.</li>
+        <li><b>The &ldquo;+29.2% annual appreciation&rdquo; and &ldquo;&#8377;6,700/sq ft near Mopa&rdquo; figures</b> originate in a promotional press release dated September 2022. They are four years old and were forecasts, not observations. They circulate widely in current marketing and should not be repeated.</li>
+        <li><b>Portal per-sq-ft averages for Sindhudurg talukas</b> returned implausible values in places (single- and double-digit &#8377;/sq ft), indicating data-quality problems in thin markets. Only ranges corroborated across more than one source are used here.</li>
+        <li><b>God City LLP registration.</b> The MCA-derived record for LLPIN ACF-3634 matches the name exactly and the business description matches the developer's own positioning, but the identity of the marketing entity and the registered LLP has not been independently confirmed. Confirm at the meeting which entity is the seller on the agreement.</li>
+        <li><b>Shaktipeeth terminus naming.</b> Sources describe the southern terminus as both &ldquo;Patradevi&rdquo; and &ldquo;Banda in Sawantwadi taluka&rdquo; &mdash; these are adjacent locations on the Maharashtra&ndash;Goa border, not a contradiction.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Sources</h3>
+  <p class="note">All URLs accessed via search indexing, September 2026.</p>
+  <ol class="srclist">
+    <li>God City LLP &mdash; <a href="https://godcity.in/">godcity.in</a>, <a href="https://www.godcity.in/about/">/about</a>, <a href="https://www.godcity.in/blog/">/blog</a></li>
+    <li>God City Projects &mdash; <a href="https://godcityprojects.in/">godcityprojects.in</a></li>
+    <li>MCA-derived LLP record &mdash; <a href="https://www.falconebiz.com/LLP/GOD-CITY-LLP-ACF-3634">Falcon Ebiz, GOD CITY LLP ACF-3634</a></li>
+    <li>MahaRERA &mdash; <a href="https://maharera.maharashtra.gov.in/guide-for-promoters-registration">promoter registration guide</a>; <a href="https://maharera.maharashtra.gov.in/sites/default/files/inline-files/FAQ_1.pdf">FAQs</a></li>
+    <li>MahaRERA plotted-development rules &mdash; <a href="https://www.punekarnews.in/maharera-registration-mandatory-for-all-plotted-developments-and-sale-of-plots/">Punekar News</a>; <a href="https://www.freepressjournal.in/business/maharashtra-no-maharera-registration-required-for-projects-under-500-square-meter">Free Press Journal</a></li>
+    <li>Yugen Garden of Eden MahaRERA &mdash; <a href="https://www.rprealtyplus.com/news-views/garden-of-eden-residential-plotted-project-gets-maharera-approval-in-sindhudurg-123665.html">RP Realty Plus</a></li>
+    <li>Yugen Infra &mdash; <a href="https://www.axiomlandbase.in/property/yugen-infra-garden-of-eden-goa/">Axiom Landbase</a>; <a href="https://yugengolfcitygoa.com/">yugengolfcitygoa.com</a>; <a href="https://www.realestateindia.com/projects/golf-city-by-yugen-infra-pvt-ltd-in-sawantwadi-sindhudurg-pjid-62240/">RealEstateIndia</a></li>
+    <li>Axon The Origin, Sasoli &mdash; <a href="https://www.360realtors.com/axon-the-origin-sasoli-dodamarg-maharashtra-uid-6196">360 Realtors</a>; <a href="https://www.theoriginsasoli.com/">theoriginsasoli.com</a></li>
+    <li>Neworld Northern Hills &mdash; <a href="https://www.neworlddevelopers.com/northern-hills-paradise-unlocked/">Neworld Developers</a>; <a href="https://www.avacasa.life/holiday-homes/goa/sawantwadi/northern-hills">Avacasa</a></li>
+    <li>Cida De Luxora &mdash; <a href="https://cidadeluxora.com/">cidadeluxora.com</a>; <a href="https://cidadeluxora.com/blogs/villa-plots-in-sindhudurg-3/">Sindhudurg villa plots</a></li>
+    <li>Sanskruti Goa2 &mdash; <a href="https://www.99acres.com/sanskruti-goa2-tarkarli-sindhudurg-npxid-r273173">99acres project page</a>; <a href="https://investorsclinic.in/project/sanskruti-goa2-sindhudurg">Investors Clinic</a></li>
+    <li>Womeki Eye of Goa &mdash; <a href="https://www.rprealtyplus.com/news-views/womeki-groups-rs-350-cr-residential-project-at-sindhudurg-maharashtra-116843.html">RP Realty Plus</a></li>
+    <li>Konkan Estates / Tathastu &mdash; <a href="https://konkanestates.com/locations/maharashtra/sindhudurg/">Sindhudurg</a>; <a href="https://konkanestates.com/locations/maharashtra/ratnagiri/">Ratnagiri</a></li>
+    <li>Sindhudurg plot &amp; land rates &mdash; <a href="https://www.99acres.com/property-rates-and-price-trends-in-malvan-sindhudurg-prffid">99acres Malvan rates</a>; <a href="https://www.99acres.com/residential-land-in-dodamarg-sindhudurg-ffid">99acres Dodamarg</a>; <a href="https://totlrealty.com/plots-in-sindhudurg/">Totl Realty</a></li>
+    <li>MOPA-side layout pricing &amp; 28% appreciation &mdash; <a href="https://ninedivinegroup.com/blog/luxury-plots-near-mopa/">Nine Divine Group</a>; <a href="https://www.sindhudurgdevelopments.com/land-plots-in-sindhudurg.php">Sindhudurg Developments</a></li>
+    <li>Goa &amp; Pernem rates &mdash; <a href="https://www.99acres.com/property-rates-and-price-trends-in-north-goa-prffid">99acres North Goa</a>; <a href="https://www.squareyards.com/property-rates-in-goa">Square Yards Goa</a>; <a href="https://plotsgoa.com/land-rates-in-goa/">Plots Goa land rates</a>; <a href="https://realtypromoo.com/cities/north-goa">RealtyPromoo</a></li>
+    <li>Mopa airport traffic &amp; finances &mdash; <a href="https://navhindtimes.in/goanews/mopa-airport-losses-mount-to-rs-331-crore-despite-revenue-rise/">The Navhind Times</a>; <a href="https://en.wikipedia.org/wiki/Manohar_International_Airport">Manohar International Airport</a>; <a href="https://www.gmrgroup.com/airports-and-aero-services/airports/manohar-international-airport">GMR Group</a></li>
+    <li>Sindhudurg (Chipi) airport &mdash; <a href="https://en.wikipedia.org/wiki/Sindhudurg_Airport">Sindhudurg Airport</a>; <a href="https://imadtravel.com/blog/flights/navi-mumbai-sindhudurg-chipi-flight-2026/">IMAD Travel, Aug 2026</a>; <a href="https://www.drishtiias.com/state-pcs-current-affairs/sindhudurgs-chipi-airport">Drishti IAS</a></li>
+    <li>NH-66 four-laning &mdash; <a href="https://www.newsbytesapp.com/news/india/mumbai-goa-highway-upgrade-pushed-to-march-2026/tldr">NewsBytes</a>; <a href="https://dwello.in/news/mumbai-to-goa-at-full-speed-highway-upgrade-set-to-change-road-travel">Dwello</a></li>
+    <li>Shaktipeeth Expressway &mdash; <a href="https://en.wikipedia.org/wiki/Shaktipeeth_Expressway">Shaktipeeth Expressway</a>; <a href="https://www.infracapitalist.com/project/shaktipeeth-expressway">Infracapitalist, 2026</a>; <a href="https://kolhapur.gov.in/en/notice/notification-of-section-152-regarding-land-acquisition-at-taluka-karveer-for-pawanar-to-patradevi-nagpur-goa-maharashtra-shaktipeeth-expressway/">Kolhapur district land-acquisition notices</a></li>
+    <li>Konkan Expressway (ME-6) &mdash; <a href="https://themetrorailguy.com/msrdc-konkan-expressway-route-map-status-update-tenders/">The Metro Rail Guy</a>; <a href="https://www.india.com/news/india/mumbai-to-goa-in-just-6-hrs-new-466-km-konkan-expressway-set-to-open-by-march-2026-will-pass-through-232-villages-across-raigad-ratnagiri-and-sindhudurg-8131120/">India.com</a></li>
+    <li>Revas&ndash;Reddi Coastal Highway &mdash; <a href="https://www.freepressjournal.in/mumbai/maharashtra-msrdc-to-renew-widen-revas-redi-coastal-road-to-speed-up-travel-from-mumbai-to-sindhudurg">Free Press Journal</a>; <a href="https://swarajyamag.com/infrastructure/deputy-cm-ajit-pawar-emphasizes-urgency-as-lack-of-clearances-delays-revas-reddi-coastal-road-project">Swarajya</a></li>
+    <li>Konkan Railway &amp; Sawantwadi terminus &mdash; <a href="https://en.wikipedia.org/wiki/Sawantwadi_Road_railway_station">Sawantwadi Road station</a>; <a href="https://www.freepressjournal.in/mumbai/direct-csmt-sawantwadi-express-service-to-begin-giving-thane-commuters-faster-konkan-connectivity">CSMT&ndash;Sawantwadi express, Sept 2026</a>; <a href="https://www.business-standard.com/article/economy-policy/konkan-railway-completes-electrification-of-entire-741-km-route-122032901530_1.html">Business Standard, electrification</a></li>
+    <li>Underwater museum, ex-INS Guldar &mdash; <a href="https://www.thehitavada.com/Encyc/2026/5/22/indias-first-underwater-museum-submarine-tourism-project-coming-up-off-sindhudurg-coast.html">The Hitavada, May 2026</a>; <a href="https://www.outlooktraveller.com/News/maharashtra-launches-indias-first-submarine-tourism-project">Outlook Traveller</a>; <a href="https://newsonair.gov.in/indias-first-underwater-museum-and-artificial-coral-reef-to-be-developed-around-ins-guldar-in-maharashtra">News On Air</a></li>
+    <li>Sagarmala &mdash; <a href="https://www.pib.gov.in/PressNoteDetails.aspx?NoteId=158151&amp;ModuleId=3&amp;reg=3&amp;lang=1">PIB, March 2026</a>; <a href="https://shipmin.gov.in/en/division/sagarmala">Ministry of Ports, Shipping &amp; Waterways</a></li>
+    <li>Western Ghats ESA 7th draft &mdash; <a href="https://www.sanskritiias.com/current-affairs/western-ghats-eco-sensitive-area-esa-2026-government-re-issues-draft-notification-for-56825-sq-km">Sanskriti IAS, 2026</a>; <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/western-ghats-ecologically-sensitive-area-7th-draft-notification">Drishti IAS</a>; <a href="https://newsonair.gov.in/centre-issues-fresh-esa-draft-notification-for-western-ghats-across-six-states">News On Air</a></li>
+    <li>Tillari Conservation Reserve &amp; Sawantwadi&ndash;Dodamarg ESZ &mdash; <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/tillari-conservation-reserve-notified">Drishti IAS</a>; <a href="https://www.indiejournal.in/article/maharashtra-creates-29-sq-km-safe-corridor-for-tigers-elephants-as-tillari-conservation-region">Indie Journal</a></li>
+    <li>CRZ in Maharashtra &mdash; <a href="https://1acre.in/guides/maharashtra/crz-clearance-maharashtra">1acre CRZ clearance guide</a>; <a href="https://edgere.in/crz-and-eco-sensitive-zone-rules-for-buying-coastal-or-riverfront-land-in-maharashtra-2026/">The Edge, 2026</a>; <a href="https://1acre.in/map-layers/maharashtra/maharashtra-crz">Maharashtra CRZ map layers</a></li>
+    <li>Agricultural land purchase &amp; NA conversion &mdash; <a href="https://edgere.in/who-can-buy-agricultural-land-in-maharashtra-eligibility-the-non-agriculturist-rule-and-section-63/">The Edge, Section 63</a>; <a href="https://1acre.in/guides/maharashtra/na-order-non-agricultural-maharashtra">1acre NA order guide 2026</a></li>
+    <li>UDCPR 2020 &amp; Integrated Township Policy &mdash; <a href="https://www.mmrda.maharashtra.gov.in/sites/default/files/2023-10/UDCPR_compressed_2.pdf">UDCPR 2020 (MMRDA copy)</a>; <a href="https://www.klaw.in/integrated-townships-in-maharashtra/">K Law, Integrated Townships in Maharashtra</a>; <a href="https://vjrealestate.co.in/blog/udcpr-2026-explained-maharashtra-complete-guide">UDCPR 2026 guide</a></li>
+    <li>Stamp duty &amp; ready reckoner &mdash; <a href="https://cleartax.in/s/stamp-duty-and-registration-charges-in-maharashtra">ClearTax 2026</a>; <a href="https://edgere.in/stamp-duty-registration-ready-reckoner-rate-on-land-in-maharashtra-2026/">The Edge</a>; <a href="https://www.business-standard.com/amp/finance/personal-finance/maharashtra-hikes-property-rates-what-3-9-rr-rate-increase-means-for-you-125040100372_1.html">Business Standard, RR +3.9%</a>; <a href="https://igrmaharashtra.gov.in/Home">IGR Maharashtra</a></li>
+    <li>Konkan flood &amp; landslide risk &mdash; <a href="https://sdma.maharashtra.gov.in/en/hazard-vulnerability-risk-information/">Maharashtra SDMA</a>; <a href="https://nidm.gov.in/pdf/trgReports/2026/May/Trg_06-08May2026ga.pdf">NIDM pre-monsoon preparedness, 2026</a></li>
+    <li>Second-home, HNI &amp; NRI demand &mdash; <a href="https://www.thepropertist.com/blog/second-home-destinations-in-india-where-hnis-are-actually-buying-in-2026--488">The Propertist, 2026</a>; <a href="https://www.realtorrashmi.in/blog/second-home-india-concept-guide/">Second Homes in India market guide 2026</a>; <a href="https://www.westsiderealty.in/insights/goa-real-estate-nri-investment-2026">Westside Realty NRI guide 2026</a></li>
+    <li>Goa spillover into Sindhudurg &mdash; <a href="https://goanewshub.com/goas-land-use-woes-spill-over-into-maharashtras-sindhudurg/">Goa News Hub</a>; <a href="https://cidadeluxora.com/blogs/real-estate-growth-in-sindhudurg/">Cida De Luxora analysis</a></li>
+    <li>Mopa second-home effect (Sept 2022, dated) &mdash; <a href="https://theprint.in/ani-press-releases/mopa-airport-will-change-the-fortunes-of-goa-and-the-sindhudurg-region/1123623/">ThePrint / ANI press release</a>; <a href="https://realtynmore.com/mopa-airport-is-catapulting-sindhudurg-into-a-thriving-second-home-market/">RealtynMore</a></li>
+    <li>District profile, tourism &amp; social infrastructure &mdash; <a href="https://sindhudurg.nic.in/en/">Sindhudurg district administration</a>; <a href="https://maharashtratourism.gov.in/districts/sindhudurg/">Maharashtra Tourism</a>; <a href="https://en.wikipedia.org/wiki/Sindhudurg_district">Sindhudurg district</a>; <a href="https://en.wikipedia.org/wiki/Government_Medical_College,_Sindhudurg">GMC Sindhudurg</a>; <a href="https://gmcsindhudurg.com/">gmcsindhudurg.com</a></li>
+    <li>National inventory &amp; absorption context &mdash; <a href="https://www.tribuneindia.com/news/business/unsold-housing-inventory-rises-4-yoy-to-over-5-25-lakh-units-in-h1-2026-knight-frank/">Knight Frank via The Tribune, H1 2026</a>; <a href="https://www.businesstoday.in/real-estate/story/unsold-premium-homes-surge-43-should-homebuyers-expect-discounts-now-548135-2026-08-10">Business Today, Aug 2026</a></li>
+  </ol>
+
+  <div class="callout" style="margin-top:28px">
+    <h4>Disclaimer</h4>
+    <p>This report is prepared for commercial discussion and internal strategy use. It is not investment advice, a valuation, a legal opinion or a substitute for due diligence. Financial projections are illustrative models built on stated assumptions and will not be realised as shown. No representation is made that any figure attributed to a third party is accurate, and several key project facts could not be verified at all. Independent legal, technical, environmental and financial advice must be obtained before any acquisition, investment or sale.</p>
+  </div>
+</section>
+
+</div>
