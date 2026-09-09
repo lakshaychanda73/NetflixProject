@@ -11,26 +11,32 @@ Prepared September 2026. Open the HTML file in a browser.
 |---|---|
 | 00 | Executive summary — top 10 findings, top 10 recommendations, dashboard |
 | 01 | Project & location — fact sheet, micro-market, connectivity, FSI |
-| 02 | Market & pricing — price ladder, benchmarks, appreciation, supply |
-| 03 | Competitor analysis — 15 schemes, competitive ranking |
-| 04 | Customer & demand — 8 buyer segments |
-| 05 | Location & future growth — 10 infrastructure catalysts |
-| 06 | Project positioning — USP, target customer, market gaps |
-| 07 | Financial & investment — scenarios, break-even, yield, appreciation |
-| 08 | Legal & development risks — risk register |
-| 09 | Pricing & sales strategy — price bands, phasing, channels, messages |
-| 10 | SWOT & investment thesis — score 59/100 |
-| 11 | Data quality & sources |
+| 02 | Sponsor, founders & track record — entity, founders, past projects |
+| 03 | Market & pricing — price ladder, benchmarks, appreciation, supply |
+| 04 | Competitor analysis — 15 schemes, competitive ranking |
+| 05 | Customer & demand — 8 buyer segments |
+| 06 | Location & future growth — 10 infrastructure catalysts |
+| 07 | Project positioning — USP, target customer, market gaps |
+| 08 | Financial & investment — scenarios, break-even, yield, appreciation |
+| 09 | Legal & development risks — risk register |
+| 10 | Pricing & sales strategy — price bands, phasing, channels, messages |
+| 11 | SWOT & investment thesis — score 60/100 |
+| 12 | Data quality & sources |
 
 ## Headline conclusions
 
-- **Investment score: 59/100** today; 70/100 achievable after five specific fixes.
+- **Investment score: 60/100** today; 70/100 achievable after five specific fixes.
 - **The price is the risk, not the land.** God City lists from ₹35,000/sq yd against
   ₹7,000–9,500/sq yd for comparable developed layouts in the same belt.
 - **No MahaRERA number, village, survey number or coordinates** were publicly
   discoverable for the project — the single largest diligence gap.
 - **At 150 acres (60.7 ha) the project qualifies for Integrated Township status**,
   an advantage its 11–78 acre competitors cannot access. Currently unclaimed.
+- **Two founders — Rakesh Chaudhary and Suresh Chaudhary** (Rakesh Kumar and Suresh
+  Kumar on MCA filings). Directors of Delhiwood Studios Pvt Ltd since 2016 and
+  co-producers of the 2017 Punjabi feature *Hard Kaur*; Rakesh Chaudhary claims a
+  directorial role on VHR Group's Winsten Park, Greater Noida. **No completed
+  real-estate development delivered by them as principal was found.**
 
 ## Data quality
 
