@@ -1,9 +1,13 @@
 # God City LLP — Sindhudurg Market, Feasibility & Investment Analysis
 
-`godcity-sindhudurg-report.html` — a self-contained research dossier on God City LLP's
-150-acre "New Goa" plotted township in Sindhudurg district, Maharashtra.
+Two self-contained HTML documents on God City LLP's 150-acre "New Goa" plotted
+township in Sindhudurg district, Maharashtra. Prepared September 2026. Open either
+in a browser.
 
-Prepared September 2026. Open the HTML file in a browser.
+| File | What it is | Who it's for |
+|---|---|---|
+| `godcity-sindhudurg-report.html` | Full research dossier — 12 sections, market, competitors, financials, risk | Analysis and diligence |
+| `godcity-pitch-brief.html` | Working pitch brief — spec sheet, missing specs, pro/con and objection handling | Investor meetings and client sales |
 
 ## Contents
 
@@ -47,4 +51,21 @@ confidence marker (Verified / Reported / Estimate / Gap) and a source. Re-verify
 developer-sourced figures against the live site, MahaRERA and physical documents
 before any transaction.
 
-Not investment advice. See the disclaimer in § 11.
+## Pitch brief contents
+
+| § | Section |
+|---|---|
+| 01 | The spec sheet — 3 blocks: land & product, location & connectivity, commercial |
+| 02 | The eleven specs needed before pitching |
+| 03 | Investor pitch — 60-second version, five numbers, pros, cons with answers |
+| 04 | Client pitch — 60-second version, pros, cons |
+| 05 | Objection handling — 8 common objections and responses |
+| 06 | Red lines — what to say and what never to say |
+
+Only **five specifications of this project are publicly published**: total area
+(150 acres), Phase 1 area (22.5 acres), product type (gated NA plots), list price
+(from ₹35,000/sq yd) and airport proximity (~30 min from Mopa). Everything else in
+the spec sheet is derived arithmetic or a sourced market benchmark, and is marked
+as such.
+
+Not investment advice. See the disclaimer in § 12 of the dossier.

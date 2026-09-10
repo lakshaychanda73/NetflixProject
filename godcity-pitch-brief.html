@@ -1,0 +1,413 @@
+<title>God City Pitch Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --ground:#eaeff1; --surface:#ffffff; --surface-2:#f5f8f9;
+  --ink:#0d1a20; --ink-2:#4a5f68; --ink-3:#7a9099;
+  --rule:#d3dee1; --rule-2:#bccace;
+  --accent:#0f4c5c; --accent-soft:#dfeef1; --accent-ink:#0b3c49;
+  --yes:#1a7a55; --yes-soft:#e4f3ec; --yes-rule:#a8d8c2;
+  --no:#b23c14; --no-soft:#fceadf; --no-rule:#eeb69a;
+  --warn:#8a6100; --warn-soft:#f8eed6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --ground:#080f12; --surface:#111d22; --surface-2:#16242a;
+    --ink:#e9f1f3; --ink-2:#a3b8bf; --ink-3:#78909a;
+    --rule:#25373e; --rule-2:#31474f;
+    --accent:#5fb3c9; --accent-soft:#16333c; --accent-ink:#9fd6e4;
+    --yes:#4fc396; --yes-soft:#122b23; --yes-rule:#245a45;
+    --no:#e8825c; --no-soft:#331d15; --no-rule:#6b3a26;
+    --warn:#d8ad51; --warn-soft:#312717;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --ground:#080f12; --surface:#111d22; --surface-2:#16242a;
+  --ink:#e9f1f3; --ink-2:#a3b8bf; --ink-3:#78909a;
+  --rule:#25373e; --rule-2:#31474f;
+  --accent:#5fb3c9; --accent-soft:#16333c; --accent-ink:#9fd6e4;
+  --yes:#4fc396; --yes-soft:#122b23; --yes-rule:#245a45;
+  --no:#e8825c; --no-soft:#331d15; --no-rule:#6b3a26;
+  --warn:#d8ad51; --warn-soft:#312717;
+}
+*{box-sizing:border-box}
+body{background:var(--ground); color:var(--ink); margin:0;
+  font-family:"IBM Plex Serif",Georgia,serif; font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px; margin:0 auto; padding:0 22px 88px}
+
+.mast{border-bottom:2px solid var(--ink); padding:40px 0 18px; margin-bottom:30px}
+.kicker{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3); display:flex; flex-wrap:wrap; gap:6px 18px; margin-bottom:16px}
+h1{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:700;
+  font-size:clamp(32px,5.6vw,54px); line-height:1.03; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance}
+.stand{font-size:17.5px; color:var(--ink-2); max-width:60ch; margin:0}
+
+h2{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:700;
+  font-size:clamp(22px,3.2vw,30px); line-height:1.12; letter-spacing:-.01em;
+  margin:0 0 6px; text-wrap:balance}
+h3{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:600;
+  font-size:18px; margin:28px 0 8px; text-wrap:balance}
+.eyebrow{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:10.5px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:8px}
+section{margin:0 0 56px; scroll-margin-top:16px}
+.sechead{border-top:1px solid var(--ink); padding-top:14px; margin-bottom:14px}
+p{margin:0 0 13px; max-width:66ch}
+p.wide{max-width:none}
+ul,ol{margin:0 0 14px; padding-left:20px; max-width:66ch}
+li{margin-bottom:6px}
+a{color:var(--accent); text-underline-offset:2px}
+.note{font-size:13.5px; color:var(--ink-2); max-width:66ch}
+.mono{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+
+/* spec blocks */
+.specs{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin:18px 0}
+.spec{background:var(--surface); border:1px solid var(--rule); border-radius:5px; overflow:hidden}
+.spec > header{background:var(--surface-2); border-bottom:1px solid var(--rule); padding:11px 15px}
+.spec > header .n{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--accent); display:block; margin-bottom:2px}
+.spec > header .t{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:600; font-size:16px}
+.spec dl{margin:0; padding:6px 15px 12px}
+.spec div.row{display:flex; justify-content:space-between; gap:14px; align-items:baseline;
+  padding:7px 0; border-bottom:1px solid var(--rule)}
+.spec div.row:last-child{border-bottom:none}
+.spec dt{font-size:13px; color:var(--ink-2); flex:1 1 auto}
+.spec dd{margin:0; font-family:"IBM Plex Mono",monospace; font-size:13px; font-weight:500;
+  font-variant-numeric:tabular-nums; text-align:right; flex:0 0 auto}
+.spec dd em{font-style:normal; color:var(--ink-3); font-size:11px; display:block; font-weight:400}
+
+.chip{font-family:"IBM Plex Mono",monospace; font-size:9px; font-weight:600; letter-spacing:.1em;
+  text-transform:uppercase; padding:2px 5px; border-radius:3px; border:1px solid transparent; white-space:nowrap}
+.c-v{background:var(--yes-soft); color:var(--yes); border-color:var(--yes-rule)}
+.c-e{background:var(--warn-soft); color:var(--warn); border-color:color-mix(in srgb,var(--warn) 32%,transparent)}
+.c-x{background:var(--no-soft); color:var(--no); border-color:var(--no-rule)}
+
+/* say / don't say */
+.talk{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; margin:18px 0}
+.talk > div{border-radius:5px; padding:16px 18px; border:1px solid var(--rule)}
+.talk .say{background:var(--yes-soft); border-color:var(--yes-rule)}
+.talk .dont{background:var(--no-soft); border-color:var(--no-rule)}
+.talk h4{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:11px; letter-spacing:.13em;
+  text-transform:uppercase; margin:0 0 10px}
+.talk .say h4{color:var(--yes)} .talk .dont h4{color:var(--no)}
+.talk ul{margin:0; padding-left:18px; max-width:none; font-size:14px}
+.talk li{margin-bottom:8px}
+
+/* pitch card */
+.pitch{background:var(--surface); border:1px solid var(--rule); border-left:4px solid var(--accent);
+  border-radius:5px; padding:20px 24px; margin:18px 0}
+.pitch p{font-size:17px; line-height:1.55; max-width:64ch; margin:0}
+.pitch p + p{margin-top:12px}
+.pitch .lbl{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:10px}
+
+/* number strip */
+.nums{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1px;
+  background:var(--rule); border:1px solid var(--rule); border-radius:5px; overflow:hidden; margin:18px 0}
+.nums > div{background:var(--surface); padding:13px 15px}
+.nums .k{font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--ink-3); margin-bottom:3px}
+.nums .v{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:700;
+  font-size:24px; line-height:1.12; letter-spacing:-.012em; font-variant-numeric:tabular-nums}
+.nums .s{font-size:11.5px; color:var(--ink-2); line-height:1.35; margin-top:3px}
+
+/* pro / con */
+.pc{display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:14px; margin:18px 0}
+.pc > div{background:var(--surface); border:1px solid var(--rule); border-radius:5px; padding:16px 18px}
+.pc.pros > div{border-top:3px solid var(--yes)}
+.pc.cons > div{border-top:3px solid var(--no)}
+.pc h4{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:600;
+  font-size:15.5px; margin:0 0 6px; text-wrap:balance}
+.pc p{font-size:13.5px; color:var(--ink-2); margin:0; max-width:none}
+.pc .tag{font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:5px}
+
+/* tables */
+.tw{overflow-x:auto; margin:16px 0; border:1px solid var(--rule); border-radius:5px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:13.5px; min-width:600px}
+caption{text-align:left; font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3); padding:10px 14px;
+  border-bottom:1px solid var(--rule); background:var(--surface-2)}
+th,td{padding:9px 13px; text-align:left; vertical-align:top; border-bottom:1px solid var(--rule)}
+thead th{font-family:"IBM Plex Sans Condensed",Arial Narrow,sans-serif; font-weight:600; font-size:12px;
+  color:var(--ink-2); background:var(--surface-2); border-bottom:1px solid var(--rule-2)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:var(--surface-2)}
+td.num{text-align:right; font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; white-space:nowrap}
+td b{font-weight:600}
+
+.stop{background:var(--no-soft); border:1px solid var(--no-rule); border-left:4px solid var(--no);
+  border-radius:5px; padding:16px 20px; margin:18px 0}
+.stop h4{font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:11px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--no); margin:0 0 8px}
+.stop p{max-width:none; margin-bottom:0; font-size:14.5px}
+
+.toc{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:1px;
+  background:var(--rule); border:1px solid var(--rule); border-radius:5px; overflow:hidden; margin:0 0 40px}
+.toc a{background:var(--surface); padding:11px 15px; text-decoration:none; color:var(--ink);
+  font-size:13.5px; display:flex; gap:9px; align-items:baseline}
+.toc a:hover{background:var(--accent-soft)}
+.toc a span{font-family:"IBM Plex Mono",monospace; font-size:10px; color:var(--accent); font-weight:600}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="kicker">
+    <span>God City LLP &middot; &ldquo;New Goa&rdquo;, Sindhudurg</span>
+    <span>Internal &mdash; sales &amp; fundraising</span>
+    <span>10 September 2026</span>
+  </div>
+  <h1>Pitch Brief</h1>
+  <p class="stand">The specs you actually have, the specs you need before you walk into a room, and the honest pro-and-con case for two different audiences: the investor who funds it, and the client who buys a plot.</p>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <a href="#spec"><span>01</span>The spec sheet</a>
+  <a href="#missing"><span>02</span>What's missing</a>
+  <a href="#investor"><span>03</span>Investor pitch</a>
+  <a href="#client"><span>04</span>Client pitch</a>
+  <a href="#objections"><span>05</span>Objection handling</a>
+  <a href="#redlines"><span>06</span>Red lines</a>
+</nav>
+
+<section id="spec">
+  <div class="sechead">
+    <div class="eyebrow">01</div>
+    <h2>The spec sheet</h2>
+  </div>
+  <p>Start here, because it is shorter than you think. <b>Five specifications about this project are publicly published.</b> Everything else in the three blocks below is either derived arithmetic from those five, or an independently sourced benchmark for the surrounding market. Anything marked <span class="chip c-e">Derived</span> is a calculation you should confirm against the sanctioned layout before it goes in a deck.</p>
+
+  <div class="specs">
+    <article class="spec">
+      <header><span class="n">Spec 1</span><span class="t">Land &amp; product</span></header>
+      <dl>
+        <div class="row"><dt>Total land</dt><dd>150 acres <span class="chip c-v">Pub</span><em>60.7 hectares</em></dd></div>
+        <div class="row"><dt>Phase 1 released</dt><dd>22.5 acres <span class="chip c-v">Pub</span><em>15% of total</em></dd></div>
+        <div class="row"><dt>Product</dt><dd>NA plots <span class="chip c-v">Pub</span><em>gated township</em></dd></div>
+        <div class="row"><dt>Saleable area, total</dt><dd>~421,000 sq yd <span class="chip c-e">Derived</span><em>at 58% efficiency</em></dd></div>
+        <div class="row"><dt>Saleable, Phase 1</dt><dd>~63,200 sq yd <span class="chip c-e">Derived</span></dd></div>
+        <div class="row"><dt>Indicative plot count</dt><dd>~1,400 <span class="chip c-e">Derived</span><em>at 300 sq yd average</em></dd></div>
+        <div class="row"><dt>Township eligible</dt><dd>Yes <span class="chip c-e">Derived</span><em>60.7 ha &gt; 40 ha threshold</em></dd></div>
+        <div class="row"><dt>Plot size range</dt><dd>Not published <span class="chip c-x">Gap</span></dd></div>
+        <div class="row"><dt>Amenity schedule</dt><dd>Not published <span class="chip c-x">Gap</span></dd></div>
+      </dl>
+    </article>
+
+    <article class="spec">
+      <header><span class="n">Spec 2</span><span class="t">Location &amp; connectivity</span></header>
+      <dl>
+        <div class="row"><dt>District</dt><dd>Sindhudurg <span class="chip c-v">Pub</span><em>Maharashtra, Goa border</em></dd></div>
+        <div class="row"><dt>Mopa airport (GOX)</dt><dd>~30 min <span class="chip c-v">Pub</span><em>developer's stated figure</em></dd></div>
+        <div class="row"><dt>&mdash; benchmark</dt><dd>35 km / 42 min <span class="chip c-e">Route data</span><em>Sawantwadi&ndash;Mopa; Banda ~15 min</em></dd></div>
+        <div class="row"><dt>Chipi airport (SDW)</dt><dd>~60&ndash;70 km <span class="chip c-e">Belt</span></dd></div>
+        <div class="row"><dt>Sawantwadi Road rail</dt><dd>~15&ndash;25 km <span class="chip c-e">Belt</span><em>daily CSMT express since 3 Sep 2026</em></dd></div>
+        <div class="row"><dt>NH-66</dt><dd>On alignment <span class="chip c-e">Belt</span><em>four-laning due end-2026</em></dd></div>
+        <div class="row"><dt>Goa border</dt><dd>~10&ndash;20 km <span class="chip c-e">Belt</span></dd></div>
+        <div class="row"><dt>Mumbai</dt><dd>9&ndash;11 hrs <span class="chip c-e">Belt</span><em>~6 hrs once NH-66 completes</em></dd></div>
+        <div class="row"><dt>Village / survey no. / coords</dt><dd>Not published <span class="chip c-x">Gap</span></dd></div>
+      </dl>
+    </article>
+
+    <article class="spec">
+      <header><span class="n">Spec 3</span><span class="t">Commercial</span></header>
+      <dl>
+        <div class="row"><dt>List price</dt><dd>&#8377;35,000/sq yd <span class="chip c-v">Pub</span><em>&#8377;3,889/sq ft &middot; &#8377;41,860/sq m</em></dd></div>
+        <div class="row"><dt>Ticket at list, 300 sq yd</dt><dd>&#8377;1.05 cr <span class="chip c-e">Derived</span></dd></div>
+        <div class="row"><dt>GDV at list, full site</dt><dd>~&#8377;1,474 cr <span class="chip c-e">Derived</span></dd></div>
+        <div class="row"><dt>GDV at list, Phase 1</dt><dd>~&#8377;221 cr <span class="chip c-e">Derived</span></dd></div>
+        <div class="row"><dt>Modelled cost base</dt><dd>~&#8377;357 cr <span class="chip c-e">Modelled</span><em>land, infra, amenities, approvals</em></dd></div>
+        <div class="row"><dt>Break-even price</dt><dd>~&#8377;9,420/sq yd <span class="chip c-e">Modelled</span></dd></div>
+        <div class="row"><dt>Local market benchmark</dt><dd>&#8377;7,000&ndash;9,500 <span class="chip c-e">Sourced</span><em>Sawantwadi MOPA-side layouts</em></dd></div>
+        <div class="row"><dt>Nearest branded rival</dt><dd>&#8377;49,990/sq yd <span class="chip c-e">Sourced</span><em>Yugen Golf City, Banda</em></dd></div>
+        <div class="row"><dt>MahaRERA number</dt><dd>Not published <span class="chip c-x">Gap</span></dd></div>
+      </dl>
+    </article>
+  </div>
+  <p class="note"><b>Efficiency assumption:</b> 58% saleable after roads (~18%), open space (~10%), amenities (~8%) and buffers (~6%). If your sanctioned layout gives a different number, every derived figure above moves with it &mdash; recalculate before quoting.</p>
+</section>
+
+<section id="missing">
+  <div class="sechead">
+    <div class="eyebrow">02</div>
+    <h2>The eleven specs you need before you pitch</h2>
+  </div>
+  <p>This is the most useful list in this brief. Neither an investor nor a serious client will sign without these, and none of them are currently discoverable in public. Getting them is not a marketing task &mdash; it is the prerequisite for marketing.</p>
+  <div class="tw">
+    <table>
+      <caption>Fill these in &mdash; ranked by how fast each one kills a meeting</caption>
+      <thead><tr><th>#</th><th>Spec</th><th>Why it stops the deal</th><th>Who needs it</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><b>MahaRERA registration number</b></td><td>A plotted scheme above 500 sq m <em>and</em> 8 plots must be registered before it is marketed. Without the number there is no escrow, no legal comfort, and no NRI or HNI sale</td><td><b>Both</b></td></tr>
+        <tr><td class="num">2</td><td><b>Village, survey / gat numbers</b></td><td>Nothing can be title-searched, mapped or valued without them</td><td><b>Both</b></td></tr>
+        <tr><td class="num">3</td><td><b>Form D-3 layout sanction + NA order</b></td><td>Proves the land is legally subdividable and non-agricultural</td><td>Both</td></tr>
+        <tr><td class="num">4</td><td><b>Plot size range and count</b></td><td>You cannot build a price ladder or a ticket-size story without it</td><td>Client</td></tr>
+        <tr><td class="num">5</td><td><b>Amenity schedule with delivery dates</b></td><td>This is what a &#8377;35,000/sq yd price is supposed to be buying</td><td><b>Both</b></td></tr>
+        <tr><td class="num">6</td><td><b>Land ownership status</b></td><td>Owned outright, or under a development agreement or agreement to sell? Changes the risk entirely</td><td>Investor</td></tr>
+        <tr><td class="num">7</td><td><b>ESA / ESZ / CRZ position</b></td><td>Western Ghats ESA 7th draft (July 2026) and the Sawantwadi&ndash;Dodamarg ESZ direction are live. A buyer's lawyer will ask</td><td><b>Both</b></td></tr>
+        <tr><td class="num">8</td><td><b>Funding plan</b></td><td>&#8377;1,00,000 of partner contribution against a ~&#8377;357 cr cost base is the first question an investor asks</td><td>Investor</td></tr>
+        <tr><td class="num">9</td><td><b>Audited financials</b></td><td>God City LLP and Delhiwood Studios, last two years</td><td>Investor</td></tr>
+        <tr><td class="num">10</td><td><b>Phasing and possession dates</b></td><td>&ldquo;Phase 1 is open&rdquo; is not a schedule</td><td>Both</td></tr>
+        <tr><td class="num">11</td><td><b>Sales to date</b></td><td>Plots sold, value booked, collections. Nobody funds a scheme with no velocity data</td><td>Investor</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="stop">
+    <h4>The one that is not optional</h4>
+    <p>Taking booking money for a scheme of this size before MahaRERA registration is live is an offence under Section 3 of the Act, not a paperwork delay. Whatever else you do with this brief: <b>get the registration number, then pitch.</b> It is also, conveniently, your single strongest differentiator &mdash; most of your competitors show renders, and you would be showing documents.</p>
+  </div>
+</section>
+
+<section id="investor">
+  <div class="sechead">
+    <div class="eyebrow">03</div>
+    <h2>Investor pitch</h2>
+  </div>
+
+  <div class="pitch">
+    <div class="lbl">The sixty-second version</div>
+    <p>&ldquo;We hold 150 contiguous acres on the Maharashtra&ndash;Goa border, thirty minutes from an international airport that moved 5.4 million passengers last year and grew 15.8%. Because this is plotted development, there is no vertical construction cost &mdash; our modelled break-even is around &#8377;9,400 per square yard in a belt where unbranded layouts already trade at &#8377;7,000&ndash;9,500 and the branded scheme next door sells at &#8377;49,990.</p>
+    <p>Phase 1 is 22.5 acres. Roughly a quarter of total saleable area, sold at list, covers the entire project cost base &mdash; so Phase 1 funds the remaining four phases. At scale we are above the 40-hectare threshold for Integrated Township status, which brings additional FSI on premium and a 50% stamp-duty concession that no 11-to-78-acre competitor in this belt can access. Base case returns roughly 51% net margin and a 26&ndash;32% IRR over seven to eight years.&rdquo;</p>
+  </div>
+
+  <h3>The five numbers to lead with</h3>
+  <div class="nums">
+    <div><div class="k">Cost base</div><div class="v">&#8377;357 cr</div><div class="s">modelled, full 150 acres</div></div>
+    <div><div class="k">Break-even</div><div class="v">&#8377;9,420</div><div class="s">per sq yd &mdash; at local layout prices</div></div>
+    <div><div class="k">Phase 1 GDV</div><div class="v">&#8377;221 cr</div><div class="s">22.5 acres at list price</div></div>
+    <div><div class="k">Covers full cost</div><div class="v">~24%</div><div class="s">of saleable area sold at list</div></div>
+    <div><div class="k">Base-case IRR</div><div class="v">26&ndash;32%</div><div class="s">51% net margin, 7&ndash;8 years</div></div>
+  </div>
+
+  <h3>Pros &mdash; why an investor should look</h3>
+  <div class="pc pros">
+    <div><span class="tag">Cost structure</span><h4>No vertical construction, so the floor is low</h4><p>Break-even lands around &#8377;9,420/sq yd. Even a bear case at &#8377;14,000 blended clears cost with ~29% margin. The downside is slow, not loss-making.</p></div>
+    <div><span class="tag">Self-funding</span><h4>Phase 1 pays for the project</h4><p>~24% of saleable area at list price covers the whole &#8377;357 cr base. That is an unusually short capital-at-risk window for a 150-acre scheme.</p></div>
+    <div><span class="tag">Scarcity</span><h4>150 contiguous acres is genuinely hard to assemble</h4><p>Only two rivals in the catchment hold more &mdash; Axon at 600 acres and Yugen at 500. Everyone else is at 11&ndash;78 acres.</p></div>
+    <div><span class="tag">Regulatory edge</span><h4>Township status is available and unclaimed</h4><p>60.7 ha clears the 40 ha threshold: extra FSI on premium, plus a 50% stamp-duty concession worth ~&#8377;2.5&ndash;3 lakh on a &#8377;1 cr plot. No small competitor can match it.</p></div>
+    <div><span class="tag">Demand engine</span><h4>The airport already works</h4><p>Mopa: 5.38 M passengers FY2025&ndash;26, +15.8%, 38,111 movements (+21%), against 7.7 M capacity. This is delivered infrastructure, not a promise.</p></div>
+    <div><span class="tag">Catalysts</span><h4>Two dated events ahead, not behind</h4><p>NH-66 four-laning due end-2026 (Mumbai&ndash;Goa ~6 hrs), and the Shaktipeeth Expressway terminating at Banda in Sawantwadi taluka, targeted 2028&ndash;29.</p></div>
+  </div>
+
+  <h3>Cons &mdash; what they will push on, and the honest answer</h3>
+  <div class="pc cons">
+    <div><span class="tag">Compliance</span><h4>No MahaRERA number is published</h4><p><b>Answer honestly.</b> Either produce the registration, or say it is in application with a date. Do not deflect &mdash; a sophisticated investor checks the portal during the meeting.</p></div>
+    <div><span class="tag">Price</span><h4>&#8377;35,000/sq yd is 3.7&ndash;5&times; the local benchmark</h4><p>The whole model rests on holding it. <b>Answer:</b> reprice standard stock to &#8377;18,000&ndash;24,000 and keep &#8377;28,000&ndash;35,000 for genuinely premium plots &mdash; base case still returns 51% margin. A repriced plan is more fundable than an aspirational one.</p></div>
+    <div><span class="tag">Balance sheet</span><h4>&#8377;1,00,000 contribution against a &#8377;357 cr cost base</h4><p>Expect this immediately. <b>Answer:</b> show the funding plan &mdash; equity infusion, debt, or Phase-1-collections-funded &mdash; and audited accounts. Have a number, not a philosophy.</p></div>
+    <div><span class="tag">Track record</span><h4>No completed real-estate delivery as principal</h4><p>The founders have a decade of corporate history and a released feature film; Winsten Park belongs to VHR Group. <b>Answer:</b> own it, and offer The Farmlands in Faridabad as a checkable reference.</p></div>
+    <div><span class="tag">Environmental</span><h4>Live clearance overhang</h4><p>Western Ghats ESA 7th draft (27 July 2026), a Bombay HC direction on the Sawantwadi&ndash;Dodamarg ESZ with a tree-felling embargo, and the Tillari reserve nearby. <b>Answer:</b> a mapped non-applicability certificate. Nothing else will do.</p></div>
+    <div><span class="tag">Supply</span><h4>~1,529 announced competing acres</h4><p>Against a district population of 849,651 &mdash; this inventory is a bet on out-of-state buyers. <b>Answer:</b> price for velocity, not for the headline rate.</p></div>
+    <div><span class="tag">Cash flow</span><h4>Plots yield nothing</h4><p>If absorption stalls there is no rent to carry the asset and no secondary market to exit into. <b>Answer:</b> the build-and-manage villa programme &mdash; it converts a 0% asset into a modelled ~5.3% net yield.</p></div>
+    <div><span class="tag">Evidence</span><h4>No absorption data exists &mdash; for anyone</h4><p>Not for you, not for Yugen, not for Axon. You cannot prove velocity in this district. <b>Answer:</b> present your own booking data as the only real evidence, and be first to have some.</p></div>
+  </div>
+</section>
+
+<section id="client">
+  <div class="sechead">
+    <div class="eyebrow">04</div>
+    <h2>Client pitch</h2>
+  </div>
+
+  <div class="pitch">
+    <div class="lbl">The sixty-second version</div>
+    <p>&ldquo;Goa has priced itself out &mdash; it averages about &#8377;11,950 a square foot. Forty minutes up the coast, on the Maharashtra side of the same border, you can still own land. We are thirty minutes from Mopa international airport, there is a daily express from CSMT that started this month, and NH-66 finishes this year, which takes Mumbai down to about six hours.</p>
+    <p>This is a gated township on 150 acres, not a fenced field. You get a registered, non-agricultural, title-clear plot in a planned layout with amenities &mdash; and if you want, we will build the villa and run it as a holiday let for you. The Shaktipeeth Expressway terminates in this taluka in 2028&ndash;29. Land within thirty kilometres of Mopa moved about 28% in the last eighteen months.&rdquo;</p>
+  </div>
+
+  <h3>Pros &mdash; what genuinely stands up</h3>
+  <div class="pc pros">
+    <div><span class="tag">Value</span><h4>The same coastline, a fraction of Goa's price</h4><p>Goa averages ~&#8377;11,950/sq ft and villas ~&#8377;18,200. This belt is a fraction of that for comparable coast and climate.</p></div>
+    <div><span class="tag">Access</span><h4>Two working airports</h4><p>Mopa 30 minutes, Chipi 60&ndash;70 km. Fly in for a site visit &mdash; the pitch is checkable on the way.</p></div>
+    <div><span class="tag">Access</span><h4>A daily train from Mumbai, live now</h4><p>The CSMT&ndash;Sawantwadi Road express was flagged off on 3 September 2026. Concrete, verifiable, and it dismantles the isolation objection.</p></div>
+    <div><span class="tag">Catalyst</span><h4>Roads that are actually being built</h4><p>NH-66 four-laning due end-2026 (Mumbai to ~6 hrs); Shaktipeeth Expressway terminus at Banda, 2028&ndash;29.</p></div>
+    <div><span class="tag">Track record</span><h4>The belt has already moved</h4><p>Land within 25&ndash;30 km of Mopa appreciated ~28% in 18 months across 2024&ndash;25. Pernem on the Goa side is reported up 261.5% over three years.</p></div>
+    <div><span class="tag">Product</span><h4>A planned township, not a loose layout</h4><p>Gated, with roads, drainage, power and amenities &mdash; against neighbouring half-acre NA plots sold with a boundary stone and nothing else.</p></div>
+    <div><span class="tag">Lifestyle</span><h4>Maharashtra's first tourism district</h4><p>37 forts, Tarkarli and Vengurla beaches, a marine sanctuary, Amboli, and India's first underwater museum installed off Nivati Rock in May 2026.</p></div>
+    <div><span class="tag">Optionality</span><h4>Build now or hold</h4><p>A plot can sit as land banking, or become a villa with a managed rental &mdash; modelled at ~5.3% net yield on total capital.</p></div>
+  </div>
+
+  <h3>Cons &mdash; what a serious buyer will find anyway</h3>
+  <p class="note">Raise these before the client's lawyer does. In plotted sales, the developer who names the downside is the one who gets believed on the upside.</p>
+  <div class="pc cons">
+    <div><span class="tag">Price</span><h4>They will find cheaper land twenty minutes away</h4><p>Unbranded MOPA-side layouts in Sawantwadi go for &#8377;7,000&ndash;9,500/sq yd; Dodamarg half-acre NA plots from ~&#8377;11 lakh. The premium has to be justified by product, not hidden.</p></div>
+    <div><span class="tag">Legal</span><h4>No visible RERA registration means no escrow</h4><p>Until the number is live, a careful buyer should not pay &mdash; and will be told so by their advisor. This is the single biggest conversion blocker.</p></div>
+    <div><span class="tag">Returns</span><h4>A plot earns nothing until it is built on</h4><p>Zero income, plus holding costs. Anyone pitching this as a yielding asset is misleading them.</p></div>
+    <div><span class="tag">Climate</span><h4>Heavy monsoon, and a landslide-prone region</h4><p>The Konkan sees extreme rainfall &mdash; recent daily maxima of 270 mm at Devgad, 170 mm at Malvan and Vengurla &mdash; with repeat flooding and NDRF evacuations. Year-round road access is a fair question.</p></div>
+    <div><span class="tag">Access</span><h4>Mumbai is 9&ndash;11 hours today, not six</h4><p>The six-hour figure depends on NH-66 completing, and that deadline has slipped repeatedly since 2011. Say &ldquo;when it completes&rdquo;, never &ldquo;it is&rdquo;.</p></div>
+    <div><span class="tag">Liquidity</span><h4>There is no resale market yet</h4><p>Assume a five-to-eight-year hold with no guaranteed exit. Do not let anyone buy this expecting a two-year flip.</p></div>
+    <div><span class="tag">Amenities</span><h4>Thin social infrastructure</h4><p>Nearest large hospital &mdash; the government medical college at Oros, Kudal &mdash; is 40&ndash;60 km. Schools, retail and restaurants at an urban standard are limited. This is a holiday and retirement location, not a family primary residence yet.</p></div>
+    <div><span class="tag">Regulatory</span><h4>Environmental rules could affect what they build</h4><p>The Western Ghats ESA draft and the neighbouring ESZ direction are unresolved. A buyer planning construction deserves to know that before booking, not after.</p></div>
+  </div>
+</section>
+
+<section id="objections">
+  <div class="sechead">
+    <div class="eyebrow">05</div>
+    <h2>Objection handling</h2>
+  </div>
+  <p>The eight things you will hear in almost every meeting, and a response that is both persuasive and true. Nothing here requires you to overstate anything.</p>
+  <div class="tw">
+    <table>
+      <caption>Objection &rarr; response</caption>
+      <thead><tr><th style="width:26%">They say</th><th>You say</th></tr></thead>
+      <tbody>
+        <tr><td><b>&ldquo;Why is it four times the price of the land down the road?&rdquo;</b></td><td>&ldquo;Because that land is a boundary stone in a field. You are buying a sanctioned layout with roads, drainage, power, security and amenities, inside a 150-acre master plan &mdash; and a title you can resell. Here is the layout sanction and here is what the &#8377;35,000 buys.&rdquo; <b>If you cannot show the amenity schedule, you cannot win this one &mdash; which is why spec 5 matters.</b></td></tr>
+        <tr><td><b>&ldquo;Where is your RERA number?&rdquo;</b></td><td>Give the number, or give the application date. Never say &ldquo;it's coming&rdquo; without a date, and never take money before it is live. If you have it, lead with it &mdash; most of your competitors are showing renders.</td></tr>
+        <tr><td><b>&ldquo;Yugen has a golf course and Wyndham. What do you have?&rdquo;</b></td><td>&ldquo;Yugen is &#8377;49,990 a square yard. We are the same belt, the same airport, the same expressway terminus &mdash; at roughly half the entry. And our clubhouse will be finished and photographable before Phase 1 closes, not rendered.&rdquo;</td></tr>
+        <tr><td><b>&ldquo;Why not just buy in Goa?&rdquo;</b></td><td>&ldquo;You should, if you want a Goa address and can pay ~&#8377;11,950 a square foot. If you want land, space and appreciation on the same coastline, this is where the value is &mdash; Goa's own buyers are crossing the border for exactly that reason.&rdquo; Do not claim this <em>is</em> Goa. That argument is unwinnable.</td></tr>
+        <tr><td><b>&ldquo;Who are you? I've never heard of God City.&rdquo;</b></td><td>&ldquo;God City LLP was formed for this project. The founders, Rakesh and Suresh Chaudhary, have been directors together since 2016 and have 18 and 14 years in the sector; Rakesh worked on VHR Group's Winsten Park in Greater Noida.&rdquo; Say <em>worked on</em> &mdash; not <em>built</em>. It is VHR's project.</td></tr>
+        <tr><td><b>&ldquo;What if the expressway never gets built?&rdquo;</b></td><td>&ldquo;Then you still have an airport that moved 5.4 million passengers last year, a highway finishing this year and a daily train from Mumbai. The expressway is upside, and I'd rather you bought without counting on it.&rdquo;</td></tr>
+        <tr><td><b>&ldquo;Can I rent it out?&rdquo;</b></td><td>&ldquo;Not as bare land &mdash; that earns nothing. Build on it and we will manage it as a holiday let; on our numbers a 300-square-yard villa runs to roughly 5&ndash;6% net. Sindhudurg is more seasonal than Goa, so we model 38% occupancy, not 70%.&rdquo;</td></tr>
+        <tr><td><b>&ldquo;What about the environmental restrictions?&rdquo;</b></td><td>&ldquo;There is a live Western Ghats ESA draft and an ESZ direction for the corridor nearby. Here is our mapped position showing the site falls outside them.&rdquo; If you do not have that certificate, get it &mdash; this question is now standard, and bluffing it is the fastest way to lose a lawyer-advised buyer.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="redlines">
+  <div class="sechead">
+    <div class="eyebrow">06</div>
+    <h2>Red lines</h2>
+  </div>
+  <p>Claims that are either false, unsupportable, or will collapse under a buyer's own five minutes of searching. Every one of these is currently circulating in this market.</p>
+
+  <div class="talk">
+    <div class="say">
+      <h4>Say this</h4>
+      <ul>
+        <li>&ldquo;Mopa handled 5.38 million passengers last year, up 15.8%.&rdquo; &mdash; delivered fact</li>
+        <li>&ldquo;There is a daily express from CSMT since 3 September 2026.&rdquo; &mdash; checkable</li>
+        <li>&ldquo;NH-66 four-laning is targeted for completion by the end of 2026.&rdquo; &mdash; targeted, not done</li>
+        <li>&ldquo;The Shaktipeeth Expressway terminates at Banda, Sawantwadi taluka, with the alignment approved in April 2026 and completion targeted 2028&ndash;29.&rdquo; &mdash; under construction</li>
+        <li>&ldquo;Land within 25&ndash;30 km of Mopa rose about 28% over eighteen months.&rdquo; &mdash; attribute it</li>
+        <li>&ldquo;150 contiguous acres, Phase 1 of 22.5 acres.&rdquo; &mdash; your own published spec</li>
+      </ul>
+    </div>
+    <div class="dont">
+      <h4>Never say this</h4>
+      <ul>
+        <li><b>&ldquo;29.2% annual appreciation.&rdquo;</b> That is a promotional forecast from September 2022, four years stale. It circulates widely and it will be checked.</li>
+        <li><b>Anything about the Konkan Expressway.</b> It is unsanctioned &mdash; a revised DPR awaiting approval. A buyer who discovers that discounts everything else you said.</li>
+        <li><b>&ldquo;This is New Goa.&rdquo;</b> It is Sindhudurg, Maharashtra. GMR uses the phrase for the airport, and another developer uses it for its own scheme. It invites a comparison with real Goa that you lose.</li>
+        <li><b>&ldquo;G+4 is permissible.&rdquo;</b> Not until the sanctioned layout says so in writing. A wrong FSI claim is a mis-selling exposure.</li>
+        <li><b>&ldquo;Winsten Park is our project.&rdquo;</b> It is VHR Group's. Say the founder worked on it.</li>
+        <li><b>&ldquo;Guaranteed returns&rdquo; or any assured-buyback framing.</b> There is no resale market in this district yet to support it.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stop">
+    <h4>Sequence matters</h4>
+    <p>Fix the eleven specs first, reprice second, pitch third. Pitching a &#8377;35,000/sq&nbsp;yd price with no registration number and no amenity schedule burns the channel partners and NRI leads you will need later &mdash; and in this market those relationships are harder to rebuild than a price list.</p>
+  </div>
+
+  <p class="note" style="margin-top:26px">Figures, sources and the full reasoning behind every number here are in the main dossier. This brief is a working document for internal use; it is not investment advice, a valuation or a legal opinion, and no figure marked <span class="chip c-e">Derived</span> or <span class="chip c-e">Modelled</span> should be quoted to a third party as fact.</p>
+</section>
+
+</div>
