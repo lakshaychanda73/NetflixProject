@@ -1,0 +1,1151 @@
+<title>Powai Lakefront Dossier</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#EEF1EC; --surface:#F9FBF7; --surface-2:#E3E9E2; --ink:#16211D;
+  --graphite:#4D5C56; --faint:#78867F; --rule:#C7D2C9;
+  --accent:#1C5A4A; --accent-soft:#D7E5DD; --sage:#6E8F73;
+  --flag:#A2551F; --flag-soft:#F0E2D5; --stop:#93302A; --stop-soft:#F2DCDA;
+  --gold:#8A6C13;
+  --f-disp:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-data:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --mx:1120px;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --paper:#0D1411; --surface:#151E1A; --surface-2:#1D2823; --ink:#E1E9E3;
+  --graphite:#9AAAA1; --faint:#72827A; --rule:#2A3933;
+  --accent:#5CB79B; --accent-soft:#1A2F29; --sage:#8AAC8C;
+  --flag:#D98E56; --flag-soft:#2E2117; --stop:#DB7C72; --stop-soft:#321A18;
+  --gold:#CBA845;
+}}
+:root[data-theme="dark"]{
+  --paper:#0D1411; --surface:#151E1A; --surface-2:#1D2823; --ink:#E1E9E3;
+  --graphite:#9AAAA1; --faint:#72827A; --rule:#2A3933;
+  --accent:#5CB79B; --accent-soft:#1A2F29; --sage:#8AAC8C;
+  --flag:#D98E56; --flag-soft:#2E2117; --stop:#DB7C72; --stop-soft:#321A18;
+  --gold:#CBA845;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);
+  font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--mx);margin:0 auto;padding-inline:20px;padding-block:0}
+h1,h2,h3,h4{font-family:var(--f-disp);text-wrap:balance;margin:0;line-height:1.14;
+  letter-spacing:-.018em;font-weight:700}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+.mono{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-data);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--faint);font-weight:500}
+
+/* ---------- masthead ---------- */
+.mast{border-bottom:1.5px solid var(--ink);padding-block:36px 22px}
+.mast .wrap{display:flex;flex-direction:column;gap:16px}
+.mast h1{font-size:clamp(30px,5.4vw,52px);letter-spacing:-.03em}
+.mast .sub{font-size:clamp(15px,2vw,18px);color:var(--graphite);max-width:62ch}
+.mastmeta{display:flex;flex-wrap:wrap;gap:8px 26px;font-family:var(--f-data);
+  font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.mastmeta b{color:var(--ink);font-weight:500}
+
+/* ---------- evidence ladder ---------- */
+.ladder{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);
+  border-radius:2px;overflow:hidden;background:var(--surface)}
+.ladder div{flex:1 1 168px;padding:11px 14px;border-right:1px solid var(--rule);min-width:0}
+.ladder div:last-child{border-right:0}
+.ladder .t{font-family:var(--f-data);font-weight:600;font-size:12px;letter-spacing:.04em}
+.ladder .d{font-size:13px;color:var(--graphite);line-height:1.45;margin-top:2px}
+.tV{color:var(--accent)} .tS{color:var(--flag)} .tE{color:var(--gold)} .tQ{color:var(--stop)}
+
+/* ---------- layout ---------- */
+.shell{display:grid;grid-template-columns:1fr;gap:0}
+.shell>*{min-width:0}
+main{min-width:0}
+@media(min-width:1000px){
+  .shell{grid-template-columns:186px 1fr;gap:46px;align-items:start}
+  nav.rail{position:sticky;top:18px;padding-block:44px}
+}
+nav.rail ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+nav.rail a{display:block;font-family:var(--f-data);font-size:12px;letter-spacing:.02em;
+  color:var(--graphite);text-decoration:none;padding:5px 0 5px 11px;
+  border-left:2px solid var(--rule)}
+nav.rail a:hover,nav.rail a:focus-visible{color:var(--accent);border-left-color:var(--accent)}
+nav.rail .num{color:var(--faint);margin-right:7px}
+@media(max-width:999px){nav.rail{display:none}}
+
+section{padding-block:40px;border-top:1px solid var(--rule)}
+section:first-child{border-top:0}
+.shead{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;flex-wrap:wrap}
+.shead h2{font-size:clamp(20px,3vw,27px)}
+.shead .n{font-family:var(--f-data);font-size:12px;color:var(--faint);font-weight:500}
+.lede{color:var(--graphite);max-width:68ch;margin-bottom:22px;font-size:16.5px}
+
+/* ---------- scorecard ---------- */
+.score{display:flex;flex-direction:column;gap:9px;margin-top:6px}
+.srow{display:grid;grid-template-columns:1fr;gap:3px}
+@media(min-width:620px){.srow{grid-template-columns:200px 1fr 72px;align-items:center;gap:14px}}
+.slabel{font-size:14.5px}
+.strack{height:9px;background:var(--surface-2);border-radius:1px;overflow:hidden}
+.sfill{height:100%;background:var(--accent)}
+.sfill.warn{background:var(--flag)} .sfill.bad{background:var(--stop)}
+.sval{font-family:var(--f-data);font-size:11px;letter-spacing:.07em;color:var(--faint);
+  text-transform:uppercase}
+
+/* ---------- callouts ---------- */
+.stops{display:grid;gap:12px;grid-template-columns:1fr}
+.stops>*{min-width:0}
+@media(min-width:760px){.stops{grid-template-columns:repeat(3,1fr)}}
+.stop{border-left:3px solid var(--stop);background:var(--stop-soft);padding:14px 16px}
+.stop h4{font-size:14px;color:var(--stop);letter-spacing:.03em;text-transform:uppercase;
+  font-family:var(--f-data);font-weight:600}
+.stop p{font-size:14.5px;margin-top:6px;color:var(--ink)}
+.note{border-left:3px solid var(--flag);background:var(--flag-soft);padding:13px 16px;
+  font-size:14.5px}
+.note b{color:var(--flag)}
+
+/* ---------- tables ---------- */
+.tscroll{overflow-x:auto;margin-block:4px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:520px}
+th{font-family:var(--f-data);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--faint);text-align:left;font-weight:500;padding:0 12px 7px 0;
+  border-bottom:1px solid var(--ink);white-space:nowrap}
+td{padding:9px 12px 9px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+td.num,th.num{text-align:right;font-family:var(--f-data);font-variant-numeric:tabular-nums;
+  padding-right:0}
+tr:last-child td{border-bottom:0}
+.tag{font-family:var(--f-data);font-size:10px;font-weight:600;letter-spacing:.06em;
+  padding:1px 4px;border-radius:2px;vertical-align:1px}
+.tag.v{color:var(--accent);background:var(--accent-soft)}
+.tag.s{color:var(--flag);background:var(--flag-soft)}
+.tag.e{color:var(--gold);background:var(--surface-2)}
+.tag.q{color:var(--stop);background:var(--stop-soft)}
+
+/* ---------- bar ladder ---------- */
+.ladderchart{display:flex;flex-direction:column;gap:7px;margin-top:8px}
+.lrow{display:grid;grid-template-columns:1fr;gap:2px}
+@media(min-width:680px){.lrow{grid-template-columns:230px 1fr 92px;align-items:center;gap:14px}}
+.lname{font-size:14px;line-height:1.3}
+.lname .sm{color:var(--faint);font-size:12.5px}
+.lbar{height:15px;background:var(--surface-2);position:relative;border-radius:1px}
+.lbar i{position:absolute;inset:0 auto 0 0;background:var(--sage);border-radius:1px;display:block}
+.lrow.me .lbar i{background:var(--accent)}
+.lrow.me .lname{font-weight:600}
+.lrow.ref .lbar i{background:var(--flag)}
+.lnum{font-family:var(--f-data);font-size:13px;font-variant-numeric:tabular-nums;
+  text-align:right;color:var(--graphite)}
+.lrow.me .lnum{color:var(--accent);font-weight:600}
+
+/* ---------- value bridge ---------- */
+.bridge{display:flex;align-items:flex-end;gap:5px;overflow-x:auto;padding-top:8px;
+  padding-bottom:4px}
+.bcol{flex:1 0 70px;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:70px}
+.bbar{width:100%;position:relative;height:150px}
+.bbar span{position:absolute;left:0;right:0;border-radius:1px;display:block}
+.bbar .base{background:var(--surface-2);border:1px solid var(--rule)}
+.bbar .add{background:var(--accent)}
+.bbar .sub{background:var(--stop)}
+.bbar .tot{background:var(--ink)}
+.bcap{font-family:var(--f-data);font-size:10px;letter-spacing:.04em;text-align:center;
+  color:var(--graphite);line-height:1.3}
+.bcap b{display:block;font-size:12px;color:var(--ink);font-weight:600}
+
+/* ---------- view ladder ---------- */
+.views{display:flex;flex-direction:column;gap:2px}
+.vband{display:grid;grid-template-columns:78px 1fr;gap:14px;align-items:center;
+  padding:11px 14px;border-left:3px solid var(--rule);background:var(--surface)}
+.vband.hi{border-left-color:var(--accent);background:var(--accent-soft)}
+.vband.mid{border-left-color:var(--sage)}
+.vfl{font-family:var(--f-data);font-size:13px;font-weight:600;letter-spacing:.02em}
+.vtx{font-size:14.5px;line-height:1.45}
+.vtx b{font-weight:600}
+
+/* ---------- calculator ---------- */
+.calc>*{min-width:0}
+.calc{display:grid;grid-template-columns:1fr;gap:26px;background:var(--surface);
+  border:1px solid var(--rule);border-radius:3px;padding:20px}
+@media(min-width:840px){.calc{grid-template-columns:300px 1fr;gap:34px}}
+.ctrls{display:flex;flex-direction:column;gap:17px}
+.ctrl label{display:block;font-family:var(--f-data);font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--faint);margin-bottom:5px}
+select{width:100%;font-family:var(--f-body);font-size:15px;padding:8px 9px;
+  background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:2px}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.rv{font-family:var(--f-data);font-size:19px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums}
+.seg{display:flex;gap:0;border:1px solid var(--rule);border-radius:2px;overflow:hidden}
+.seg button{flex:1;font-family:var(--f-data);font-size:12px;padding:8px 4px;border:0;
+  background:var(--paper);color:var(--graphite);cursor:pointer;letter-spacing:.04em}
+.seg button[aria-pressed=true]{background:var(--accent);color:var(--surface)}
+.out{display:flex;flex-direction:column;gap:0}
+.orow{display:flex;justify-content:space-between;gap:16px;padding:7px 0;
+  border-bottom:1px solid var(--rule);font-size:14.5px}
+.orow span:last-child{font-family:var(--f-data);font-variant-numeric:tabular-nums;
+  white-space:nowrap}
+.orow.big{border-bottom:1.5px solid var(--ink);border-top:1.5px solid var(--ink);
+  padding:11px 0;margin-top:5px;font-weight:600;font-size:17px}
+.orow.big span:last-child{color:var(--accent);font-size:20px;font-weight:600}
+.orow.sub span{color:var(--graphite);font-size:13.5px}
+.btn{font-family:var(--f-data);font-size:12px;letter-spacing:.05em;padding:9px 15px;
+  border:1px solid var(--accent);background:transparent;color:var(--accent);
+  border-radius:2px;cursor:pointer}
+.btn:hover{background:var(--accent);color:var(--surface)}
+.btn[disabled]{opacity:.45;cursor:default}
+
+/* ---------- heatmap ---------- */
+.heat{display:grid;grid-template-columns:62px repeat(4,1fr);gap:3px;font-size:12px;
+  min-width:520px}
+.heat .hc{font-family:var(--f-data);font-size:9.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--faint);padding:3px;text-align:center}
+.heat .hr{font-family:var(--f-data);font-size:9.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--faint);display:flex;align-items:center}
+.cell{min-height:74px;padding:7px 8px;border-radius:2px;display:flex;flex-direction:column;
+  gap:3px;background:var(--surface);border:1px solid var(--rule)}
+.cell.l1{background:var(--surface)}
+.cell.l2{background:var(--flag-soft);border-color:var(--flag)}
+.cell.l3{background:var(--stop-soft);border-color:var(--stop)}
+.cell b{font-family:var(--f-data);font-size:10.5px;font-weight:600;line-height:1.35}
+.cell.l3 b{color:var(--stop)} .cell.l2 b{color:var(--flag)}
+
+/* ---------- checklist ---------- */
+.prog{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.ptrack{flex:1 1 200px;height:7px;background:var(--surface-2);border-radius:1px;overflow:hidden}
+.pfill{height:100%;background:var(--accent);width:0;transition:width .25s}
+.pnum{font-family:var(--f-data);font-size:13px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums}
+.qgroup h4{font-family:var(--f-data);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--faint);font-weight:500;margin:22px 0 8px;padding-bottom:6px;
+  border-bottom:1px solid var(--rule)}
+.qrow{display:grid;grid-template-columns:22px 30px 1fr;gap:10px;align-items:start;
+  padding:7px 0;font-size:14.5px;line-height:1.45}
+.qrow input{margin-top:5px;width:15px;height:15px;accent-color:var(--accent)}
+.qrow .qn{font-family:var(--f-data);font-size:12px;color:var(--faint);padding-top:3px}
+.qrow.crit .qn{color:var(--stop);font-weight:600}
+.qrow label{cursor:pointer}
+.qrow input:checked + .qn + label{color:var(--faint);text-decoration:line-through;
+  text-decoration-color:var(--rule)}
+.syncnote{font-family:var(--f-data);font-size:11px;color:var(--faint);letter-spacing:.04em}
+
+/* ---------- plan ---------- */
+.plan{display:grid;gap:14px;grid-template-columns:1fr}
+.plan>*{min-width:0}
+@media(min-width:740px){.plan{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.plan{grid-template-columns:repeat(4,1fr)}}
+.pcard{border-top:2px solid var(--accent);padding-top:12px;display:flex;
+  flex-direction:column;gap:8px}
+.pcard .wk{font-family:var(--f-data);font-size:11px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--accent);font-weight:600}
+.pcard h4{font-size:16px}
+.pcard ul{margin:0;padding-left:16px;font-size:14px;color:var(--graphite);line-height:1.5}
+.pcard li{margin-bottom:5px}
+
+.grid2{display:grid;gap:22px;grid-template-columns:1fr}
+.grid2>*{min-width:0}
+@media(min-width:800px){.grid2{grid-template-columns:1fr 1fr}}
+.kv{display:flex;flex-direction:column;gap:0}
+.kv div{display:flex;justify-content:space-between;gap:14px;padding:7px 0;
+  border-bottom:1px solid var(--rule);font-size:14.5px}
+.kv div span:last-child{font-family:var(--f-data);font-variant-numeric:tabular-nums;
+  text-align:right}
+
+footer{border-top:1.5px solid var(--ink);padding-block:28px 46px;margin-top:20px}
+footer .wrap{display:flex;flex-direction:column;gap:12px}
+footer p{font-size:13.5px;color:var(--graphite);max-width:76ch}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <p class="eyebrow">Master report &amp; execution blueprint · compiled 14 September 2026</p>
+    <h1>Powai Lakefront Dossier</h1>
+    <p class="sub">The Hines&nbsp;×&nbsp;Sumitomo boutique residential scheme at Chandivali/Powai,
+      50&nbsp;metres off the Jogeshwari–Vikhroli Link Road — assessed, reconciled against the public
+      record, and turned into a working plan.</p>
+    <div class="mastmeta">
+      <div>SPV <b>Powai Lake Residential Pvt Ltd</b></div>
+      <div>Land <b>3.2–3.4 ac freehold</b></div>
+      <div>Saleable <b>3.82 lakh sq ft</b></div>
+      <div>Homes <b>~250 · 3 &amp; 4 BHK</b></div>
+      <div>Ask <b>₹55,000/sq ft</b></div>
+      <div>Possession <b>Dec 2030</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<div class="shell">
+
+<nav class="rail" aria-label="Sections">
+  <ol>
+    <li><a href="#verdict"><span class="num">01</span>Verdict</a></li>
+    <li><a href="#stop"><span class="num">02</span>Stop the line</a></li>
+    <li><a href="#recon"><span class="num">03</span>Reconciliation</a></li>
+    <li><a href="#place"><span class="num">04</span>Place &amp; access</a></li>
+    <li><a href="#price"><span class="num">05</span>Price ladder</a></li>
+    <li><a href="#bridge"><span class="num">06</span>Value bridge</a></li>
+    <li><a href="#views"><span class="num">07</span>View ladder</a></li>
+    <li><a href="#product"><span class="num">08</span>The product</a></li>
+    <li><a href="#comp"><span class="num">09</span>Competition</a></li>
+    <li><a href="#calc"><span class="num">10</span>Cost model</a></li>
+    <li><a href="#invest"><span class="num">11</span>Return reality</a></li>
+    <li><a href="#risk"><span class="num">12</span>Risk</a></li>
+    <li><a href="#dd"><span class="num">13</span>Question bank</a></li>
+    <li><a href="#plan"><span class="num">14</span>90-day plan</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section id="verdict">
+  <div class="shead"><span class="n">01</span><h2>The verdict</h2></div>
+  <p class="lede">A genuinely high-quality sponsor and a genuinely good location, wrapped around a
+    price at the top of what this micro-market has ever supported, and a disclosure pack that is not
+    yet complete. That is sellable — but only to the right buyer, and only once the paperwork lands.</p>
+
+  <div class="ladder" style="margin-bottom:26px">
+    <div><div class="t tV">[V] &nbsp;Verified</div><div class="d">Public record, regulator, rating agency, company release. State as fact.</div></div>
+    <div><div class="t tS">[S] &nbsp;Stated</div><div class="d">Said by the sales team. Not confirmed. Say “the developer indicates…”.</div></div>
+    <div><div class="t tE">[E] &nbsp;Estimated</div><div class="d">Modelled here from stated inputs. Internal planning only.</div></div>
+    <div><div class="t tQ">[?] &nbsp;Contradiction</div><div class="d">Sources disagree. Resolve before it reaches a client.</div></div>
+  </div>
+
+  <div class="score">
+    <div class="srow"><div class="slabel">Sponsor quality</div><div class="strack"><div class="sfill" style="width:92%"></div></div><div class="sval">Strong</div></div>
+    <div class="srow"><div class="slabel">Capital stability</div><div class="strack"><div class="sfill" style="width:94%"></div></div><div class="sval">Strong</div></div>
+    <div class="srow"><div class="slabel">Location fundamentals</div><div class="strack"><div class="sfill" style="width:78%"></div></div><div class="sval">Good</div></div>
+    <div class="srow"><div class="slabel">Infrastructure tailwind</div><div class="strack"><div class="sfill" style="width:80%"></div></div><div class="sval">Good</div></div>
+    <div class="srow"><div class="slabel">Design differentiation</div><div class="strack"><div class="sfill" style="width:74%"></div></div><div class="sval">Good</div></div>
+    <div class="srow"><div class="slabel">Price vs. micro-market</div><div class="strack"><div class="sfill warn" style="width:34%"></div></div><div class="sval">Weak</div></div>
+    <div class="srow"><div class="slabel">Rental yield</div><div class="strack"><div class="sfill bad" style="width:14%"></div></div><div class="sval">Poor</div></div>
+    <div class="srow"><div class="slabel">Disclosure completeness</div><div class="strack"><div class="sfill warn" style="width:30%"></div></div><div class="sval">Weak</div></div>
+    <div class="srow"><div class="slabel">Brand recall in Mumbai</div><div class="strack"><div class="sfill warn" style="width:42%"></div></div><div class="sval">Fair</div></div>
+    <div class="srow"><div class="slabel">Exit liquidity, 2030+</div><div class="strack"><div class="sfill" style="width:66%"></div></div><div class="sval">Fair–Good</div></div>
+  </div>
+</section>
+
+<section id="stop">
+  <div class="shead"><span class="n">02</span><h2>Three things stop the line</h2></div>
+  <p class="lede">No client conversation until these clear. Each one is a personal liability, not a
+    developer problem.</p>
+  <div class="stops">
+    <div class="stop">
+      <h4>RERA registration</h4>
+      <p>No registration was traceable in the public record at the time of writing. No number means no
+      advertising, no marketing, no booking. The penalty under s.62 is <b>₹10,000 per day, capped at 5%
+      of the property's cost</b> — about ₹30.8 lakh on a ₹6.16 Cr flat.</p>
+    </div>
+    <div class="stop">
+      <h4>Area definition</h4>
+      <p>Until “₹55,000 per sq&nbsp;ft” names its denominator in writing, it is not a price. Carpet
+      versus saleable swings the only comparable metric a buyer has by <b>up to 45%</b>. The briefing
+      indicates carpet — get it on paper.</p>
+    </div>
+    <div class="stop">
+      <h4>Unit &amp; tower count</h4>
+      <p>The pitch is “boutique, 250 homes, 3 towers”. The public record from the JV announcement says
+      <b>321 homes across 6 towers of 20 storeys</b>. Exclusivity is the whole argument. If the filing
+      says 321, the pitch is wrong — and you will be the one who said it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="recon">
+  <div class="shead"><span class="n">03</span><h2>Told versus record</h2></div>
+  <p class="lede">The most important table here. The likeliest explanation is benign — the public
+    figures are the acquisition-stage concept, the sales figures are the current scheme, and design
+    evolves between a deal and a launch. Your job is not to catch anyone out. It is to make sure the
+    number you repeat is the number on the filing.</p>
+  <div class="tscroll">
+  <table>
+    <thead><tr><th>Attribute</th><th>Sales gallery <span class="tag s">S</span></th><th>Public record <span class="tag v">V</span></th><th>Read</th></tr></thead>
+    <tbody>
+      <tr><td>Land parcel</td><td>3.2 ac freehold</td><td>~3.4 ac; ~13,000 sq m</td><td>Reconcilable — 13,000 sq m <em>is</em> 3.21 ac. Likely gross vs. net.</td></tr>
+      <tr><td><b>Towers</b></td><td><b>3</b> (T1 + T3 launching)</td><td><b>6</b></td><td><span class="tag q">?</span> Major. Confirm against the filing.</td></tr>
+      <tr><td><b>Floors</b></td><td><b>17</b> habitable</td><td><b>20</b> storeys</td><td><span class="tag q">?</span> “Storeys” ≠ habitable floors.</td></tr>
+      <tr><td><b>Homes</b></td><td><b>~250</b></td><td><b>321</b></td><td><span class="tag q">?</span> A 28% density difference — this <em>is</em> the pitch.</td></tr>
+      <tr><td>Saleable area</td><td>—</td><td><b>3.82 lakh sq ft</b></td><td>Use as the anchor. Reconciles with 250–321 homes.</td></tr>
+      <tr><td><b>Developer</b></td><td>“Hines”</td><td><b>Sumitomo 90% / Hines 10%</b></td><td><span class="tag q">?</span> Hines is development manager. A strength — see below.</td></tr>
+      <tr><td>Open space</td><td>2.42 ac in the brief</td><td>Briefing: 0.6 forest + 0.82 podium ≈ <b>1.5 ac</b></td><td><span class="tag q">?</span> 2.42 ac would be 76% of the site. Use 1.5.</td></tr>
+      <tr><td>Price</td><td>₹55,000/sq ft</td><td>Powai avg ₹42,650 · Hiranandani ₹43.9–58.4k · Chandivali ₹33.2k</td><td>Top of everything the market has printed for new product.</td></tr>
+      <tr><td>1,560 sq ft unit</td><td>Brief called it 4 BHK</td><td>Briefing: <b>3 BHK large</b></td><td><span class="tag q">?</span> Corrected. 4 BHK standard is 1,740.</td></tr>
+      <tr><td>RERA</td><td>“expected ~5–10 Oct”</td><td>Not on record</td><td><span class="tag q">?</span> Stop-the-line.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note" style="margin-top:22px">
+    <b>On the 90/10.</b> Sumitomo Corporation — roughly 400 years old, Fortune Global 100, the sōgō
+    shōsha the briefing called “the Tata of Japan” — holds the money; Hines, which built Salesforce
+    Tower and 53 West 53, runs the site. That is a better risk profile than a locally-leveraged
+    developer who owns 100% of a project he has borrowed against. Patient equity is the single best
+    predictor of on-time delivery in Mumbai. Lead with it; don't hide it.
+  </div>
+</section>
+
+<section id="place">
+  <div class="shead"><span class="n">04</span><h2>Place and access</h2></div>
+  <p class="lede">The briefing claims “triple metro connectivity”. The verified position is better than
+    the pitch: one line is already running, a second is 70% built with a station a walk away, and a
+    tunnel follows.</p>
+  <div class="grid2">
+    <div>
+      <div class="tscroll">
+      <table style="min-width:0">
+        <thead><tr><th>Connection</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><b>Metro 3 — Aqua Line</b><br><span style="color:var(--graphite);font-size:13.5px">Underground, at SEEPZ / Aarey JVLR</span></td>
+              <td><b style="color:var(--accent)">Fully operational</b> <span class="tag v">V</span><br><span style="color:var(--graphite);font-size:13.5px">33.5 km, 27 stations, Cuffe Parade ↔ BKC ↔ Aarey JVLR. Final section opened Oct 2025.</span></td></tr>
+          <tr><td><b>Metro 6 — Pink Line</b><br><span style="color:var(--graphite);font-size:13.5px">Elevated along JVLR. <b>Rambaug station, 5–7 min walk</b></span></td>
+              <td>Under construction <span class="tag v">V</span><br><span style="color:var(--graphite);font-size:13.5px">15.18 km, 13 stations, 70%+ civil done, opening targeted mid-to-late 2026.</span></td></tr>
+          <tr><td><b>Metro 4 — Green Line</b></td><td>Under construction <span class="tag v">V</span><br><span style="color:var(--graphite);font-size:13.5px">Via the Gandhi Nagar / EEH junction.</span></td></tr>
+          <tr><td><b>GMLR</b><br><span style="color:var(--graphite);font-size:13.5px">Goregaon–Mulund Link Road</span></td>
+              <td>First flyover opened May 2026 <span class="tag v">V</span><br><span style="color:var(--graphite);font-size:13.5px">6.3 km twin tunnel under SGNP; full operation targeted Dec 2026. Cuts the east–west crossing from ~85 min to ~20.</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:16px;margin-bottom:10px">The approach</h3>
+      <div class="kv">
+        <div><span>Service road off JVLR, past the CCD</span><span>—</span></div>
+        <div><span>Left onto DP Road No. 9 (extension)</span><span>—</span></div>
+        <div><span>Distance from JVLR to the plot</span><span>~50 m</span></div>
+        <div><span>From deep Chandivali to JVLR, peak <span class="tag s">S</span></span><span>~25 min</span></div>
+      </div>
+      <p style="margin-top:14px;font-size:14.5px;color:var(--graphite)">DP Road No. 9 is a dead end. It
+      leads nowhere except this plot — so a public road on paper works as a private approach in
+      practice. It is also the single most checkable claim in the entire pitch. <b>Pace it out and
+      photograph it with the CCD in frame.</b></p>
+      <div class="note" style="margin-top:16px;font-size:14px">
+        <b>Ask what the dead end's expiry date is.</b> If DP Road No. 9 can later be extended to serve
+        another plot, the private-cul-de-sac argument has a shelf life.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="shead"><span class="n">05</span><h2>Where ₹55,000 actually sits</h2></div>
+  <p class="lede">Carpet basis where stated. The ask is above everything this micro-market has printed
+    for new product — and below both the best Hiranandani resale stock and what a lake view already
+    fetches next door.</p>
+  <div class="ladderchart" id="ladderChart"></div>
+  <div class="note" style="margin-top:22px">
+    <b>The number that matters most.</b> Channel partners in the briefing said the price
+    “should be ₹45–48”. The developer conceded that a “normal building” on that plot would be ₹45.
+    So the gap you are being asked to sell is <b>15–20% above what the channel itself believes</b> —
+    and the only thing that closes it is the specification argument below.
+  </div>
+</section>
+
+<section id="bridge">
+  <div class="shead"><span class="n">06</span><h2>How ₹40,000 becomes ₹55,000</h2></div>
+  <p class="lede">Your whiteboard sequence in every client meeting. It turns a price objection into a
+    specification conversation — the only conversation you can win. Every block is a separate
+    argument; sell them one at a time.</p>
+  <div class="bridge" id="bridge"></div>
+  <div class="tscroll" style="margin-top:20px">
+  <table>
+    <thead><tr><th>Block</th><th class="num">₹/sq ft</th><th>The claim</th><th>Evidence you must hold</th></tr></thead>
+    <tbody>
+      <tr><td>Base</td><td class="num">40,000</td><td>JVLR new-launch benchmark</td><td>The partner's own number <span class="tag s">S</span>; Powai avg ₹42,650 <span class="tag v">V</span></td></tr>
+      <tr><td>Density</td><td class="num">+3,000</td><td>~250 homes on 3.2 ac, not 2,000+ in a township</td><td>Sanctioned unit count — <b>open</b></td></tr>
+      <tr><td>Clean plot</td><td class="num">+2,000</td><td>No rehab, no EWS, no MHADA, no reservation, no amenity-space handover</td><td>DP remark + sanctioned plan. Genuinely rare in Mumbai.</td></tr>
+      <tr><td>Product</td><td class="num">+4,000</td><td>10 ft clear ceilings, PT flat slab, ~160 sq ft curved deck, 23 ft lobby</td><td>Sanctioned section + spec annexure</td></tr>
+      <tr><td>Sponsor</td><td class="num">+2,000</td><td>Hines execution on a Sumitomo balance sheet</td><td><span class="tag v">V</span> — your strongest block</td></tr>
+      <tr><td>Lake view</td><td class="num">+3,000</td><td>61% of homes get a lake outlook</td><td>Unit-wise schedule — <b>open</b>. Note L&amp;T lake-view at ₹75k <span class="tag s">S</span></td></tr>
+      <tr><td>Brand</td><td class="num">−2,000</td><td>No Mumbai retail recall yet</td><td>Conceded by the developer's own team <span class="tag s">S</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="margin-top:18px;font-size:16px;max-width:66ch"><b>The line that closes it:</b>
+  “You are not paying ₹55,000 for Chandivali. You are paying ₹40,000 for the postcode and ₹15,000 for
+  a specification and a density Chandivali has never had. If the specification isn't there when the
+  plans drop, neither is my recommendation.”</p>
+</section>
+
+<section id="views">
+  <div class="shead"><span class="n">07</span><h2>The view ladder</h2></div>
+  <p class="lede">The developer's own floor-by-floor banding. This is the most commercially sensitive
+    material in the dossier, and the part most likely to be repeated carelessly.</p>
+  <div class="views">
+    <div class="vband hi"><div class="vfl">FL 13–17</div><div class="vtx"><b>Clear Powai Lake view.</b> The premium band. The 4 BHK XL sits here. Expect the highest ₹/sq ft.</div></div>
+    <div class="vband mid"><div class="vfl">FL 11–12</div><div class="vtx"><b>Partial Powai Lake view.</b> The value sweet spot — ask for the price step up to 13.</div></div>
+    <div class="vband"><div class="vfl">FL 2–10</div><div class="vtx"><b>Amenity deck, podium green, city skyline or internal lake.</b> Lower floor rise, faster absorption. Internal-lake units here may be under-priced at launch.</div></div>
+  </div>
+  <div class="stop" style="margin-top:20px">
+    <h4>Why the band starts at 10</h4>
+    <p>Because <b>there is a building between this plot and Powai Lake.</b> The briefing said so
+    directly. Below the 10th floor there is no Powai Lake view at all. Orientation is north to Powai
+    Lake, south to the internal lake, east to the Hiranandani skyline, west to Andheri. Get the
+    intervening building's height and owner, and whether it can be redeveloped taller — then get the
+    unit-wise view schedule in writing. And never promise permanence: nothing in Indian law protects
+    a sightline, and there is another tower going up next door.</p>
+  </div>
+</section>
+
+<section id="product">
+  <div class="shead"><span class="n">08</span><h2>What you are actually selling</h2></div>
+  <p class="lede">A 70-metre envelope was sanctioned. Most developers would put 20–22 floors into it.
+    They put 17 — and spent the surplus on ceiling height. That trade-off is real, quantifiable, and
+    checkable on the sanctioned section. It is the best technical story here.</p>
+  <div class="grid2">
+    <div>
+      <h3 style="font-size:16px;margin-bottom:10px">The specification</h3>
+      <div class="kv">
+        <div><span>Tower top-out</span><span>~70 m · 17 floors</span></div>
+        <div><span>Floor-to-floor</span><span>10 ft 10 in (3.30 m)</span></div>
+        <div><span>Clear ceiling</span><span><b>10 ft 0 in</b></span></div>
+        <div><span>Structural zone implied</span><span>~254 mm → PT flat slab</span></div>
+        <div><span>Lobby</span><span>~4,500 sq ft · 23 ft high</span></div>
+        <div><span>Minimum bedroom width</span><span>11 ft</span></div>
+        <div><span>Living-room deck</span><span>150–160 sq ft, curved</span></div>
+        <div><span>Master-bedroom deck</span><span>40–50 sq ft</span></div>
+        <div><span>Deck depth</span><span>3–4 ft to 7–8 ft</span></div>
+        <div><span>Resident parking</span><span>Conventional, 2 basements</span></div>
+        <div><span>Guest parking</span><span>Stack only</span></div>
+        <div><span>Open space</span><span>~1.5 ac (0.6 forest + 0.82 podium)</span></div>
+      </div>
+      <p class="syncnote" style="margin-top:10px">Mumbai benchmark: mass housing gives an 8&nbsp;ft&nbsp;6&nbsp;in
+        clear ceiling; good premium 8&nbsp;ft&nbsp;10&nbsp;in–9&nbsp;ft&nbsp;4&nbsp;in. A 10-ft clear
+        ceiling in a suburban product is top-decile — and more valuable in a client's felt experience
+        than the butterfly plate.</p>
+    </div>
+    <div>
+      <h3 style="font-size:16px;margin-bottom:10px">The unit mix, corrected</h3>
+      <div class="tscroll">
+      <table style="min-width:0">
+        <thead><tr><th>Type</th><th class="num">Carpet</th><th class="num">Deck</th><th class="num">All-in <span class="tag e">E</span></th></tr></thead>
+        <tbody>
+          <tr><td>3 BHK standard</td><td class="num">1,120</td><td class="num">50–55</td><td class="num">₹7.08 Cr</td></tr>
+          <tr><td>3 BHK standard</td><td class="num">1,180</td><td class="num">50–55</td><td class="num">₹7.45 Cr</td></tr>
+          <tr><td><b>3 BHK large</b></td><td class="num">1,560</td><td class="num">~200</td><td class="num">₹9.78 Cr</td></tr>
+          <tr><td>4 BHK standard</td><td class="num">1,740</td><td class="num">~200</td><td class="num">₹10.89 Cr</td></tr>
+          <tr><td>4 BHK XL, fl. 14–17</td><td class="num">~2,360</td><td class="num">~200</td><td class="num">₹14.70 Cr</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note" style="margin-top:16px">
+        <b>The ₹6–13 Cr band is agreement value.</b> All-in, the same product is ₹7.1–14.7 Cr.
+        A buyer who budgets ₹6 Cr and is handed a ₹7.08 Cr obligation at the paperwork stage walks.
+        Lead with all-in and you never lose a deal there.
+      </div>
+      <h3 style="font-size:16px;margin:22px 0 10px">The design team</h3>
+      <div class="kv">
+        <div><span>Architecture</span><span>Kapadia Associates, Mumbai</span></div>
+        <div><span>Interiors</span><span>HBA · Hirsch Bedner</span></div>
+        <div><span>Landscape</span><span>Coopers Hill (part of HBA)</span></div>
+      </div>
+      <p style="margin-top:12px;font-size:14.5px;color:var(--graphite)">A local architect was chosen
+        deliberately: only someone living in Mumbai designs for a five-month monsoon, the summer heat
+        — <b>and for Vastu</b>. The field note reading “Vastu complaint” is the opposite of a problem;
+        Vastu compliance is a stated design driver.</p>
+    </div>
+  </div>
+  <div class="note" style="margin-top:24px">
+    <b>The monsoon question — the one that separates you from everyone else in the room.</b>
+    A 160 sq&nbsp;ft open deck at floor 15 is not a balcony; it is a small cantilevered roof over
+    someone's living room. The answer given: the deck above shades the one below, but was
+    deliberately <em>not</em> extended further because a deeper overhang would darken the living room.
+    Daylight was chosen over full rain cover. The deck is floored in wood-look tile and run with a
+    <b>slot drain</b>. Now ask for the threshold section detail — slot drain, upstand, membrane
+    upturn, drip edge, fall. A developer who has it will respect you. One who doesn't has just told
+    you something.
+  </div>
+</section>
+
+<section id="comp">
+  <div class="shead"><span class="n">09</span><h2>Township scale, boutique density</h2></div>
+  <p class="lede">The entire positioning is a deliberate refusal of the township model. The developer's
+    own words: in a township the amenities are built for 2,000 apartments — and among those 2,000 you
+    have a one-bed and a four-bed using the same clubhouse. A 380 sq ft carpet resident and an
+    1,100 sq ft carpet resident queueing for the same court is the mismatch they are selling against.</p>
+  <div class="tscroll">
+  <table>
+    <thead><tr><th>&nbsp;</th><th>This project <span class="tag s">S</span></th><th>Hiranandani Gardens</th><th>L&amp;T Emerald Isle</th><th>Nahar Chandi Valley</th></tr></thead>
+    <tbody>
+      <tr><td>Scale</td><td><b>3.2 ac</b></td><td>~250 ac</td><td>19 ac</td><td>township</td></tr>
+      <tr><td>Homes</td><td><b>~250</b></td><td>thousands</td><td>~1,000s</td><td>~100s</td></tr>
+      <tr><td>Config</td><td><b>3 &amp; 4 BHK only</b></td><td>1–5 BHK</td><td>2 &amp; 3 BHK compact-led</td><td>2 &amp; 3 BHK</td></tr>
+      <tr><td>Clear ceiling</td><td><b>10′ 0″</b></td><td>~8′6″–9′</td><td>~8′6″–9′</td><td>~9′</td></tr>
+      <tr><td>Balcony</td><td><b>~160 sq ft curved floating deck + master deck</b></td><td>boxy, columned</td><td>boxy</td><td>boxy</td></tr>
+      <tr><td>Distance to JVLR</td><td><b>~50 m</b></td><td>0.5–2 km</td><td>~1 km</td><td>~1–2 km</td></tr>
+      <tr><td>₹/sq ft carpet</td><td><b>55,000</b></td><td>43,930–58,350 <span class="tag v">V</span></td><td>lake-view 75,000 <span class="tag s">S</span></td><td>32,000–33,200 <span class="tag v">V</span></td></tr>
+      <tr><td>Brand recall</td><td><b>Low</b></td><td>Very high</td><td>High</td><td>Medium</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="grid2" style="margin-top:24px">
+    <div class="note"><b>The cleanest comparison in the market.</b> Nahar sells the same 1,100 and
+      1,550 carpet sizes — at ₹3.52 Cr and ₹5.14 Cr. Against ₹6.16 Cr here, that is a <b>75% gap</b>.
+      Nothing but the value bridge will close it. Go and collect their price sheet before your first
+      client meeting; you cannot argue a ₹55,000 price without holding a ₹33,000 price sheet.</div>
+    <div class="note"><b>The comp that helps you.</b> Lake-view units at L&amp;T Emerald Isle are said
+      to transact at ₹75,000/sq ft — in this very micro-market. If that verifies, ₹55,000 for a
+      lower-density, higher-specification, 61%-lake-view product is an argument you can actually make.
+      Verify it independently before you ever quote it.</div>
+  </div>
+</section>
+
+<section id="calc">
+  <div class="shead"><span class="n">10</span><h2>Cost model</h2></div>
+  <p class="lede">Never open with ₹/sq ft. Open with this. Charges below the statutory line are
+    estimated from Mumbai luxury norms — replace them the day the developer's written cost sheet
+    arrives.</p>
+  <div class="calc">
+    <div class="ctrls">
+      <div class="ctrl">
+        <label for="unitSel">Unit</label>
+        <select id="unitSel"></select>
+      </div>
+      <div class="ctrl">
+        <label for="rateRng">Rate on carpet</label>
+        <div class="rv" id="rateOut">₹55,000</div>
+        <input type="range" id="rateRng" min="40000" max="70000" step="500" value="55000">
+        <p class="syncnote" style="margin-top:4px">Channel said ₹45–48k · ask is ₹55k</p>
+      </div>
+      <div class="ctrl">
+        <label>Stamp duty</label>
+        <div class="seg" role="group" aria-label="Stamp duty rate">
+          <button type="button" id="sdM" aria-pressed="true">6% · male</button>
+          <button type="button" id="sdF" aria-pressed="false">5% · female</button>
+        </div>
+      </div>
+      <div class="ctrl">
+        <label for="ltvRng">Loan-to-value</label>
+        <div class="rv" id="ltvOut">75%</div>
+        <input type="range" id="ltvRng" min="0" max="85" step="5" value="75">
+      </div>
+      <div class="ctrl">
+        <label for="intRng">Interest rate</label>
+        <div class="rv" id="intOut">7.50%</div>
+        <input type="range" id="intRng" min="6.5" max="10" step="0.05" value="7.5">
+        <p class="syncnote" style="margin-top:4px">Repo 5.25% · best rates 7.10–7.75% · stress-test at 9%</p>
+      </div>
+      <button class="btn" id="dlBtn" hidden>Export cost sheet (CSV)</button>
+    </div>
+    <div class="out" id="out"></div>
+  </div>
+</section>
+
+<section id="invest">
+  <div class="shead"><span class="n">11</span><h2>Return reality</h2></div>
+  <p class="lede">Say this first, unprompted, in minute four. It disqualifies the wrong buyer before
+    week nine and buys enormous credibility with the right one.</p>
+  <div class="grid2">
+    <div>
+      <h3 style="font-size:16px;margin-bottom:10px">Yield</h3>
+      <div class="kv">
+        <div><span>Gross yield on all-in cost <span class="tag e">E</span></span><span>1.6 – 2.6%</span></div>
+        <div><span>Powai micro-market average <span class="tag v">V</span></span><span>3.0 – 3.5%</span></div>
+        <div><span>Powai 3 BHK rent <span class="tag v">V</span></span><span>~₹1.4 L/month</span></div>
+      </div>
+      <p style="margin-top:12px;font-size:15px"><b>This asset yields below its own micro-market.</b>
+        Net of maintenance, vacancy and tax, realistic net yield is 1.2–1.9%. It is not an income
+        asset, and pretending otherwise costs you the deal <em>and</em> the referral.</p>
+      <h3 style="font-size:16px;margin:24px 0 10px">Break-even appreciation <span class="tag e">E</span></h3>
+      <div class="kv">
+        <div><span>5-year hold</span><span>3.23% p.a.</span></div>
+        <div><span>7-year hold</span><span>2.30% p.a.</span></div>
+        <div><span>10-year hold</span><span>1.60% p.a.</span></div>
+      </div>
+      <p class="syncnote" style="margin-top:8px">You pay ₹63,186/sq ft effective. To get your money
+        back after a 2% exit fee you must sell at ₹64,476.</p>
+    </div>
+    <div>
+      <h3 style="font-size:16px;margin-bottom:10px">Historical Powai appreciation <span class="tag v">V</span></h3>
+      <div class="ladderchart" id="cagrChart"></div>
+      <h3 style="font-size:16px;margin:26px 0 10px">A 7-year exit on ₹7.08 Cr all-in <span class="tag e">E</span></h3>
+      <div class="tscroll">
+      <table style="min-width:0">
+        <thead><tr><th>CAGR</th><th class="num">2033 ₹/sq ft</th><th class="num">Net</th><th class="num">×</th></tr></thead>
+        <tbody>
+          <tr><td>3%</td><td class="num">67,643</td><td class="num">₹7.42 Cr</td><td class="num">1.05</td></tr>
+          <tr style="background:var(--accent-soft)"><td><b>5%</b></td><td class="num"><b>77,391</b></td><td class="num"><b>₹8.49 Cr</b></td><td class="num"><b>1.20</b></td></tr>
+          <tr><td>7%</td><td class="num">88,318</td><td class="num">₹9.69 Cr</td><td class="num">1.37</td></tr>
+          <tr><td>9%</td><td class="num">100,542</td><td class="num">₹11.04 Cr</td><td class="num">1.56</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="syncnote" style="margin-top:8px">The 5% row is the one to plan around. The 9% row needs
+        Powai above ₹1,00,000/sq ft by 2033 — roughly double today's best print. Show it as a
+        sensitivity, never an expectation.</p>
+    </div>
+  </div>
+  <div class="note" style="margin-top:22px">
+    <b>The correct frame.</b> “This is not an income asset and it is not a trade. It is a primary-residence
+    upgrade with an embedded scarcity option: 250 homes, one of them yours, in a corridor where a metro
+    line just opened and another is about to. If you need this money to work for you, buy something
+    else. If you need it to house you well for fifteen years and hold its value, this is a serious
+    candidate.”
+  </div>
+</section>
+
+<section id="risk">
+  <div class="shead"><span class="n">12</span><h2>Risk</h2></div>
+  <p class="lede">Four items sit in the top-right corner. All four are yours to control, and none of
+    them is a developer problem.</p>
+  <div class="tscroll">
+  <div class="heat">
+    <div></div>
+    <div class="hc">Low impact</div><div class="hc">Medium</div><div class="hc">High</div><div class="hc">Severe</div>
+    <div class="hr">High<br>likelihood</div>
+    <div class="cell l1"></div>
+    <div class="cell l2"><b>M2</b> Brand drag on lead cost<br><b>M3</b> A major launches nearby</div>
+    <div class="cell l2"><b>S1</b> ₹55k above channel appetite<br><b>S2</b> Area definition open</div>
+    <div class="cell l3"><b>L1</b> Marketing unlicensed<br><b>L2</b> Pre-RERA advertising<br><b>C1</b> Area mis-selling</div>
+    <div class="hr">Medium</div>
+    <div class="cell l1"><b>O1</b> Lead tagging</div>
+    <div class="cell l2"><b>M1</b> Slow absorption<br><b>E2</b> Monsoon deck defects<br><b>P1</b> Parking count</div>
+    <div class="cell l2"><b>D3</b> Possession slips to 2031<br><b>V1</b> View grid undisclosed<br><b>E1</b> Rock excavation delays</div>
+    <div class="cell l3"><b>F1</b> Low payout slab locked<br><b>C2</b> Lake-view claim fails</div>
+    <div class="hr">Low</div>
+    <div class="cell l1"><b>O2</b> CRM hygiene</div>
+    <div class="cell l1"><b>N1</b> Adjacent settlement<br><b>W1</b> Wetland / NGT</div>
+    <div class="cell l2"><b>D1</b> Scheme changes<br><b>R1</b> Rate shock</div>
+    <div class="cell l2"><b>L8</b> EC absent<br><b>T1</b> Title / tenure defect</div>
+  </div>
+  </div>
+  <div class="stops" style="margin-top:24px;grid-template-columns:1fr">
+    <div class="stop">
+      <h4>The four you personally control</h4>
+      <p><b>1.</b> Don't market without two registration numbers — yours and the project's.
+      <b>2.</b> Only ever quote RERA carpet, in writing, with the balcony stated separately.
+      <b>3.</b> Never promise a view — there is a building between this plot and Powai Lake.
+      <b>4.</b> Never project a return — not the Gurugram 3×, not a CAGR, not a resale price. Give the
+      mechanism and the history, and let them do the arithmetic.</p>
+    </div>
+  </div>
+  <div class="note" style="margin-top:16px">
+    <b>The pre-launch marketing trap.</b> The developer asked partners not to use the Hines name before
+    RERA — sincere advice that protects <em>their</em> brand and their partners' ad accounts. It does
+    not protect you. S.3 of RERA prohibits advertising an unregistered project whether or not you name
+    the developer; an anonymised ad with no RERA number and no QR code is more exposed, not less.
+    Until both numbers exist, run micro-market content that names no project. You will have built the
+    list by the time the filing lands.
+  </div>
+</section>
+
+<section id="dd">
+  <div class="shead"><span class="n">13</span><h2>The question bank</h2></div>
+  <p class="lede">Send this as one numbered email. Ask for written answers. A developer who answers 40
+    of 45 in writing is one you can sell for; one who answers verbally and changes the subject is
+    telling you something. Tick each when you have it <em>on paper</em>.</p>
+  <div class="prog">
+    <div class="pnum" id="progNum">0 / 45</div>
+    <div class="ptrack"><div class="pfill" id="progFill"></div></div>
+    <div class="syncnote" id="syncNote">tracking locally</div>
+  </div>
+  <div id="qbank"></div>
+</section>
+
+<section id="plan">
+  <div class="shead"><span class="n">14</span><h2>The first ninety days</h2></div>
+  <p class="lede">Nothing in this dossier matters until the licence is in hand. Six to ten weeks,
+    end to end. Start Monday.</p>
+  <div class="plan">
+    <div class="pcard">
+      <div class="wk">Weeks 1–2</div>
+      <h4>Licence &amp; foundations</h4>
+      <ul>
+        <li>Register as an <b>individual</b> (₹10,000), not a firm (₹1,00,000) — convert once volume is proven</li>
+        <li>Enrol in the 20-hour MahaRERA training (~₹5,900)</li>
+        <li>Book the competency exam (₹1,062)</li>
+        <li>Bank account, CA, GST assessment</li>
+        <li>Build the referral bench: one advocate, one CA, two bankers</li>
+        <li><b>Zero project marketing. Not one post.</b></li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <div class="wk">Weeks 2–4</div>
+      <h4>Diligence</h4>
+      <ul>
+        <li>Send the 45 questions as one email</li>
+        <li>Shoot the real-footage library — including the downside frames, for your own file</li>
+        <li>Walk and time the 50 m from the CCD</li>
+        <li>Visit the 16,000 sq ft sales gallery when it opens</li>
+        <li>Visit three comps in person and collect their price sheets</li>
+        <li>Check the MahaRERA portal daily</li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <div class="wk">Weeks 4–8</div>
+      <h4>Build the machine</h4>
+      <ul>
+        <li>Sit the exam; file the registration the day the certificates land</li>
+        <li>Credential one-pager, comp pack, cost-sheet calculator</li>
+        <li>Learn the objection library until it's conversational, not recited</li>
+        <li>Start micro-market content — lawful, project-free: what Metro 3 did to Powai; carpet versus saleable; township versus boutique</li>
+      </ul>
+    </div>
+    <div class="pcard">
+      <div class="wk">Weeks 8–12</div>
+      <h4>Go live</h4>
+      <ul>
+        <li><b>Gate check: your agent number ☐ &nbsp; project RERA number ☐</b> — if either box is empty, do not proceed</li>
+        <li>Run every asset through the advertising pre-flight</li>
+        <li>Launch to the list you already built</li>
+        <li>Target: 40 qualified conversations, 12 site visits, 2 closings</li>
+        <li>Start the quarterly progress-report ritual on day one</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note" style="margin-top:24px">
+    <b>Your economics.</b> At an ₹8.76 Cr average agreement value, the gap between a 1.0% and a 2.0%
+    payout slab over eight units is <b>₹70 lakh for the same work</b>. That negotiation is the
+    highest-paid hour of your year. Your leverage: the developer conceded that Hines is a new brand in
+    Mumbai and that partners must build it — that is unpaid brand-building labour, and it is worth a
+    higher slab, marketing co-funding, or segment exclusivity. Ask.
+  </div>
+</section>
+
+</main>
+</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>Your edge is not access. It is honesty.</b> Thirty other partners will have the same renders
+    and the same floor plates. You will be the one who says: there is a building between us and Powai
+    Lake, the yield is 1.8%, plan for 2031, and here is the settlement on the south-west boundary. In
+    a ₹7 crore sale to someone who prices risk for a living, that is not a handicap. It is the entire
+    business.</p>
+    <p class="syncnote">Compiled 14 September 2026 from a 72-minute partner briefing (transcribed
+    locally), public regulatory and market sources, and a cost model built from stated inputs. Full
+    report, transcript, digest, data and the runnable model live in the repository alongside this page.
+    A research and planning document — not legal, tax or investment advice.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(id){ return document.getElementById(id); };
+  var fmtINR = function(n){ return "₹" + Math.round(n).toLocaleString("en-IN"); };
+  var cr = function(n){ return "₹" + (n/1e7).toFixed(2) + " Cr"; };
+  var lakh = function(n){ return "₹" + (n/1e5).toFixed(2) + " L"; };
+
+  /* ---------- 05 price ladder ---------- */
+  var LADDER = [
+    ["Chandivali average", "area average", 33600, "V", ""],
+    ["Nahar Chandi Valley", "new launch, carpet", 32600, "V", ""],
+    ["JVLR market reference", "the partner's own benchmark", 40000, "S", "ref"],
+    ["Powai average", "Aug 2026", 42650, "V", ""],
+    ["Hiranandani Gardens", "transacted average", 43930, "V", ""],
+    ["Hiranandani Gardens", "asking average", 50950, "V", ""],
+    ["Hiranandani Verona", "premium society", 54700, "V", ""],
+    ["★ This project", "the ask", 55000, "S", "me"],
+    ["Hiranandani Glen Dale", "premium society", 57600, "V", ""],
+    ["Hiranandani Octavius", "highest in the township", 58350, "V", ""],
+    ["Raheja Modern Vivarea", "Mahalaxmi — ceiling reference", 71400, "V", ""],
+    ["L&T Emerald Isle", "lake-view units", 75000, "S", ""]
+  ];
+  (function(){
+    var host = $("ladderChart"); if(!host) return;
+    var max = 78000;
+    LADDER.forEach(function(r){
+      var row = document.createElement("div");
+      row.className = "lrow" + (r[4] ? " " + r[4] : "");
+      row.innerHTML =
+        '<div class="lname">' + r[0] + ' <span class="sm">' + r[1] + '</span> ' +
+          '<span class="tag ' + r[3].toLowerCase() + '">' + r[3] + '</span></div>' +
+        '<div class="lbar"><i style="width:' + (r[2]/max*100).toFixed(1) + '%"></i></div>' +
+        '<div class="lnum">' + r[2].toLocaleString("en-IN") + '</div>';
+      host.appendChild(row);
+    });
+  })();
+
+  /* ---------- 11 historical CAGR ---------- */
+  (function(){
+    var host = $("cagrChart"); if(!host) return;
+    var rows = [["1 year","+7.3% cumulative",7.30],["3 years","+18.6% cumulative",5.85],
+                ["5 years","+27.4% cumulative",4.96],["10 years","+41.1% cumulative",3.50]];
+    rows.forEach(function(r){
+      var row = document.createElement("div");
+      row.className = "lrow";
+      row.innerHTML =
+        '<div class="lname">' + r[0] + ' <span class="sm">' + r[1] + '</span></div>' +
+        '<div class="lbar"><i style="width:' + (r[2]/8*100).toFixed(1) + '%"></i></div>' +
+        '<div class="lnum">' + r[2].toFixed(2) + '% CAGR</div>';
+      host.appendChild(row);
+    });
+    var be = document.createElement("p");
+    be.className = "syncnote";
+    be.style.marginTop = "8px";
+    be.textContent = "Against a 7-year break-even of 2.30% p.a. The long-run micro-market rate clears it — but not dramatically.";
+    host.parentNode.insertBefore(be, host.nextSibling);
+  })();
+
+  /* ---------- 06 value bridge ---------- */
+  (function(){
+    var host = $("bridge"); if(!host) return;
+    var steps = [
+      {label:"JVLR base",     delta: 40000, kind:"base"},
+      {label:"Density",       delta:  3000, kind:"add"},
+      {label:"Clean plot",    delta:  2000, kind:"add"},
+      {label:"Product",       delta:  4000, kind:"add"},
+      {label:"Sponsor",       delta:  2000, kind:"add"},
+      {label:"Lake view",     delta:  3000, kind:"add"},
+      {label:"Brand",         delta: -2000, kind:"sub"},
+      {label:"The ask",       delta: 55000, kind:"tot"}
+    ];
+    var MIN = 34000, MAX = 58000, H = 150;
+    var y = function(v){ return (1 - (v - MIN) / (MAX - MIN)) * H; };
+    var running = 0;
+    steps.forEach(function(s){
+      var top, bot;
+      if (s.kind === "base" || s.kind === "tot") { running = s.delta; top = y(s.delta); bot = H; }
+      else if (s.delta > 0) { top = y(running + s.delta); bot = y(running); running += s.delta; }
+      else { top = y(running); bot = y(running + s.delta); running += s.delta; }
+      var h = Math.max(3, bot - top);
+      var col = document.createElement("div");
+      col.className = "bcol";
+      col.innerHTML =
+        '<div class="bbar"><span class="' + s.kind + '" style="top:' + top.toFixed(1) +
+          'px;height:' + h.toFixed(1) + 'px"></span></div>' +
+        '<div class="bcap"><b>' + (s.kind === "base" || s.kind === "tot"
+            ? (s.delta/1000) + "k"
+            : (s.delta > 0 ? "+" : "−") + Math.abs(s.delta/1000) + "k") +
+          '</b>' + s.label + '</div>';
+      host.appendChild(col);
+    });
+  })();
+
+  /* ---------- 10 cost model ---------- */
+  var UNITS = [
+    {id:"u1120", label:"3 BHK standard · 1,120 sq ft", carpet:1120, deck:55},
+    {id:"u1180", label:"3 BHK standard · 1,180 sq ft", carpet:1180, deck:55},
+    {id:"u1560", label:"3 BHK large · 1,560 sq ft",    carpet:1560, deck:200},
+    {id:"u1740", label:"4 BHK standard · 1,740 sq ft", carpet:1740, deck:200},
+    {id:"u2360", label:"4 BHK XL · ~2,360 sq ft · fl. 14–17", carpet:2360, deck:200}
+  ];
+  var state = { unit:0, rate:55000, female:false, ltv:75, interest:7.5 };
+  var lastSheet = null;
+
+  function sheet(){
+    var u = UNITS[state.unit];
+    var agreement = u.carpet * state.rate;
+    var stamp = agreement * (state.female ? 0.05 : 0.06);
+    var reg = Math.min(30000, agreement * 0.01);
+    var gst = agreement * 0.05;
+    var other = 1500000 + (u.carpet * 10 * 24) + (u.carpet * 150) + 250000 + 75000 + 100000;
+    var allIn = agreement + stamp + reg + gst + other;
+    var loan = agreement * (state.ltv/100);
+    var r = state.interest/12/100, n = 240;
+    var emi = loan > 0 ? loan * r * Math.pow(1+r,n) / (Math.pow(1+r,n) - 1) : 0;
+    var need = allIn / 0.98;
+    var be7 = (Math.pow(need/agreement, 1/7) - 1) * 100;
+    return {u:u, agreement:agreement, stamp:stamp, reg:reg, gst:gst, other:other,
+            allIn:allIn, eff:allIn/u.carpet, loading:(allIn/agreement - 1)*100,
+            loan:loan, emi:emi, cash:allIn - loan, income:emi/0.45,
+            yieldLow:u.carpet*85*12/allIn*100, yieldHigh:u.carpet*135*12/allIn*100,
+            be7:be7};
+  }
+
+  function render(){
+    var s = sheet(); lastSheet = s;
+    $("rateOut").textContent = fmtINR(state.rate);
+    $("ltvOut").textContent = state.ltv + "%";
+    $("intOut").textContent = state.interest.toFixed(2) + "%";
+    $("sdM").setAttribute("aria-pressed", String(!state.female));
+    $("sdF").setAttribute("aria-pressed", String(state.female));
+    var rows = [
+      ["Agreement value", cr(s.agreement), ""],
+      ["Stamp duty · " + (state.female ? "5%" : "6%"), fmtINR(s.stamp), "sub"],
+      ["Registration", fmtINR(s.reg), "sub"],
+      ["GST · 5%, no input credit", fmtINR(s.gst), "sub"],
+      ["Other charges, estimated", fmtINR(s.other), "sub"],
+      ["All-in cost", cr(s.allIn), "big"],
+      ["Effective rate on carpet", fmtINR(s.eff) + " / sq ft", ""],
+      ["Loading over the headline rate", "+" + s.loading.toFixed(1) + "%", "sub"],
+      ["Loan at " + state.ltv + "% LTV", cr(s.loan), ""],
+      ["EMI · " + state.interest.toFixed(2) + "% over 20 years", lakh(s.emi) + " / month", ""],
+      ["Net income needed at 45% FOIR", lakh(s.income) + " / month", "sub"],
+      ["Cash required up front", cr(s.cash), ""],
+      ["Gross rental yield", s.yieldLow.toFixed(2) + "–" + s.yieldHigh.toFixed(2) + "%", ""],
+      ["Break-even appreciation, 7-year hold", s.be7.toFixed(2) + "% p.a.", "sub"]
+    ];
+    $("out").innerHTML = rows.map(function(r){
+      return '<div class="orow ' + r[2] + '"><span>' + r[0] + '</span><span>' + r[1] + '</span></div>';
+    }).join("") +
+    '<p class="syncnote" style="margin-top:12px">Other charges assume a ₹15 L club and infrastructure ' +
+    'fee, 24 months of maintenance at ₹10/sq ft, a ₹150/sq ft corpus, ₹2.5 L of deposits, and legal ' +
+    'and society formation. Replace them with the developer’s written cost sheet. ' +
+    'Indicative only — not tax or legal advice.</p>';
+  }
+
+  $("unitSel").innerHTML = UNITS.map(function(u,i){
+    return '<option value="' + i + '">' + u.label + '</option>'; }).join("");
+  $("unitSel").addEventListener("change", function(e){ state.unit = +e.target.value; render(); });
+  $("rateRng").addEventListener("input", function(e){ state.rate = +e.target.value; render(); });
+  $("ltvRng").addEventListener("input", function(e){ state.ltv = +e.target.value; render(); });
+  $("intRng").addEventListener("input", function(e){ state.interest = +e.target.value; render(); });
+  $("sdM").addEventListener("click", function(){ state.female = false; render(); });
+  $("sdF").addEventListener("click", function(){ state.female = true; render(); });
+  render();
+
+  /* ---------- 13 question bank ---------- */
+  var QB = [
+    ["A. Commercial &amp; legal — ask these first", [
+      [1,"Is the quoted area RERA carpet, carpet + balcony, or saleable? Give one unit type with all three side by side.",1],
+      [2,"What is the MahaRERA registration number, and on what date was it granted? Send the certificate.",1],
+      [3,"What is the registered project name? (It will not contain “Hines” — confirm what it is.)",0],
+      [4,"Three towers or six? Seventeen habitable floors or twenty? 250 homes or 321? Which is in the filing?",1],
+      [5,"Confirm the SPV name, CIN and the escrow account details.",0],
+      [6,"Land: 3.2 acres or 3.4? Gross or net? Send the CTS number and the sanctioned-plan area.",0],
+      [7,"Send the landscape plan with areas tabulated. Is open space ~1.5 acres or 2.42? They conflict.",1],
+      [8,"Send the Title Report in Format A, and confirm tenure is freehold.",0],
+      [9,"Send the Environmental Clearance letter.",0],
+      [10,"Send the IOD and the Commencement Certificate.",0],
+      [11,"Confirm in writing: no reservation, no EWS, no MHADA component, no rehab/SRA component, no amenity-open-space handover.",0],
+      [12,"Does any part of the plot fall within the notified Powai Lake wetland or a buffer? Is the internal lake natural, a former quarry pit, or engineered? Who owns and maintains it?",1],
+      [13,"Any pending proceedings — NGT, writ, civil, consumer — affecting this land or project?",0]
+    ]],
+    ["B. Product, view and specification", [
+      [14,"Send the unit-wise view schedule. Which units, floors and wings get clear Powai Lake, partial, internal lake, or amenity?",1],
+      [15,"Confirm there is a building between this plot and Powai Lake. What is its height, who owns it, and can it be redeveloped taller?",1],
+      [16,"Height and distance of the tower under construction immediately adjacent. Which of our units does it affect?",0],
+      [17,"Send the floor-rise and view-premium grid. What is the step from floor 9 to 10, 12 to 13, and internal-lake to Powai-Lake facing?",0],
+      [18,"Send the sanctioned section showing 10′10″ floor-to-floor and 10′0″ clear. Confirm post-tensioned flat slab.",0],
+      [19,"Send dimensioned unit plans. Confirm the minimum 11 ft bedroom width.",0],
+      [20,"Where are the refuge floors? Do any coincide with a premium view floor?",0],
+      [21,"Confirm deck areas: 150–160 sq ft living-room deck plus 40–50 sq ft master deck. On every large unit?",0],
+      [22,"Send the DP remark for Road No. 9. Is it developed and handed over? Can it be extended to serve another plot?",1],
+      [23,"Confirm the tower top-out height (70 m stated) and the sanctioned building height.",0],
+      [24,"Parking: bays per unit by type? Any tandem bays? Is resident parking genuinely conventional? EV provision?",0],
+      [25,"Send the deck threshold section detail — slot drain, upstand, membrane upturn, drip edge, fall — and the downpipe strategy.",1],
+      [26,"Estimated monthly maintenance in ₹/sq ft, and what it includes.",0],
+      [27,"Confirm the consultant roster: Kapadia Associates, HBA, Coopers Hill, plus structural, façade, MEP, lift, STP and Vastu.",0],
+      [28,"Is the scheme Vastu-compliant, and who is the Vastu consultant?",0],
+      [29,"Which images are inspirational and which are contractual? Send the specification annexure for the Agreement for Sale.",0],
+      [30,"When does the mock-up flat open? May clients see it before booking?",0]
+    ]],
+    ["C. Money", [
+      [31,"Send the full all-in cost sheet for one 3 BHK and one 4 BHK — every line.",1],
+      [32,"Send the payment plan / construction-linked schedule.",0],
+      [33,"Is a subvention or 20:80 plan offered, and at what price difference?",0],
+      [34,"What launch-phase incentives exist — first-N pricing, stamp-duty contribution, floor-rise waiver, furniture credit?",0],
+      [35,"Which lenders have approved the project (APF)? Send the list.",0],
+      [36,"What is the cancellation and refund policy, and the forfeiture schedule?",0],
+      [37,"Confirm the RERA completion date on the filing, against the stated December 2030.",0]
+    ]],
+    ["D. Your commercial terms", [
+      [38,"What is the payout slab, and what is the volume ladder above it?",1],
+      [39,"When is payout triggered — booking, agreement registration, or a collection milestone? What percentage at each?",0],
+      [40,"What happens to payout on cancellation, transfer, a unit switch, or if the buyer later goes direct?",0],
+      [41,"What is the lead-tagging rule? How is a lead registered, how long does the tag survive, and what if the client walks in unaccompanied?",1],
+      [42,"Given that Hines is a new brand in Mumbai and partners are being asked to build it, is there a brand premium, marketing co-funding, or exclusivity?",0],
+      [43,"From what date and with what approved creative kit may I market? Send the permitted-claims list and the compliant ad template.",0],
+      [44,"How many channel partners are being appointed? Is there territorial or segment exclusivity?",0],
+      [45,"Who is my single point of contact, and what is the escalation path?",0]
+    ]]
+  ];
+
+  var checked = {}, db = null, LS = "powai-dd-v1";
+
+  (function build(){
+    var host = $("qbank");
+    QB.forEach(function(g){
+      var sec = document.createElement("div");
+      sec.className = "qgroup";
+      sec.innerHTML = "<h4>" + g[0] + "</h4>" + g[1].map(function(q){
+        return '<div class="qrow' + (q[2] ? " crit" : "") + '">' +
+          '<input type="checkbox" id="q' + q[0] + '" data-q="' + q[0] + '">' +
+          '<span class="qn">' + (q[2] ? "★" : "") + q[0] + '</span>' +
+          '<label for="q' + q[0] + '">' + q[1] + '</label></div>';
+      }).join("");
+      host.appendChild(sec);
+    });
+    host.addEventListener("change", function(e){
+      var t = e.target;
+      if (!t || t.type !== "checkbox") return;
+      checked[t.dataset.q] = t.checked;
+      if (!t.checked) delete checked[t.dataset.q];
+      paint(); persist();
+    });
+  })();
+
+  function paint(){
+    var n = Object.keys(checked).length;
+    $("progNum").textContent = n + " / 45";
+    $("progFill").style.width = (n/45*100) + "%";
+  }
+  function apply(map){
+    checked = map || {};
+    Object.keys(checked).forEach(function(k){
+      var el = $("q" + k); if (el) el.checked = !!checked[k];
+    });
+    paint();
+  }
+  function persist(){
+    if (db) {
+      db.doc("tracker/dd").set({ checked: checked, updated: Date.now() })
+        .catch(function(){ /* shared write refused — local copy still holds */ });
+    }
+    try { localStorage.setItem(LS, JSON.stringify(checked)); } catch(e){}
+  }
+  try {
+    var raw = localStorage.getItem(LS);
+    if (raw) apply(JSON.parse(raw));
+  } catch(e){}
+
+  /* ---------- runtime capabilities ---------- */
+  if (window.claude && typeof window.claude.use === "function") {
+    window.claude.use("db").then(function(d){
+      if (!d) return;
+      db = d;
+      d.doc("tracker/dd").onSnapshot(function(snap){
+        var data = snap && (snap.data ? (typeof snap.data === "function" ? snap.data() : snap.data) : null);
+        if (data && data.checked) apply(data.checked);
+        $("syncNote").textContent = "synced across your devices";
+      }, function(){ /* ignore */ });
+    }).catch(function(){});
+
+    window.claude.use("downloads").then(function(dl){
+      if (!dl) return;
+      var btn = $("dlBtn");
+      btn.hidden = false;
+      btn.addEventListener("click", function(){
+        var s = lastSheet || sheet();
+        var lines = [
+          ["Powai Lakefront — indicative cost sheet"],
+          ["Generated", new Date().toISOString().slice(0,10)],
+          [],
+          ["Unit", s.u.label],
+          ["RERA carpet (sq ft)", s.u.carpet],
+          ["Deck (sq ft)", s.u.deck],
+          ["Rate on carpet (INR/sq ft)", state.rate],
+          [],
+          ["Agreement value", Math.round(s.agreement)],
+          ["Stamp duty (" + (state.female ? "5%" : "6%") + ")", Math.round(s.stamp)],
+          ["Registration", Math.round(s.reg)],
+          ["GST (5%, no ITC)", Math.round(s.gst)],
+          ["Other charges (estimated)", Math.round(s.other)],
+          ["ALL-IN", Math.round(s.allIn)],
+          ["Effective rate on carpet", Math.round(s.eff)],
+          ["Loading over headline rate (%)", s.loading.toFixed(1)],
+          [],
+          ["Loan at " + state.ltv + "% LTV", Math.round(s.loan)],
+          ["EMI at " + state.interest.toFixed(2) + "% over 20y", Math.round(s.emi)],
+          ["Net income needed (45% FOIR)", Math.round(s.income)],
+          ["Cash required up front", Math.round(s.cash)],
+          [],
+          ["Gross rental yield (%)", s.yieldLow.toFixed(2) + " to " + s.yieldHigh.toFixed(2)],
+          ["Break-even appreciation, 7y (% p.a.)", s.be7.toFixed(2)],
+          [],
+          ["Indicative only. Other charges are estimated from Mumbai luxury norms."],
+          ["Replace with the developer's written cost sheet. Not tax or legal advice."]
+        ];
+        var csv = lines.map(function(r){
+          return r.map(function(c){
+            var v = String(c == null ? "" : c);
+            return /[",\n]/.test(v) ? '"' + v.replace(/"/g,'""') + '"' : v;
+          }).join(",");
+        }).join("\n");
+        dl.save({ filename: "powai-cost-sheet.csv", data: csv })
+          .catch(function(){ /* viewer declined */ });
+      });
+    }).catch(function(){});
+  }
+})();
+</script>

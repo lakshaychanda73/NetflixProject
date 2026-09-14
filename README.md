@@ -11,6 +11,7 @@ real-estate practice around it.
 
 | File | What it is |
 |---|---|
+| **[Interactive blueprint](https://claude.ai/code/artifact/aaee3393-cb87-4253-aa31-bf1571bdf3f8)** | ⭐ The shareable version — live cost model, price ladder, value bridge, risk heatmap and a tickable 45-question diligence tracker. Source: [`docs/blueprint.html`](docs/blueprint.html) |
 | **[`MASTER_REPORT.md`](MASTER_REPORT.md)** | ⭐ **The blueprint.** 13 parts, ~3,200 lines. Read Part 0 (the Evidence Ladder), then Part 2 (Source Reconciliation), then Part 10 (the question bank). Everything else is reference. |
 | [`docs/transcript_digest.md`](docs/transcript_digest.md) | Every extractable claim from the 72-minute partner briefing, indexed by timestamp and cross-referenced to the report |
 | [`docs/transcript_full.md`](docs/transcript_full.md) | The full transcript, with an ASR error key |
