@@ -67,6 +67,15 @@ two decks (150–160 living + 40–50 master). "Vastu complaint" in the field no
 *compliance* — a stated design driver. "Ram borg" is *Rambaug*, a real Metro 6 station. The ticket band
 is ₹6–13 Cr on agreement value, which is ₹7.1–14.7 Cr all-in.
 
+**From the site visit** (see [`assets/`](assets/)). In favour: the sales gallery is a real steel
+structure at finishing stage; mature trees are wrapped and collared rather than cleared; internal
+roads, kerbs and drainage are concreted before a single tower rises; the water body genuinely sits at
+the plot edge. Against: a tall tower stands directly over the boundary hoarding, informal housing
+abuts the works, clearance activity is under way on the adjoining land, and rock excavation is live
+and large. And two traps in the photographs themselves — anything shot from the two-level gallery is
+the *internal* lake, not Powai Lake, and every frame in hand is a September frame of a water body
+that looks different in May.
+
 ---
 
 ## ⚠ Standing compliance rule

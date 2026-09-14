@@ -112,7 +112,7 @@ Every material claim in this document is tagged. **Never repeat an `[S]` or `[E]
            8.1 Stage gates   8.2 Gantt   8.3 Long view   8.4 RACI
            8.5 Workload split
   PART 9   RISK REGISTER & HEATMAP
-  PART 10  ⭐ THE DUE-DILIGENCE QUESTION BANK (45 questions)
+  PART 10  ⭐ THE DUE-DILIGENCE QUESTION BANK (50 questions)
   PART 11  FINANCIAL TOOLKIT (printable)
            11.1 Cost-sheet template      11.2 Quick reference
            11.3 Price sensitivity        11.4 Lender sheet
@@ -544,15 +544,86 @@ Your four images are better evidence than any brochure. Here is what they establ
  │         stop-work notices and night-work restrictions. Schedule risk.        │
  └──────────────────────────────────────────────────────────────────────────────┘
 
- ┌── IMAGE 4 ── your own notes ─────────────────────────────────────────────────┐
+ ┌── SECOND VISIT ── inside the hoarding ───────────────────────────────────────┐
+ │                                                                              │
+ │  THE SALES GALLERY IS REAL, AND IT IS STEEL.                                 │
+ │  A steel-framed, metal-deck structure at finishing stage — scaffold up,      │
+ │  columns painted, floor slabs cast, first-fix electrical run. Steel was      │
+ │  chosen because steel is fast. This corroborates "structure complete,        │
+ │  finishing work, opening within a month" and makes the 16,000 sq ft          │
+ │  gallery a near-term certainty rather than a promise.                        │
+ │                                                                              │
+ │  ⭐ TREES ARE BEING PROTECTED, NOT CLEARED.                                  │
+ │  Mature trees wrapped in protective netting with cast concrete collars at    │
+ │  the base — textbook tree protection. That is a deliberate, auditable cost   │
+ │  and the strongest PHYSICAL evidence yet that the "forest" is a retained     │
+ │  asset rather than a render.                                                 │
+ │  ⇒ ASK: how many trees retained vs. transplanted vs. felled? Where is the    │
+ │    tree-cutting permission? Part 10, Q.46.                                   │
+ │                                                                              │
+ │  ⭐ SITE INFRASTRUCTURE IS GOING IN FIRST.                                   │
+ │  Concreted internal roads with kerbs and paver edges, drainage rings, a      │
+ │  formal site office, hoarding complete — all before the towers rise. That    │
+ │  is institutional sequencing. It is the OPPOSITE of how an undercapitalised  │
+ │  developer runs a site, and it is a legitimate confidence signal.            │
+ │                                                                              │
+ │  THE WATER IS AT THE PLOT EDGE — AND SO IS THE EXCAVATION.                   │
+ │  One frame, shot from inside the gallery frame, has raw cut earth and rock   │
+ │  in the foreground and the water body immediately beyond it, with a          │
+ │  boundary hoarding along the far edge. The internal lake is genuinely        │
+ │  adjacent, not a distant amenity.                                            │
+ │                                                                              │
+ │  ⚠ THE NEIGHBOURS ARE CLOSE, ON MORE THAN ONE SIDE.                          │
+ │  A tall cream high-rise sits DIRECTLY over the boundary hoarding on the      │
+ │  access-road side. Informal low-rise housing abuts the works elsewhere.      │
+ │  A further frame shows an excavator working through rubble amid informal     │
+ │  structures in the middle ground — clearance activity adjacent to the plot.  │
+ │  ⇒ ASK what that land is and what its long-term plan is. Part 10, Q.47.      │
+ └──────────────────────────────────────────────────────────────────────────────┘
+
+ ┌── 🔴 THE TWO PHOTOGRAPH TRAPS ───────────────────────────────────────────────┐
+ │                                                                              │
+ │  1. WHICH LAKE IS IT?                                                        │
+ │     The sales gallery is a two-to-three level structure. The developer's     │
+ │     own banding puts a PARTIAL Powai Lake view above the 10th floor and a    │
+ │     CLEAR one above the 13th, because a building sits in between.            │
+ │     ⇒ Therefore anything shot from the gallery is the SOUTH outlook — the    │
+ │       INTERNAL lake, not Powai Lake.                                         │
+ │     Your best water frames are almost certainly internal-lake frames.        │
+ │     They are still good. They are just not what a buyer will assume.         │
+ │     ⇒ Re-shoot every view frame with the FLOOR and a COMPASS BEARING noted.  │
+ │       Showing an internal-lake photograph while saying "Powai Lake" is a     │
+ │       misrepresentation YOU made, and it surfaces on handover day in 2030.   │
+ │                                                                              │
+ │  2. WHICH SEASON IS IT?                                                      │
+ │     Every frame you hold is a SEPTEMBER frame — end of monsoon. Water high,  │
+ │     banks lush, canopy full. Compare the clear olive-green water of the      │
+ │     early frames with the turbid brown water at the excavation edge in the   │
+ │     later one: even within one site, on one visit, the water reads           │
+ │     differently.                                                             │
+ │     The same water body in April or May is a different photograph.           │
+ │     ⇒ RE-SHOOT THE WATER FRAMES IN MARCH–APRIL. Own the dry-season truth as  │
+ │       well as the monsoon one — and price the difference into what you       │
+ │       promise. A buyer who sees the September frame and moves in during May  │
+ │       remembers who showed them the September frame.                         │
+ └──────────────────────────────────────────────────────────────────────────────┘
+
+ ┌── YOUR NOTES ────────────────────────────────────────────────────────────────┐
  │  Digitised, cross-checked and reconciled in Part 2 and Appendix A.           │
  └──────────────────────────────────────────────────────────────────────────────┘
 ```
 
 > **The honesty dividend.** Every competing agent on this project will show the render. You will be
 > the only one who says *"here is the settlement to the south-west, here is the tower going up next
-> door, and here is why the price still works."* In a ₹7–15 Cr sale to a BFSI buyer who models risk
-> for a living, that is not a weakness. It is the whole moat.
+> door, here is what the water looks like in May, and here is why the price still works."* In a
+> ₹7–15 Cr sale to a BFSI buyer who models risk for a living, that is not a weakness. It is the
+> whole moat.
+
+> **And the flip side — spend the good evidence too.** Protected trees, concreted roads before
+> towers, a steel gallery going up fast, a real water body at the boundary: these are things you can
+> photograph and a competitor selling a ₹33,000 Chandivali flat cannot. The site visit is your
+> conversion event (7C.5). **Walk clients past the wrapped trees.** It says more about how this
+> developer works than any slide about Salesforce Tower.
 
 ---
 ## 4. SPONSOR & COUNTERPARTY — who is actually building this
@@ -1738,6 +1809,8 @@ The briefing claims "triple metro connectivity" `[S]`. The verified position is 
 | ~1.5 ac open space (0.6 forest + 0.82 podium) | **High** `[S]` — supersedes the 2.42 ac in the brief `[?]` | Landscape plan with area table | ☐ |
 | 50 m to JVLR via DP Road 9 dead-end | **High** — trivially checkable | Walk it. DP remark. | ☐ |
 | 3.2 ac freehold, no reservation / EWS / MHADA / rehab | **High if true, and very valuable** | DP remark + title report | ☐ |
+| Tree retention / the "forest" is real | **High** `[E]` — wrapped, collared trees photographed on site | Tree survey + Tree Authority permission (Q.46) | ☐ |
+| Site infrastructure sequencing | **High** `[E]` — concreted roads, kerbs, drainage and site office already in | Your own frames; no further evidence needed | ☑ |
 | Kapadia Associates as design architect | **Medium** `[S]` | Appointment letter / drawing title block | ☐ |
 | Vastu compliance | Your notes flag "Vastu complaint" `[?]` — unclear if *compliant* or a *complaint* | Ask directly; get the consultant's name | ☐ |
 
@@ -1840,6 +1913,15 @@ The most valuable thing in that briefing was not a fact. It was permission:
       You need to be able to answer "what's on the other side?" the first
       time it is asked, not the third.
    7. A daylight and a dusk version. Dusk sells; daylight verifies.
+   8. ⭐ THE WRAPPED TREES. Mature trees in protective netting with concrete
+      collars at the base. It is the single most persuasive frame you have,
+      because it is a cost the developer chose to incur and a competitor
+      selling a ₹33,000 Chandivali flat cannot show you anything like it.
+      Walk clients past them on the site visit.
+   9. ⭐ THE CONCRETED INTERNAL ROADS AND SITE OFFICE — infrastructure going
+      in before the towers. Institutional sequencing, and it photographs.
+  10. 🔴 A MARCH–APRIL RE-SHOOT OF EVERY WATER FRAME. You currently own only
+      the monsoon truth. Own the dry-season one too, before a client does.
 
    RULES
    • Timestamp and geotag everything.
@@ -2593,6 +2675,7 @@ with your own gates.**
 | **S1** | ₹55k proves 15–20% above what the channel will carry | H | High | **20** | Value bridge (5.3). Negotiate launch incentives (7D.4). Hold the line on segment. | YOU | ⚠ Partners in the room said **"it should be ₹45–48"** `[S]` |
 | **S2** | Area terminology unresolved at launch | H | High | **20** | Part 10 Q.1 before any client contact | YOU | Price sheet without a carpet column |
 | **C2** | "Lake view" fails at handover 2030 | M | Sev | **20** | ⚠ **A building sits between the plot and Powai Lake** `[S]`. Get the unit-wise schedule. Never promise permanence. | YOU | Any unit below floor 10 sold on "lake view" |
+| **C3** | Monsoon-season imagery oversells the water and the canopy | M | High | **15** | Every frame you hold is a September frame. Re-shoot in March–April and show both. Never let a September photograph be the only thing a buyer has seen. | YOU | A client asks "is it like this all year?" and you don't have the answer |
 | **V1** | Floor/view premium grid undisclosed at booking | M | High | **15** | Demand the grid in writing pre-launch | YOU | "Price on request" for premium floors |
 | **F1** | You sign a low payout slab to "get in" | M | High | **15** | Negotiate once, properly. 100 bps ≈ ₹70 L on 8 units. | YOU | Pressure to sign fast |
 | **D3** | Possession slips past Dec 2030 | M | High | **15** | Track QPRs; set client expectation at 2031 from day one | YOU | Two consecutive QPRs behind plan |
@@ -2637,7 +2720,7 @@ with your own gates.**
 
 ## PART 10 — THE DUE-DILIGENCE QUESTION BANK
 
-Send this as a written list. Ask for written answers. **A developer who answers 40 of 45 in writing is
+Send this as a written list. Ask for written answers. **A developer who answers 45 of 50 in writing is
 a developer you can sell for. One who answers verbally and changes the subject is telling you
 something.** Tick the box when you have it *on paper*.
 
@@ -2744,10 +2827,33 @@ something.** Tick the box when you have it *on paper*.
  ☐ 45. Who is my single point of contact, and what is the escalation path?
 ```
 
+### E. From the site visit — added after walking the plot
+
+```
+ ☐ 46. ⭐ TREES. How many are being retained, how many transplanted, how many
+        felled? Send the tree survey and the Tree Authority permission.
+        (You have photographed wrapped, collared trees on site — this is a
+        claim the developer can evidence, and should want to.)
+ ☐ 47. ⚠ THE ADJOINING LAND. What is the parcel on the informal-housing side?
+        Who owns it? Is an SRA or redevelopment scheme proposed, and what
+        height is sanctioned there? Which of our elevations face it?
+ ☐ 48. EXCAVATION. What is the methodology for the two basements — controlled
+        blasting, mechanical rock-breaking, or chemical splitting? Are any
+        complaints, stop-work notices or night-work restrictions on record?
+ ☐ 49. ⭐ THE INTERNAL LAKE. Is it inside the plot boundary or outside it?
+        Send the boundary drawing with the water body marked. Who is
+        responsible for its water quality, its level in summer, and mosquito
+        control — the society, the developer, or a public body?
+        What does it look like in April? Send a dry-season photograph.
+ ☐ 50. MEDIA RIGHTS. From what date, and with what written permission, may I
+        photograph and video the site and the mock-up flat for client use?
+        Confirm in writing what I may and may not publish before RERA.
+```
+
 ```
    ⭐ HOW TO SEND IT
    One email. Numbered. "Before I take this to my clients I need the
-   following in writing. I'd rather ask 45 questions now than have one
+   following in writing. I'd rather ask 50 questions now than have one
    client ask me one question I can't answer in 2030."
    Any serious developer respects this. It is also exactly how you get
    taken seriously by a team whose sales head came from K Raheja Corp
@@ -2941,7 +3047,7 @@ Part 7D is the analysis. This is the set of things you print, carry and use.
  ╠═══════════════════════════════════════════════════════════════════════════╣
  ║  WEEKS 2–4   ·   DILIGENCE                                                ║
  ╠═══════════════════════════════════════════════════════════════════════════╣
- ║ ☐ ⭐ Send the Part 10 question bank. One email, 45 numbered questions.     ║
+ ║ ☐ ⭐ Send the Part 10 question bank. One email, 50 numbered questions.     ║
  ║ ☐ Visit the site. Shoot the full footage library (Part 7C.2) — including  ║
  ║   the downside frames, for your own file.                                 ║
  ║ ☐ ⭐ Walk and time the 50 m from the CCD. Photograph it.                   ║
@@ -2995,7 +3101,7 @@ Part 7D is the analysis. This is the set of things you print, carry and use.
   METRIC                          WK4   WK8   WK12   TARGET (wk 12)
   ────────────────────────────────────────────────────────────────
   Agent registration status       ___   ___   ___    ✅ CERTIFIED
-  Q-bank answers received /45     ___   ___   ___    ≥ 35 in writing
+  Q-bank answers received /50     ___   ___   ___    ≥ 40 in writing
   Comps visited in person         ___   ___   ___    3
   Footage assets captured         ___   ___   ___    7
   Database size (qualified)       ___   ___   ___    150
@@ -3006,7 +3112,7 @@ Part 7D is the analysis. This is the set of things you print, carry and use.
   Closings                        ___   ___   ___    2
   Cost per qualified lead         ___   ___   ___    track it from week 1
   ────────────────────────────────────────────────────────────────
-  ⚠ If "Q-bank answers received" is still under 20 at week 8, that is
+  ⚠ If "Q-bank answers received" is still under 22 at week 8, that is
     itself a finding. Escalate or reconsider the project.
 ```
 
