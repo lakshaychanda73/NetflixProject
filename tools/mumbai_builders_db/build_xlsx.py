@@ -231,6 +231,15 @@ def load_jsonl(path):
     return rows, bad
 
 
+def tidy_name(name):
+    n = re.sub(r"\s*[–-]\s*legal (entit|name)[^()]*$", "", name)
+    n = re.sub(r"[;,]\s*legal (entit|name)[^)]*", "", n)
+    n = re.sub(r"\(\s*legal (entit|name)[^)]*\)", "", n)
+    n = re.sub(r"\s*[–-]\s*legal (entit|name)[^)]*(?=\))", "", n)
+    n = re.sub(r"\(\s*\)", "", n)
+    return " ".join(n.split())
+
+
 def topic_of(path, suffix):
     return os.path.basename(path)[: -len(suffix)]
 
@@ -252,7 +261,7 @@ def main():
             if not name:
                 continue
             r["_topic"] = t
-            r["company"] = aliases["rename"].get(name, name)
+            r["company"] = tidy_name(aliases["rename"].get(name, name))
             companies.append(r)
     people = []
     for p in sorted(glob.glob(os.path.join(NOTES, "*_people.jsonl"))):
@@ -264,7 +273,7 @@ def main():
             if not s(r.get("person")):
                 continue
             r["_topic"] = t
-            r["company"] = aliases["rename"].get(s(r.get("company")), s(r.get("company")))
+            r["company"] = tidy_name(aliases["rename"].get(s(r.get("company")), s(r.get("company"))))
             people.append(r)
 
     # ---------------- company clustering (union-find)
@@ -328,9 +337,19 @@ def main():
         return sum(1 for k in ["website", "hq_address", "office_phone", "general_email", "cp_channel_contact", "geography",
                                "active_projects", "scale_indicators", "accessibility", "notes"] if not is_na(c.get(k)))
 
+    def is_placeholder(c):
+        if c["_topic"].startswith("kb_"):
+            return False
+        blob = (s(c.get("last_verified")) + " " + s(c.get("level_rationale"))).lower()
+        return "not researched" in blob or "not verified" in blob or "re-research" in blob or blob.strip().startswith("provisional")
+
+    def record_rank(c):
+        # web-researched record > knowledge draft > web placeholder ("not researched")
+        return 2 if is_placeholder(c) else 1 if c["_topic"].startswith("kb_") else 0
+
     merged = OrderedDict()   # root -> merged company dict
     for root, recs in clusters.items():
-        recs = sorted(recs, key=lambda c: (c["_topic"].startswith("kb_"), -filled(c)))
+        recs = sorted(recs, key=lambda c: (record_rank(c), -filled(c)))
         prim = recs[0]
         m = {k: prim.get(k) for k in prim}
         m["company"] = prim["company"]
@@ -354,6 +373,13 @@ def main():
         m["level"] = lv[0] if lv else "L4"
         if len(set(lv)) > 1:
             report["level_conflicts"].append(f"{m['company']}: {lv} -> {m['level']}")
+        fo = {k.lower(): v for k, v in aliases.get("field_override", {}).items()}
+        for a in m["_aliases"]:
+            for fld, val in fo.get(a.lower(), {}).items():
+                if fld == "notes_append":
+                    m["notes"] = (s(m.get("notes")) + " | " + val).strip(" |")
+                else:
+                    m[fld] = val
         ov = {k.lower(): v for k, v in aliases["level_override"].items()}
         for a in m["_aliases"]:
             if a.lower() in ov:
@@ -665,7 +691,8 @@ def main():
     crows = [{"Association": r["Builder/Developer"], "Person Name": r["Person Name"], "Designation": r["Designation"],
               "Developer Affiliation / Notes": r["Notes"], "Mobile Number": r["Mobile Number"], "Email ID": r["Email ID"],
               "LinkedIn": r["LinkedIn"], "Association Phone": r["Company Office Phone"], "Association Email": r["Company Email"],
-              "Outreach Priority": r["Outreach Priority"], "Source/Verification": r["Source/Verification"]} for r in conn]
+              "Outreach Priority": r["Outreach Priority"], "Source/Verification": r["Source/Verification"],
+              "_li_search": r.get("_li_search")} for r in conn]
     write_table(ws3, H3, crows, W3, "Connectors", link_cols=("LinkedIn",))
     ws3.freeze_panes = "C2"
 
@@ -746,8 +773,8 @@ def main():
         "people_merged": len(pmerged), "rows": len(people_rows),
         "by_level_companies": {lv: sum(1 for c in merged.values() if c["level"] == lv) for lv in levels},
         "by_level_people": {lv: sum(1 for r in people_rows if r["Level"] == lv and r["Role Category"] != "Company contact") for lv in levels},
-        "people_with_email": sum(1 for r in people_rows if r["Email ID"] != NA),
-        "people_with_mobile": sum(1 for r in people_rows if r["Mobile Number"] != NA),
+        "people_with_email": sum(1 for r in people_rows if r["Email ID"] not in (NA, NV)),
+        "people_with_mobile": sum(1 for r in people_rows if r["Mobile Number"] not in (NA, NV)),
         "availability": {k: sum(1 for r in people_rows if r["Contact Availability"] == k) for k in set(r["Contact Availability"] for r in people_rows)},
         "no_source_contacts": sum(1 for r in people_rows if "WARNING" in r["Source/Verification"]),
     }
