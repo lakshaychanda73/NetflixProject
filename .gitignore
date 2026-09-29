@@ -1,0 +1,5 @@
+# Outreach database outputs contain names and contact details of individuals.
+# Kept out of this public repository by design; delivered to the user directly.
+research_notes/
+reports/
+*.xlsx
