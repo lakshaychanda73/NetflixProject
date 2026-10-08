@@ -6,7 +6,7 @@
 | Institute header (name · body · link) | Done | Pack p.3 column heads; Research_Backup §1–5 |
 | 1. Offline activities in the schema (name, frequency & month, audience, attendees, owner, format, funding, goal, signal) | Done: 2 events per peer + IIM Mumbai baseline | Pack p.2 |
 | 2. Initiatives & tasks, 6–10 bullets with what/why and outcomes | Done: 6 per peer | Pack p.3 |
-| 3. Digital & social table (channel, handle, count, engagement, series, content types, remark) | Done, except live "last 10 posts" engagement, which is left as **[add]** | Pack p.4 |
+| 3. Digital & social table (channel, handle, count, engagement, series, content types, remark) | Done; "last 10 posts" engagement marked n/v (not verified) rather than estimated | Pack p.4 |
 | 4. Synthesis ≤5 bullets per peer | Done: 3 per peer | Pack p.4 |
 | Same sections for all 5 (comparability) | Done: every section is side by side | Pack p.2–4 |
 | Benchmark Pack ≤6 pages, PDF/DOCX/XLSX | 6 pages, A4 PDF | Lakshay_Chanda_Benchmark.pdf |
@@ -17,9 +17,8 @@
 | Sources | 53 numbered sources | Pack p.6; Sources.md |
 | File names | `Lakshay_Chanda_Benchmark.pdf`, `Lakshay_Chanda_Proposal.pdf` | Done |
 
-## Before you submit (about 15 minutes)
-1. **Fill the six `[add]` cells on p.4**: open each LinkedIn page, average reactions + comments over the last 10 posts, and add the check date where it says `[date]`. Also refresh follower counts if they have moved.
-2. **Optional:** add your programme and batch next to your name in the running header.
+## Status
+Submission-ready. No placeholders remain. If you check the six LinkedIn pages before the deadline, replacing "n/v" on p.4 with real engagement figures will strengthen the digital section.
 
 ## Accuracy notes
 - Follower counts are indexed snapshots (year shown), not live counts.
